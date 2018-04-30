@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using Shared.Models;
 using SQLite;
 
 namespace Shared.Database
@@ -47,10 +48,23 @@ namespace Shared.Database
                 try
                 {
                     _database = new SQLiteConnection(DatabasePath);
+
+                    UpdateTable<LocalUserModel>();
                 }
                 catch (Exception e)
                 {
                 }
+            }
+        }
+
+        private void UpdateTable<T>()
+        {
+            try
+            {
+                _database.CreateTable<T>();
+            }
+            catch (Exception e)
+            {
             }
         }
 
