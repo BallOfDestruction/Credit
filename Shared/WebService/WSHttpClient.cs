@@ -16,7 +16,7 @@ namespace Shared.WebService
     {
         private readonly string _basicAuth;
 
-        private readonly string _webApiUrl = "";
+        private readonly string _webApiUrl = "http://shilak96-001-site1.btempurl.com/";
 
         public string ContentType = "application/json";
 

@@ -9,5 +9,16 @@ namespace Shared.WebService
 
         [JsonProperty(PropertyName = "ErrorDescription")]
         public string ErrorDescription { get; set; }
+
+        public Error()
+        {
+            
+        }
+
+        public Error(string errorCode, string errorDescription)
+        {
+            ErrorCode = errorCode;
+            ErrorDescription = errorDescription;
+        }
     }
 }

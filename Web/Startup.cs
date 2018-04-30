@@ -55,16 +55,6 @@ namespace Armada
                 routes.MapRoute(
                     name: "default",
                     template: "{controller=Home}/{action=Index}");
-
-                routes.MapRoute(
-                    name: "default_route1",
-                    template: "{action}",
-                    defaults: new { controller = "Home"});
-
-                routes.MapRoute(
-                    name: "default_route",
-                    template: "{link}",
-                    defaults: new { controller = "Product", action = "Index" });
             });
         }
     }

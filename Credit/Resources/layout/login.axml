@@ -13,23 +13,34 @@
     <EditText
       android:id="@+id/login_email"
       android:hint="Email"
-      android:background="#dcdcdc"
+      android:inputType="textEmailAddress"
+      android:background="#4f4f4f"
       android:layout_width="match_parent"
       android:layout_height="40dp"/>
     <EditText
       android:id="@+id/login_password"
       android:hint="Пароль"
-      android:background="#dcdcdc"
+      android:inputType="textPassword"
+      android:background="#4f4f4f"
       android:layout_marginTop="20dp"
       android:layout_width="match_parent"
       android:layout_height="40dp"/>
     <Button
       android:id="@+id/login_send"
-      android:background="#dcdcdc"
+      android:background="#4f4f4f"
       android:layout_marginTop="20dp"
       android:layout_width="match_parent"
       android:layout_height="40dp"
+      android:imeOptions="actionSend"
       android:textAlignment="center"
       android:text="Войти"/>
+    <Button
+      android:id="@+id/login_registration"
+      android:background="#4f4f4f"
+      android:layout_marginTop="80dp"
+      android:layout_width="match_parent"
+      android:layout_height="40dp"
+      android:textAlignment="center"
+      android:text="ЗАРЕГИСТРИРОВАТЬСЯ"/>
   </LinearLayout>
 </LinearLayout>

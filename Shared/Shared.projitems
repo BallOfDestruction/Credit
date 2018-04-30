@@ -17,6 +17,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Commands\Login\LoginResponceViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Commands\Login\LoginViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Commands\Registration\RegistrationCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Commands\Registration\RegistrationRequest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Commands\Registration\RegistrationResponce.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Database\Entity.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Database\IEntity.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Database\ILocalDb.cs" />

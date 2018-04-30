@@ -34,7 +34,7 @@ namespace Web.Controllers.cms
             }
 
             await Authenticate(cmsLoginViewModel.Login);
-            return RedirectToAction("GetList", "HomeCms", new {type = "Production"});
+            return RedirectToAction("GetList", "HomeCms", new {type = "User"});
         }
 
         private async Task Authenticate(string userName)

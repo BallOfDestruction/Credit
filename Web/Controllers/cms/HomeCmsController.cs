@@ -31,7 +31,7 @@ namespace Web.Controllers.cms
         [Authorize]
         public async Task<IActionResult> GetList(string type, int page = 0, string sorted = null, string filter = null)
         {
-            var t = Type.GetType("Armada.Models." + type);
+            var t = Type.GetType("Web.Models." + type);
             if (CheckIsSingle(t))
                 return RedirectToAction("EditFirst", new {type = type});
 
@@ -136,7 +136,7 @@ namespace Web.Controllers.cms
         [Authorize]
         public IActionResult Delete(string type, int id)
         {
-            var t = Type.GetType("Armada.Models." + type);
+            var t = Type.GetType("Web.Models." + type);
 
             if(CheckIsSingle(t))
                 return RedirectToAction("EditFirst", new { type = type });
@@ -162,7 +162,7 @@ namespace Web.Controllers.cms
         [Authorize]
         public IActionResult Details(string type, int id)
         {
-            var t = Type.GetType("Armada.Models." + type);
+            var t = Type.GetType("Web.Models." + type);
             dynamic objdect = Activator.CreateInstance(t);
 
             ViewBag.Type = t;
@@ -221,7 +221,7 @@ namespace Web.Controllers.cms
         [Authorize]
         public IActionResult EditFirst(string type)
         {
-            var t = Type.GetType("Armada.Models." + type);
+            var t = Type.GetType("Web.Models." + type);
             dynamic objdect = Activator.CreateInstance(t);
             var first = GetObjectToFirstEdit(objdect);
 
@@ -240,7 +240,7 @@ namespace Web.Controllers.cms
         [Authorize]
         public IActionResult Edit(string type, int id)
         {
-            var t = Type.GetType("Armada.Models." + type);
+            var t = Type.GetType("Web.Models." + type);
             dynamic objdect = Activator.CreateInstance(t);
             ViewBag.NameType = type;
             ViewBag.Type = t;
@@ -258,7 +258,7 @@ namespace Web.Controllers.cms
 
             var typeName = Request.Form["type"];
             var id = Request.Form["id"];
-            var type = Type.GetType("Armada.Models." + typeName);
+            var type = Type.GetType("Web.Models." + typeName);
             var properties = type.GetProperties();
             dynamic newObject = Activator.CreateInstance(type);
             var editObject = GetObject(newObject, int.Parse(id));
@@ -315,7 +315,7 @@ namespace Web.Controllers.cms
             if (!keys.Contains("type")) RedirectToAction("GetList", new { type = "Order" });
 
             var typeName = Request.Form["type"];
-            var type = Type.GetType("Armada.Models." + typeName);
+            var type = Type.GetType("Web.Models." + typeName);
 
             if (CheckIsSingle(type))
                 return RedirectToAction("EditFirst", new { type = type });

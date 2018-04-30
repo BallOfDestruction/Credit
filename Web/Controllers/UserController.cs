@@ -4,6 +4,8 @@ using System.Net;
 using Microsoft.AspNetCore.Mvc;
 using Web.Models;
 using Web.ViewModels;
+using Web.ViewModels.Login;
+using Web.ViewModels.Registration;
 
 namespace Web.Controllers
 {
@@ -15,15 +17,15 @@ namespace Web.Controllers
         }
 
         [HttpPost]
-        public JsonResult Login(string email, string password)
+        public JsonResult Login([FromBody]LoginRequest model)
         {
-            var localEmail = email.ToLower();
-            var user = Context.Users.FirstOrDefault(w => w.Email.ToLower() == localEmail && w.Password == password);
+            var localEmail = model.Email.ToLower();
+            var user = Context.Users.FirstOrDefault(w => w.Email.ToLower() == localEmail && w.Password == model.Password);
 
             if (user == null)
             {
                 HttpContext.Response.StatusCode = (int)HttpStatusCode.Forbidden;
-                return Json(new Error("code", "Пользователь не существует"));
+                return Json(new Error("code", "Такого пользователя не существует"));
             }
 
             var token = Guid.NewGuid().ToString();
@@ -38,6 +40,24 @@ namespace Web.Controllers
                 SecondName = user.SecondName,
                 Town = user.Town,
             });
+        }
+
+        [HttpPost]
+        public JsonResult Registration([FromBody]RegistrationRequest model)
+        {
+            var user = new User()
+            {
+                Name = model.Name,
+                DateCreated = DateTime.Now,
+                Email = model.Email,
+                Password = model.Password,
+                SecondName = model.SecondName,
+                Town = model.Town,
+            };
+            Context.Add(user);
+            Context.SaveChanges();
+
+            return Json(new RegistrationResponce());
         }
     }
 }
