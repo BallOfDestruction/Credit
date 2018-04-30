@@ -45,6 +45,13 @@ namespace Web.Controllers
         [HttpPost]
         public JsonResult Registration([FromBody]RegistrationRequest model)
         {
+            var emailLowel = model.Email?.ToLower();
+            var existingUser = Context.Users.FirstOrDefault(w => w.Email.ToLower() == emailLowel);
+            if (existingUser != null)
+            {
+                return Json(new Error("code", "Пользователь с таким Email уже существует"));
+            }
+
             var user = new User()
             {
                 Name = model.Name,

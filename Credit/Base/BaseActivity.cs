@@ -2,6 +2,8 @@
 using System.Threading;
 using Android.App;
 using Android.OS;
+using Android.Views;
+using Android.Views.InputMethods;
 using Android.Widget;
 using Shared.Settings;
 using Shared.WebService;
@@ -161,6 +163,15 @@ namespace Credit.Base
         public void ShowErrorNotEnternet()
         {
             ShowError(WSString.Error, WSString.ErrorNotInternet);
+        }
+
+
+        protected void HideKeyboard()
+        {
+            var imm = (InputMethodManager)this.GetSystemService(Activity.InputMethodService);
+
+            var view = CurrentFocus ?? new View(this);
+            imm.HideSoftInputFromWindow(view.WindowToken, 0);
         }
     }
 }

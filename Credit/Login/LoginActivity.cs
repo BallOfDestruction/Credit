@@ -43,6 +43,8 @@ namespace Credit.Login
 
         private void TryLogin(object sender, EventArgs eventArgs)
         {
+            HideKeyboard();
+
             var model = new LoginViewModel(_login.Text, _password.Text);
             if (!model.IsValid(ShowError)) return;
 

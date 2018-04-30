@@ -41,6 +41,7 @@ namespace Credit.Registration
 
         private void SendRegistration(object sender, EventArgs eventArgs)
         {
+            HideKeyboard();
             var model = new RegistrationRequest(_name.Text, _secondName.Text, _email.Text, _password.Text, _town.Text);
 
             if (model.IsValid(ShowError))
