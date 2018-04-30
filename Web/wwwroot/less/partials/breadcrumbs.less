@@ -1,0 +1,21 @@
+.breadcrumbs{
+  position: absolute;
+  font-size: 14px;
+  left: 62px;
+  top: 135px;
+  a, span{
+    text-decoration: none;
+    color: #000;
+    position: relative;
+    font-weight: 500;
+    line-height: 1.43;
+    letter-spacing: 0.7px;
+  }
+  span{
+    &:before{
+      content: '-';
+      display: inline-block;
+      padding-right: 5px;
+    }
+  }
+}

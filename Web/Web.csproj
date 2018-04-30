@@ -1,0 +1,261 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <TypeScriptToolsVersion>2.5</TypeScriptToolsVersion>
+    <ApplicationIcon />
+    <OutputType>WinExe</OutputType>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="Controllers\FuckingFuckController.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="MailKit" Version="2.0.2" />
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.0.0" />
+    <PackageReference Include="Microsoft.jQuery.Unobtrusive.Ajax" Version="3.2.5-preview1" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Views\Shared\CMS\DetailsInnerObject.cshtml" />
+    <None Include="wwwroot\less\components\animate.less" />
+    <None Include="wwwroot\less\components\aos.less" />
+    <None Include="wwwroot\less\components\arctic_modal.less" />
+    <None Include="wwwroot\less\components\button.less" />
+    <None Include="wwwroot\less\components\formstyler.less" />
+    <None Include="wwwroot\less\components\lightbox.less" />
+    <None Include="wwwroot\less\components\mcustom.less" />
+    <None Include="wwwroot\less\components\noui.less" />
+    <None Include="wwwroot\less\components\owl.less" />
+    <None Include="wwwroot\less\components\sprite.less" />
+    <None Include="wwwroot\less\components\text_style.less" />
+    <None Include="wwwroot\less\partials\article.less" />
+    <None Include="wwwroot\less\partials\breadcrumbs.less" />
+    <None Include="wwwroot\less\partials\contacts.less" />
+    <None Include="wwwroot\less\partials\delivery_geo_cover.less" />
+    <None Include="wwwroot\less\partials\footer.less" />
+    <None Include="wwwroot\less\partials\gallery.less" />
+    <None Include="wwwroot\less\partials\header.less" />
+    <None Include="wwwroot\less\partials\main_section.less" />
+    <None Include="wwwroot\less\partials\navigation.less" />
+    <None Include="wwwroot\less\partials\products_grid.less" />
+    <None Include="wwwroot\less\partials\projects_slider.less" />
+    <None Include="wwwroot\less\partials\review_cover.less" />
+    <None Include="wwwroot\less\partials\seo_text.less" />
+    <None Include="wwwroot\less\partials\stages_construction.less" />
+    <None Include="wwwroot\less\partials\work_map.less" />
+    <None Include="wwwroot\lib\jquery-ajax-unobtrusive\gulpfile.js" />
+    <None Include="wwwroot\lib\jquery-ajax-unobtrusive\jquery.unobtrusive-ajax.js" />
+    <None Include="wwwroot\lib\jquery-ajax-unobtrusive\jquery.unobtrusive-ajax.min.js" />
+    <None Include="wwwroot\summernote-develop\.agignore" />
+    <None Include="wwwroot\summernote-develop\.editorconfig" />
+    <None Include="wwwroot\summernote-develop\.eslintrc" />
+    <None Include="wwwroot\summernote-develop\.gitignore" />
+    <None Include="wwwroot\summernote-develop\.npmignore" />
+    <None Include="wwwroot\summernote-develop\.travis.yml" />
+    <None Include="wwwroot\summernote-develop\CONTRIBUTING.md" />
+    <None Include="wwwroot\summernote-develop\Gruntfile.js" />
+    <None Include="wwwroot\summernote-develop\grunts\grunt-build.js" />
+    <None Include="wwwroot\summernote-develop\ISSUE_TEMPLATE.md" />
+    <None Include="wwwroot\summernote-develop\karma.conf.js" />
+    <None Include="wwwroot\summernote-develop\lang\summernote-ar-AR.js" />
+    <None Include="wwwroot\summernote-develop\lang\summernote-bg-BG.js" />
+    <None Include="wwwroot\summernote-develop\lang\summernote-ca-ES.js" />
+    <None Include="wwwroot\summernote-develop\lang\summernote-cs-CZ.js" />
+    <None Include="wwwroot\summernote-develop\lang\summernote-da-DK.js" />
+    <None Include="wwwroot\summernote-develop\lang\summernote-de-DE.js" />
+    <None Include="wwwroot\summernote-develop\lang\summernote-el-GR.js" />
+    <None Include="wwwroot\summernote-develop\lang\summernote-es-ES.js" />
+    <None Include="wwwroot\summernote-develop\lang\summernote-es-EU.js" />
+    <None Include="wwwroot\summernote-develop\lang\summernote-fa-IR.js" />
+    <None Include="wwwroot\summernote-develop\lang\summernote-fi-FI.js" />
+    <None Include="wwwroot\summernote-develop\lang\summernote-fr-FR.js" />
+    <None Include="wwwroot\summernote-develop\lang\summernote-gl-ES.js" />
+    <None Include="wwwroot\summernote-develop\lang\summernote-he-IL.js" />
+    <None Include="wwwroot\summernote-develop\lang\summernote-hr-HR.js" />
+    <None Include="wwwroot\summernote-develop\lang\summernote-hu-HU.js" />
+    <None Include="wwwroot\summernote-develop\lang\summernote-id-ID.js" />
+    <None Include="wwwroot\summernote-develop\lang\summernote-it-IT.js" />
+    <None Include="wwwroot\summernote-develop\lang\summernote-ja-JP.js" />
+    <None Include="wwwroot\summernote-develop\lang\summernote-ko-KR.js" />
+    <None Include="wwwroot\summernote-develop\lang\summernote-lt-LT.js" />
+    <None Include="wwwroot\summernote-develop\lang\summernote-lt-LV.js" />
+    <None Include="wwwroot\summernote-develop\lang\summernote-mn-MN.js" />
+    <None Include="wwwroot\summernote-develop\lang\summernote-nb-NO.js" />
+    <None Include="wwwroot\summernote-develop\lang\summernote-nl-NL.js" />
+    <None Include="wwwroot\summernote-develop\lang\summernote-pl-PL.js" />
+    <None Include="wwwroot\summernote-develop\lang\summernote-pt-BR.js" />
+    <None Include="wwwroot\summernote-develop\lang\summernote-pt-PT.js" />
+    <None Include="wwwroot\summernote-develop\lang\summernote-ro-RO.js" />
+    <None Include="wwwroot\summernote-develop\lang\summernote-ru-RU.js" />
+    <None Include="wwwroot\summernote-develop\lang\summernote-sk-SK.js" />
+    <None Include="wwwroot\summernote-develop\lang\summernote-sl-SI.js" />
+    <None Include="wwwroot\summernote-develop\lang\summernote-sr-RS-Latin.js" />
+    <None Include="wwwroot\summernote-develop\lang\summernote-sr-RS.js" />
+    <None Include="wwwroot\summernote-develop\lang\summernote-sv-SE.js" />
+    <None Include="wwwroot\summernote-develop\lang\summernote-ta-IN.js" />
+    <None Include="wwwroot\summernote-develop\lang\summernote-th-TH.js" />
+    <None Include="wwwroot\summernote-develop\lang\summernote-tr-TR.js" />
+    <None Include="wwwroot\summernote-develop\lang\summernote-uk-UA.js" />
+    <None Include="wwwroot\summernote-develop\lang\summernote-vi-VN.js" />
+    <None Include="wwwroot\summernote-develop\lang\summernote-zh-CN.js" />
+    <None Include="wwwroot\summernote-develop\lang\summernote-zh-TW.js" />
+    <None Include="wwwroot\summernote-develop\LICENSE" />
+    <None Include="wwwroot\summernote-develop\MAINTAIN.md" />
+    <None Include="wwwroot\summernote-develop\plugin\databasic\summernote-ext-databasic.js" />
+    <None Include="wwwroot\summernote-develop\plugin\hello\summernote-ext-hello.js" />
+    <None Include="wwwroot\summernote-develop\plugin\specialchars\summernote-ext-specialchars.js" />
+    <None Include="wwwroot\summernote-develop\PULL_REQUEST_TEMPLATE.md" />
+    <None Include="wwwroot\summernote-develop\README.md" />
+    <None Include="wwwroot\summernote-develop\src\icons\align-center.svg" />
+    <None Include="wwwroot\summernote-develop\src\icons\align-indent.svg" />
+    <None Include="wwwroot\summernote-develop\src\icons\align-justify.svg" />
+    <None Include="wwwroot\summernote-develop\src\icons\align-left.svg" />
+    <None Include="wwwroot\summernote-develop\src\icons\align-outdent.svg" />
+    <None Include="wwwroot\summernote-develop\src\icons\align-right.svg" />
+    <None Include="wwwroot\summernote-develop\src\icons\align.svg" />
+    <None Include="wwwroot\summernote-develop\src\icons\arrow-circle-down.svg" />
+    <None Include="wwwroot\summernote-develop\src\icons\arrow-circle-left.svg" />
+    <None Include="wwwroot\summernote-develop\src\icons\arrow-circle-right.svg" />
+    <None Include="wwwroot\summernote-develop\src\icons\arrow-circle-up.svg" />
+    <None Include="wwwroot\summernote-develop\src\icons\arrows-alt.svg" />
+    <None Include="wwwroot\summernote-develop\src\icons\arrows-h.svg" />
+    <None Include="wwwroot\summernote-develop\src\icons\arrows-v.svg" />
+    <None Include="wwwroot\summernote-develop\src\icons\bold.svg" />
+    <None Include="wwwroot\summernote-develop\src\icons\caret.svg" />
+    <None Include="wwwroot\summernote-develop\src\icons\chain-broken.svg" />
+    <None Include="wwwroot\summernote-develop\src\icons\circle.svg" />
+    <None Include="wwwroot\summernote-develop\src\icons\close.svg" />
+    <None Include="wwwroot\summernote-develop\src\icons\code.svg" />
+    <None Include="wwwroot\summernote-develop\src\icons\col-after.svg" />
+    <None Include="wwwroot\summernote-develop\src\icons\col-before.svg" />
+    <None Include="wwwroot\summernote-develop\src\icons\col-remove.svg" />
+    <None Include="wwwroot\summernote-develop\src\icons\eraser.svg" />
+    <None Include="wwwroot\summernote-develop\src\icons\font.svg" />
+    <None Include="wwwroot\summernote-develop\src\icons\frame.svg" />
+    <None Include="wwwroot\summernote-develop\src\icons\italic.svg" />
+    <None Include="wwwroot\summernote-develop\src\icons\link.svg" />
+    <None Include="wwwroot\summernote-develop\src\icons\magic.svg" />
+    <None Include="wwwroot\summernote-develop\src\icons\menu-check.svg" />
+    <None Include="wwwroot\summernote-develop\src\icons\minus.svg" />
+    <None Include="wwwroot\summernote-develop\src\icons\orderedlist.svg" />
+    <None Include="wwwroot\summernote-develop\src\icons\pencil.svg" />
+    <None Include="wwwroot\summernote-develop\src\icons\picture.svg" />
+    <None Include="wwwroot\summernote-develop\src\icons\question.svg" />
+    <None Include="wwwroot\summernote-develop\src\icons\redo.svg" />
+    <None Include="wwwroot\summernote-develop\src\icons\row-above.svg" />
+    <None Include="wwwroot\summernote-develop\src\icons\row-below.svg" />
+    <None Include="wwwroot\summernote-develop\src\icons\row-remove.svg" />
+    <None Include="wwwroot\summernote-develop\src\icons\special-character.svg" />
+    <None Include="wwwroot\summernote-develop\src\icons\square.svg" />
+    <None Include="wwwroot\summernote-develop\src\icons\strikethrough.svg" />
+    <None Include="wwwroot\summernote-develop\src\icons\subscript.svg" />
+    <None Include="wwwroot\summernote-develop\src\icons\summernote.svg" />
+    <None Include="wwwroot\summernote-develop\src\icons\superscript.svg" />
+    <None Include="wwwroot\summernote-develop\src\icons\table.svg" />
+    <None Include="wwwroot\summernote-develop\src\icons\text-height.svg" />
+    <None Include="wwwroot\summernote-develop\src\icons\trash.svg" />
+    <None Include="wwwroot\summernote-develop\src\icons\underline.svg" />
+    <None Include="wwwroot\summernote-develop\src\icons\undo.svg" />
+    <None Include="wwwroot\summernote-develop\src\icons\unorderedlist.svg" />
+    <None Include="wwwroot\summernote-develop\src\icons\video.svg" />
+    <None Include="wwwroot\summernote-develop\src\js\base\Context.js" />
+    <None Include="wwwroot\summernote-develop\src\js\base\core\async.js" />
+    <None Include="wwwroot\summernote-develop\src\js\base\core\dom.js" />
+    <None Include="wwwroot\summernote-develop\src\js\base\core\env.js" />
+    <None Include="wwwroot\summernote-develop\src\js\base\core\func.js" />
+    <None Include="wwwroot\summernote-develop\src\js\base\core\key.js" />
+    <None Include="wwwroot\summernote-develop\src\js\base\core\lists.js" />
+    <None Include="wwwroot\summernote-develop\src\js\base\core\range.js" />
+    <None Include="wwwroot\summernote-develop\src\js\base\editing\Bullet.js" />
+    <None Include="wwwroot\summernote-develop\src\js\base\editing\History.js" />
+    <None Include="wwwroot\summernote-develop\src\js\base\editing\Style.js" />
+    <None Include="wwwroot\summernote-develop\src\js\base\editing\Table.js" />
+    <None Include="wwwroot\summernote-develop\src\js\base\editing\Typing.js" />
+    <None Include="wwwroot\summernote-develop\src\js\base\module\AirPopover.js" />
+    <None Include="wwwroot\summernote-develop\src\js\base\module\AutoLink.js" />
+    <None Include="wwwroot\summernote-develop\src\js\base\module\AutoSync.js" />
+    <None Include="wwwroot\summernote-develop\src\js\base\module\Buttons.js" />
+    <None Include="wwwroot\summernote-develop\src\js\base\module\Clipboard.js" />
+    <None Include="wwwroot\summernote-develop\src\js\base\module\Codeview.js" />
+    <None Include="wwwroot\summernote-develop\src\js\base\module\Dropzone.js" />
+    <None Include="wwwroot\summernote-develop\src\js\base\module\Editor.js" />
+    <None Include="wwwroot\summernote-develop\src\js\base\module\Fullscreen.js" />
+    <None Include="wwwroot\summernote-develop\src\js\base\module\Handle.js" />
+    <None Include="wwwroot\summernote-develop\src\js\base\module\HelpDialog.js" />
+    <None Include="wwwroot\summernote-develop\src\js\base\module\HintPopover.js" />
+    <None Include="wwwroot\summernote-develop\src\js\base\module\ImageDialog.js" />
+    <None Include="wwwroot\summernote-develop\src\js\base\module\ImagePopover.js" />
+    <None Include="wwwroot\summernote-develop\src\js\base\module\LinkDialog.js" />
+    <None Include="wwwroot\summernote-develop\src\js\base\module\LinkPopover.js" />
+    <None Include="wwwroot\summernote-develop\src\js\base\module\Placeholder.js" />
+    <None Include="wwwroot\summernote-develop\src\js\base\module\Statusbar.js" />
+    <None Include="wwwroot\summernote-develop\src\js\base\module\TablePopover.js" />
+    <None Include="wwwroot\summernote-develop\src\js\base\module\Toolbar.js" />
+    <None Include="wwwroot\summernote-develop\src\js\base\module\VideoDialog.js" />
+    <None Include="wwwroot\summernote-develop\src\js\base\renderer.js" />
+    <None Include="wwwroot\summernote-develop\src\js\base\summernote-en-US.js" />
+    <None Include="wwwroot\summernote-develop\src\js\bs3\settings.js" />
+    <None Include="wwwroot\summernote-develop\src\js\bs3\ui.js" />
+    <None Include="wwwroot\summernote-develop\src\js\bs4\settings.js" />
+    <None Include="wwwroot\summernote-develop\src\js\bs4\ui.js" />
+    <None Include="wwwroot\summernote-develop\src\js\lite\settings.js" />
+    <None Include="wwwroot\summernote-develop\src\js\lite\ui.js" />
+    <None Include="wwwroot\summernote-develop\src\js\lite\ui\DropdownUI.js" />
+    <None Include="wwwroot\summernote-develop\src\js\lite\ui\ModalUI.js" />
+    <None Include="wwwroot\summernote-develop\src\js\lite\ui\PopoverUI.js" />
+    <None Include="wwwroot\summernote-develop\src\js\lite\ui\TooltipUI.js" />
+    <None Include="wwwroot\summernote-develop\src\js\summernote.js" />
+    <None Include="wwwroot\summernote-develop\src\less\elements.less" />
+    <None Include="wwwroot\summernote-develop\src\less\elements.scss" />
+    <None Include="wwwroot\summernote-develop\src\less\lite-ui\all.less" />
+    <None Include="wwwroot\summernote-develop\src\less\lite-ui\btn-group.less" />
+    <None Include="wwwroot\summernote-develop\src\less\lite-ui\buttons.less" />
+    <None Include="wwwroot\summernote-develop\src\less\lite-ui\common.less" />
+    <None Include="wwwroot\summernote-develop\src\less\lite-ui\dropdown.less" />
+    <None Include="wwwroot\summernote-develop\src\less\lite-ui\form.less" />
+    <None Include="wwwroot\summernote-develop\src\less\lite-ui\mixins.less" />
+    <None Include="wwwroot\summernote-develop\src\less\lite-ui\mixins\buttons.less" />
+    <None Include="wwwroot\summernote-develop\src\less\lite-ui\modal.less" />
+    <None Include="wwwroot\summernote-develop\src\less\lite-ui\popover.less" />
+    <None Include="wwwroot\summernote-develop\src\less\lite-ui\toolbar.less" />
+    <None Include="wwwroot\summernote-develop\src\less\lite-ui\tooltip.less" />
+    <None Include="wwwroot\summernote-develop\src\less\lite-ui\variables.less" />
+    <None Include="wwwroot\summernote-develop\src\less\summernote-bs4.less" />
+    <None Include="wwwroot\summernote-develop\src\less\summernote-bs4.scss" />
+    <None Include="wwwroot\summernote-develop\src\less\summernote-lite.less" />
+    <None Include="wwwroot\summernote-develop\src\less\summernote.less" />
+    <None Include="wwwroot\summernote-develop\src\less\summernote.scss" />
+    <None Include="wwwroot\summernote-develop\test\chaidom.js" />
+    <None Include="wwwroot\summernote-develop\test\e2e\initialization.test.js" />
+    <None Include="wwwroot\summernote-develop\test\e2e\static-server.js" />
+    <None Include="wwwroot\summernote-develop\test\libs\.gitkeep" />
+    <None Include="wwwroot\summernote-develop\test\libs\sauce.js" />
+    <None Include="wwwroot\summernote-develop\test\nightwatch.conf.js" />
+    <None Include="wwwroot\summernote-develop\test\unit\base\Context.spec.js" />
+    <None Include="wwwroot\summernote-develop\test\unit\base\core\dom.spec.js" />
+    <None Include="wwwroot\summernote-develop\test\unit\base\core\func.spec.js" />
+    <None Include="wwwroot\summernote-develop\test\unit\base\core\key.spec.js" />
+    <None Include="wwwroot\summernote-develop\test\unit\base\core\lists.spec.js" />
+    <None Include="wwwroot\summernote-develop\test\unit\base\core\range.spec.js" />
+    <None Include="wwwroot\summernote-develop\test\unit\base\editing\style.spec.js" />
+    <None Include="wwwroot\summernote-develop\test\unit\base\editing\Table.spec.js" />
+    <None Include="wwwroot\summernote-develop\test\unit\base\module\Codeview.spec.js" />
+    <None Include="wwwroot\summernote-develop\test\unit\base\module\Editor.spec.js" />
+    <None Include="wwwroot\summernote-develop\test\unit\base\module\Fullscreen.spec.js" />
+    <None Include="wwwroot\summernote-develop\test\unit\bs\module\Buttons.spec.js" />
+    <None Include="wwwroot\summernote-develop\test\unit\bs\module\VideoDialog.spec.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EntityFrameworkPaginateCore\EntityFrameworkPaginateCore\EntityFrameworkPaginateCore.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Enums\" />
+    <Folder Include="wwwroot\fonts\" />
+    <Folder Include="wwwroot\images\" />
+    <Folder Include="wwwroot\UploadImages\" />
+  </ItemGroup>
+</Project>

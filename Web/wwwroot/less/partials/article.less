@@ -1,0 +1,26 @@
+.article_section_cover{
+  background: #fff;
+  position: relative;
+  .vert_dividers{
+    pointer-events: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: none;
+    >div{
+      height: 100%;
+      width: 100/8%;
+      border-right: 1px solid #ededed;
+      transition: opacity 300ms;
+    }
+  }
+  .article_section{
+    position: relative;
+    padding: 20px 100/8/2%;
+    padding-top: 100px;
+    max-width: calc(~"1000px + 12.5%");
+    margin: 0 auto;
+  }
+}

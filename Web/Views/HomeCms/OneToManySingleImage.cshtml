@@ -1,0 +1,16 @@
+﻿@using Web.ViewModels.Cms
+@model Web.ViewModels.Cms.OneToManySingleImage
+
+@{
+    Layout = null;
+    var divId = $"{Model.Id}OneToManyDiv{Model.LinkPropertyName}";
+}
+
+<div style="margin-top: 20px; margin-bottom: 20px" id="@(divId)">
+    <img src="@(Model.Url)" style="max-height: 400px; max-width: 900px; margin-bottom: 10px" alt="Изображение" />
+    <form asp-controller="HomeCms" asp-action="RemoveOneToManyImage" method="post" data-ajax="true" data-ajax-update="#@(divId)">
+        <input type="hidden" value="@(Model.Id)" name="id" />
+
+        <input type="submit" value="Удалить изображение" class="btn btn-primary" />
+    </form>
+</div>

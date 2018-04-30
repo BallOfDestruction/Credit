@@ -1,0 +1,107 @@
+.review_cover{
+  background: @maize;
+  .title{
+    font-size: 20px;
+    font-weight: normal;
+    padding-left: 8%;
+    padding-top: 68px;
+    padding-bottom: 115px;
+  }
+  .review_cover_slider{
+    .owl-item{
+      .item.text{
+        opacity: 1;
+        transition: opacity 300ms;
+        min-width: 380px;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      .item.text.hide{
+        opacity: 0;
+      }
+    }
+    .item{
+      text-align: center;
+      height: 470px;
+      padding: 0 30px;
+      &.text{
+        text-align: left;
+        display: flex;
+        align-items: center;
+        position: relative;
+        >div{
+          position: relative;
+          left: -20px;
+        }
+        p{
+          font-size: 18px;
+          letter-spacing: 0.9px;
+          line-height: 30px;
+          padding-bottom: 20px;
+        }
+        .subtitle{
+          font-weight: bold;
+          font-size: 24px;
+          letter-spacing: 1.2px;
+        }
+      }
+      .img_cover_review{
+        display: inline-block;
+        padding: 27px;
+        max-width: 100%;
+        background: url("images/border_review.jpg") no-repeat;
+        background-size: contain;
+        img{
+          width: auto;
+          max-width: 100%;
+        }
+      }
+    }
+    .owl-nav{
+      font-size: 0;
+      text-align: center;
+      z-index: 1;
+      position: relative;
+      padding-top: 60px;
+      .owl-next{
+        background: @greyish-brown;
+        height: 60px;
+        width: 60px;
+        display: inline-block;
+        cursor: pointer;
+        margin-top: 0px;
+        position: relative;
+        &:after{
+          content: '';
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          width: 31px;
+          height: 27px;
+          transform: translate(-50%, -50%);
+          background: url("images/icons/right_nav.png") no-repeat center;
+        }
+      }
+      .owl-prev{
+        background: @greyish-brown;
+        height: 60px;
+        width: 60px;
+        display: inline-block;
+        cursor: pointer;
+        margin-top: 0px;
+        position: relative;
+        &:after{
+          content: '';
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          width: 31px;
+          height: 27px;
+          transform: translate(-50%, -50%);
+          background: url("images/icons/left_nav.png") no-repeat center;
+        }
+      }
+    }
+  }
+}

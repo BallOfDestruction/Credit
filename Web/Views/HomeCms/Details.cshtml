@@ -1,0 +1,90 @@
+﻿@using System.Collections
+@using System.Reflection
+@using Web.Controllers.cms
+@using Web.Models
+@using Web.StaticHelpers
+@model dynamic
+@inject Context DbContext
+
+@{
+    Layout = "~/Views/Shared/_LayoutCms.cshtml";
+
+    var type = (Type)ViewBag.Type;
+    var access = type.GetCustomAttribute<AccessAttribute>() ?? new AccessAttribute();
+    var nameType = (string)ViewBag.NameType;
+    var cmsSection = DbContext.CmsModels.FirstOrDefault(w => w.Class == nameType);
+
+    var properties = ReflectionHelper.GetProperiesInDetails(type);
+
+    var stringType = typeof(string);
+    var ienumerableType = typeof(IEnumerable);
+
+    var id = ((IEntity)Model)?.Id;
+
+    ViewData["TitleToTopLabelE"] = "Просмотр " + cmsSection?.Title;
+}
+
+<div class="col-md-offset-1 col-md-10">
+    <br />
+    <h2>Просмотр объекта</h2>
+    <hr />
+    <p>
+
+        <div>
+            <h4>@cmsSection?.Title</h4>
+            <hr />
+            <br />
+
+            <div class="">
+                @foreach (var property in properties)
+                {
+                    <div class="col-md-12" style="margin-bottom: 30px;">
+                        @{
+                            var name = ReflectionHelper.GetNameProperty(property);
+                            var propertyType = property.PropertyType;
+                        }
+                        <div class="col-md-2">
+                            <span style="font-weight: bold">
+                                @Html.DisplayName(name)
+                            </span>
+                        </div>
+                        <div class="col-md-10">
+
+                            @if ((propertyType.IsClass || propertyType.IsArray) && propertyType != stringType)
+                            {
+                                if (propertyType.IsArray || propertyType.GetInterfaces().Any(w => w == ienumerableType))
+                                {
+                                    var value = (IEnumerable)property.GetValue(Model, null);
+
+                                    foreach (var val in value)
+                                    {
+                                        <div class="col-md-12" style="color: #ff0000; height: 50px;"></div>
+                                        @Html.Partial("CMS/DetailsInnerObject", val)
+                                    }
+                                }
+                                else
+                                {
+                                    var value = (object)property.GetValue(Model, null);
+                                    @Html.Partial("CMS/DetailsInnerObject", value)
+                                }
+                            }
+                            else
+                            {
+                                var value = (string)ReflectionHelper.GetValuePropertyAsString(property, Model);
+                                @Html.DisplayFor(model => value)
+                            }
+
+                        </div>
+                    </div>
+                            }
+            </div>
+        </div>
+    <div>
+        @if (access.OnEdit)
+        {
+            @Html.ActionLink("Редактировать", "Edit", new { type = nameType, id = id }) 
+            <span>|</span>
+        }
+        @Html.ActionLink("К списку", "GetList", new {type = nameType})
+    </div>
+</div>

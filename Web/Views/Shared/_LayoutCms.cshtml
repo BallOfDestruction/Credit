@@ -1,0 +1,75 @@
+﻿@using System.Globalization
+@using Web.Models
+@inject Context ContextDb
+@{
+    var pages = ContextDb.CmsModels?.ToList() ?? new List<CmsModel>();
+}
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>@ViewData["TitleToTopLabelE"]</title>
+    
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet">
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script>
+
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.8/summernote.css" rel="stylesheet">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.8/summernote.js"></script>
+    
+    <script src="/js/bootstrap.file-input.js"> </script>
+</head>
+<body>
+    <div class="navigation_cover collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+            @foreach (var page in pages.OrderBy(w => w.Position))
+            {
+                <li>
+                    @if (page.IsSinglePage)
+                    {
+                        <a href="/HomeCms/EditFirst?type=@(page.Class)">
+                            @(page.Title)
+                        </a>
+                    }
+                    else
+                    {
+                        <a href="/HomeCms/GetList?type=@(page.Class)">
+                            @(page.Title)
+                            @if (page.NewCount > 0)
+                            {
+                                <span style="color: blueviolet">(+@(page.NewCount))</span>
+                            }
+                        </a>
+                    }
+                </li>
+            }
+            <li>
+                <a href="/LoginCms/Logout">
+                    <span style="color: red">Выход</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    @RenderBody()
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.summernote').summernote({
+            placeholder: 'Введите текст',
+            lang: 'ru-RU',
+            tabsize: 1,
+            height: 150
+        });
+
+        $(':input').serialize();
+    });
+</script>
+    
+<script src="~/lib/jquery-ajax-unobtrusive/jquery.unobtrusive-ajax.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+﻿@using Web.ViewModels.Cms
+@model Web.ViewModels.Cms.ImageViewModel
+
+@{
+    Layout = null;
+}
+
+
+@if (Model?.ImageId == null)
+{
+    <input type="file" title="Выберите изображение" class="btn btn-primary" id="@(Model?.Id)image" accept="image/*" />
+    <input type="submit" value="Загрузить" class="btn btn-primary" onclick="uploadImage()" />
+    <script>
+        uploadImage = function() {
+            var file = $("#@(Model?.Id)image")[0].files[0];
+            var formData = new FormData();
+            formData.append("uploadedImage", file);
+
+            $.ajax({
+                url: "/HomeCms/AddImage",
+                type: "POST",
+                contentType: false,
+                data: formData,
+                cache: false,
+                processData: false,
+                async: true,
+                success: function (id) {
+                    $.ajax({
+                        url: "/HomeCms/AddImage?id=" + id + "&idImageProperty=" + "@(Model?.Id)",
+                        type: "GET",
+                        contentType: false,
+                        cache: false,
+                        processData: false,
+                        async: true,
+                        success: function (data) {
+                            var input = $("#@(Model?.Id)Id");
+                            if (input.length === 0) {
+                                var filesDiv = $("#imagesHiddenInputs");
+                                filesDiv.html(filesDiv.html() + '<input type="hidden" id="@(Model?.Id)Id" name="@(Model?.Id)Id" value="' + id + '"/>');
+                            } else {
+                                input.val(id);
+                            }
+                            $("#@(Model?.Id)").html(data);
+                        }
+                    });
+                }
+            });
+        };
+    </script>
+}
+else
+{
+    <img src="@(Model.Url)" style="max-height: 400px; max-width: 900px" alt="Изображение"/>
+    <form asp-controller="HomeCms" asp-action="RemoveImage" method="post" data-ajax="true" data-ajax-update="#@(Model?.Id)" data-ajax-success="onDelete()">
+        <input type="hidden" value="@(Model.ImageId)" name="id" />
+        <input type="hidden" value="@(Model.Id)" name="idImageProperty" />
+
+        <input type="submit" value="Удалить файл" class="btn btn-primary" style="margin-bottom: 20px; margin-top: 20px" />
+    </form>
+
+    <script>
+        onDelete = function() {
+            var input = $("#@(Model?.Id)Id");
+            if (input.length === 0) {
+                var filesDiv = $("#imagesHiddenInputs");
+                filesDiv.html(filesDiv.html() + '<input type="hidden" id="@(Model?.Id)Id" name="@(Model?.Id)Id" value=""/>');
+            } else {
+                input.val("");
+            }
+        };
+    </script>
+}
+<br>
+
+<script>
+    $('input[type=file]').bootstrapFileInput();
+    $('.file-inputs').bootstrapFileInput();
+</script>

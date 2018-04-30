@@ -1,0 +1,129 @@
+.projects_slider_cover{
+  position: relative;
+  .section_title{
+    position: absolute;
+    left: 12%;
+    top: 120px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #2e2e2e;
+  }
+}
+.projects_slider{
+  .owl-nav{
+    font-size: 0;
+    text-align: center;
+    z-index: 1;
+    position: relative;
+    .owl-next{
+      background: @salmon;
+      height: 60px;
+      width: 60px;
+      display: inline-block;
+      cursor: pointer;
+      margin-top: -60px;
+      position: relative;
+      transition: 500ms;
+      &:hover{
+        background: #e1e1e1;
+        &:after{
+          background: url("images/icons/right_dark.png") no-repeat center;
+        }
+      }
+      &:after{
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 31px;
+        height: 27px;
+        transform: translate(-50%, -50%);
+        background: url("images/icons/right_nav.png") no-repeat center;
+      }
+    }
+    .owl-prev{
+      background: @salmon;
+      height: 60px;
+      width: 60px;
+      display: inline-block;
+      cursor: pointer;
+      margin-top: -60px;
+      position: relative;
+      transition: 500ms;
+      &:hover{
+        background: #e1e1e1;
+        &:after{
+          background: url("images/icons/left_dark.png") no-repeat center;
+        }
+      }
+      &:after{
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 31px;
+        height: 27px;
+        transform: translate(-50%, -50%);
+        background: url("images/icons/left_nav.png") no-repeat center;
+      }
+    }
+  }
+  .owl-item.active{
+    .item{
+      left: 0;
+    }
+  }
+  .item_bg{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  .item{
+    display: flex;
+    position: relative;
+    left: -18%;
+    transition: left 600ms;
+    .img_cover{
+      padding-top: 180px;
+      padding-bottom: 115px;
+      padding-left: 12%;
+    }
+    .info_cover{
+      padding-top: 125px;
+      padding-left: 8%;
+      padding-right: 7%;
+      padding-bottom: 115px;
+      color: #fff;
+      .city{
+        font-size: 19px;
+        font-weight: bold;
+        letter-spacing: 0.9px;
+      }
+      .name{
+        letter-spacing: 1.6px;
+        font-size: 31px;
+      }
+      .info_grid{
+        margin-top: 60px;
+        display: flex;
+        flex-wrap: wrap;
+        >div{
+          width: 50%;
+        }
+        .grid_block{
+          margin-bottom: 47px;
+          .label{
+            font-size: 18px;
+            letter-spacing: 0.9px;
+            font-style: italic;
+          }
+          .value{
+            font-size: 34px;
+            font-weight: bold;
+            letter-spacing: 1.7px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,2396 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA5KyxdGOMN0u9CgjPkG7UvQAAAAACAAAAAAAQZgAAAAEAACAAAAA4aiLXfj/HqS2SrmDXkNA90+Q20aKmnS7NiZiB7Y5swgAAAAAOgAAAAAIAACAAAAAfKJvkz8TxI0SgHRkYqkveaWzgkp0MufydDYLOLIMrxCAAAABkBH/yg6VrqfKnb8GTnM1UttO3hOIIMdkrvO+ohOlzMkAAAACA+nJp0ocZzH+GQXkJ5XBSFjmE/ylWqeSJqDYAqspQNuSQw72xN3lvz3S4LabhIYjbZbNdgxWu1x8FA4/rUDh6</EncryptedPassword>
+    <_PublishTargetUrl>ftp://31.31.196.89/httpdocs\zmk-armada.ru/</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="appsettings.Development.json">
+      <publishTime>12/27/2017 23:30:50</publishTime>
+    </File>
+    <File Include="appsettings.json">
+      <publishTime>03/28/2018 18:41:37</publishTime>
+    </File>
+    <File Include="Armada.deps.json">
+      <publishTime>04/28/2018 10:42:05</publishTime>
+    </File>
+    <File Include="Armada.dll">
+      <publishTime>04/28/2018 10:41:46</publishTime>
+    </File>
+    <File Include="Armada.pdb">
+      <publishTime>04/28/2018 10:41:46</publishTime>
+    </File>
+    <File Include="Armada.PrecompiledViews.dll">
+      <publishTime>04/28/2018 10:41:51</publishTime>
+    </File>
+    <File Include="Armada.PrecompiledViews.pdb">
+      <publishTime>04/28/2018 10:41:51</publishTime>
+    </File>
+    <File Include="Armada.runtimeconfig.json">
+      <publishTime>04/28/2018 10:42:05</publishTime>
+    </File>
+    <File Include="BouncyCastle.Crypto.dll">
+      <publishTime>08/17/2017 18:20:54</publishTime>
+    </File>
+    <File Include="bower.json">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="bundleconfig.json">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="dotnet-aspnet-codegenerator-design.dll">
+      <publishTime>07/25/2017 00:48:06</publishTime>
+    </File>
+    <File Include="EntityFrameworkPaginateCore.dll">
+      <publishTime>04/22/2018 14:00:43</publishTime>
+    </File>
+    <File Include="EntityFrameworkPaginateCore.pdb">
+      <publishTime>04/22/2018 14:00:43</publishTime>
+    </File>
+    <File Include="MailKit.dll">
+      <publishTime>03/18/2018 10:46:42</publishTime>
+    </File>
+    <File Include="Microsoft.CodeAnalysis.CSharp.Workspaces.dll">
+      <publishTime>04/04/2018 11:20:34</publishTime>
+    </File>
+    <File Include="Microsoft.CodeAnalysis.Workspaces.dll">
+      <publishTime>04/04/2018 11:21:20</publishTime>
+    </File>
+    <File Include="Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll">
+      <publishTime>07/25/2017 00:48:06</publishTime>
+    </File>
+    <File Include="Microsoft.VisualStudio.Web.CodeGeneration.Core.dll">
+      <publishTime>07/25/2017 00:48:06</publishTime>
+    </File>
+    <File Include="Microsoft.VisualStudio.Web.CodeGeneration.dll">
+      <publishTime>07/25/2017 00:48:06</publishTime>
+    </File>
+    <File Include="Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll">
+      <publishTime>07/25/2017 00:48:06</publishTime>
+    </File>
+    <File Include="Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll">
+      <publishTime>07/25/2017 00:48:06</publishTime>
+    </File>
+    <File Include="Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll">
+      <publishTime>07/25/2017 00:48:06</publishTime>
+    </File>
+    <File Include="Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll">
+      <publishTime>07/25/2017 00:48:06</publishTime>
+    </File>
+    <File Include="MimeKit.dll">
+      <publishTime>03/17/2018 10:05:20</publishTime>
+    </File>
+    <File Include="NuGet.Frameworks.dll">
+      <publishTime>01/30/2018 23:04:28</publishTime>
+    </File>
+    <File Include="System.Composition.AttributedModel.dll">
+      <publishTime>04/04/2018 11:21:00</publishTime>
+    </File>
+    <File Include="System.Composition.Convention.dll">
+      <publishTime>04/04/2018 11:21:00</publishTime>
+    </File>
+    <File Include="System.Composition.Hosting.dll">
+      <publishTime>04/04/2018 11:21:00</publishTime>
+    </File>
+    <File Include="System.Composition.Runtime.dll">
+      <publishTime>04/04/2018 11:21:00</publishTime>
+    </File>
+    <File Include="System.Composition.TypedParts.dll">
+      <publishTime>04/04/2018 11:21:00</publishTime>
+    </File>
+    <File Include="web.config">
+      <publishTime>04/28/2018 10:42:05</publishTime>
+    </File>
+    <File Include="wwwroot/css/bootstrap-responsive.css">
+      <publishTime>07/27/2013 12:50:47</publishTime>
+    </File>
+    <File Include="wwwroot/css/bootstrap-responsive.min.css">
+      <publishTime>07/27/2013 12:50:47</publishTime>
+    </File>
+    <File Include="wwwroot/css/bootstrap.css">
+      <publishTime>07/27/2013 12:50:46</publishTime>
+    </File>
+    <File Include="wwwroot/css/bootstrap.min.css">
+      <publishTime>07/27/2013 12:50:46</publishTime>
+    </File>
+    <File Include="wwwroot/css/components/arctic.css">
+      <publishTime>03/18/2018 12:11:07</publishTime>
+    </File>
+    <File Include="wwwroot/css/components/formstyler.css">
+      <publishTime>03/18/2018 12:11:07</publishTime>
+    </File>
+    <File Include="wwwroot/css/components/noui.css">
+      <publishTime>03/18/2018 12:11:06</publishTime>
+    </File>
+    <File Include="wwwroot/css/jquery.mCustomScrollbar.css">
+      <publishTime>03/18/2018 12:11:06</publishTime>
+    </File>
+    <File Include="wwwroot/css/owl.carousel.css">
+      <publishTime>03/18/2018 12:11:05</publishTime>
+    </File>
+    <File Include="wwwroot/css/owl.carousel.min.css">
+      <publishTime>03/18/2018 12:11:04</publishTime>
+    </File>
+    <File Include="wwwroot/css/owl.theme.default.min.css">
+      <publishTime>03/18/2018 12:11:04</publishTime>
+    </File>
+    <File Include="wwwroot/css/partials/articles_grid.css">
+      <publishTime>03/18/2018 12:11:03</publishTime>
+    </File>
+    <File Include="wwwroot/css/partials/navigation.css">
+      <publishTime>03/18/2018 12:11:03</publishTime>
+    </File>
+    <File Include="wwwroot/css/partials/news_cover.css">
+      <publishTime>03/18/2018 12:11:02</publishTime>
+    </File>
+    <File Include="wwwroot/css/partials/related_products_owl.css">
+      <publishTime>03/18/2018 12:11:02</publishTime>
+    </File>
+    <File Include="wwwroot/css/style.css">
+      <publishTime>04/02/2018 21:44:07</publishTime>
+    </File>
+    <File Include="wwwroot/css/style.css.map">
+      <publishTime>04/02/2018 21:44:08</publishTime>
+    </File>
+    <File Include="wwwroot/favicon.ico">
+      <publishTime>03/17/2018 21:47:02</publishTime>
+    </File>
+    <File Include="wwwroot/Files/1">
+      <publishTime>03/28/2018 22:32:07</publishTime>
+    </File>
+    <File Include="wwwroot/Files/10">
+      <publishTime>03/29/2018 19:12:58</publishTime>
+    </File>
+    <File Include="wwwroot/Files/10.png">
+      <publishTime>03/18/2018 16:44:58</publishTime>
+    </File>
+    <File Include="wwwroot/Files/11">
+      <publishTime>03/29/2018 19:13:17</publishTime>
+    </File>
+    <File Include="wwwroot/Files/11.png">
+      <publishTime>03/18/2018 16:45:19</publishTime>
+    </File>
+    <File Include="wwwroot/Files/12">
+      <publishTime>03/29/2018 19:14:39</publishTime>
+    </File>
+    <File Include="wwwroot/Files/12.png">
+      <publishTime>03/18/2018 16:45:32</publishTime>
+    </File>
+    <File Include="wwwroot/Files/13">
+      <publishTime>03/29/2018 19:16:08</publishTime>
+    </File>
+    <File Include="wwwroot/Files/13.png">
+      <publishTime>03/18/2018 16:45:54</publishTime>
+    </File>
+    <File Include="wwwroot/Files/14">
+      <publishTime>03/29/2018 19:16:30</publishTime>
+    </File>
+    <File Include="wwwroot/Files/14.png">
+      <publishTime>03/18/2018 16:46:19</publishTime>
+    </File>
+    <File Include="wwwroot/Files/15">
+      <publishTime>03/29/2018 19:17:20</publishTime>
+    </File>
+    <File Include="wwwroot/Files/15.jpg">
+      <publishTime>03/20/2018 19:21:15</publishTime>
+    </File>
+    <File Include="wwwroot/Files/16">
+      <publishTime>03/29/2018 19:19:11</publishTime>
+    </File>
+    <File Include="wwwroot/Files/16.jpg">
+      <publishTime>03/21/2018 00:22:27</publishTime>
+    </File>
+    <File Include="wwwroot/Files/17">
+      <publishTime>03/29/2018 19:20:03</publishTime>
+    </File>
+    <File Include="wwwroot/Files/17.jpg">
+      <publishTime>03/21/2018 00:22:40</publishTime>
+    </File>
+    <File Include="wwwroot/Files/18">
+      <publishTime>03/29/2018 19:20:17</publishTime>
+    </File>
+    <File Include="wwwroot/Files/18.jpg">
+      <publishTime>03/21/2018 00:22:46</publishTime>
+    </File>
+    <File Include="wwwroot/Files/19">
+      <publishTime>03/29/2018 19:20:22</publishTime>
+    </File>
+    <File Include="wwwroot/Files/2">
+      <publishTime>03/29/2018 16:24:00</publishTime>
+    </File>
+    <File Include="wwwroot/Files/2.jpg">
+      <publishTime>03/18/2018 16:29:12</publishTime>
+    </File>
+    <File Include="wwwroot/Files/20">
+      <publishTime>03/29/2018 19:21:03</publishTime>
+    </File>
+    <File Include="wwwroot/Files/21">
+      <publishTime>03/29/2018 19:22:14</publishTime>
+    </File>
+    <File Include="wwwroot/Files/22">
+      <publishTime>03/29/2018 19:24:17</publishTime>
+    </File>
+    <File Include="wwwroot/Files/23">
+      <publishTime>03/29/2018 19:24:44</publishTime>
+    </File>
+    <File Include="wwwroot/Files/24">
+      <publishTime>03/29/2018 19:24:47</publishTime>
+    </File>
+    <File Include="wwwroot/Files/28.jpeg">
+      <publishTime>03/29/2018 19:34:34</publishTime>
+    </File>
+    <File Include="wwwroot/Files/29.png">
+      <publishTime>03/29/2018 19:34:48</publishTime>
+    </File>
+    <File Include="wwwroot/Files/3">
+      <publishTime>03/29/2018 16:44:25</publishTime>
+    </File>
+    <File Include="wwwroot/Files/3.png">
+      <publishTime>03/18/2018 16:38:20</publishTime>
+    </File>
+    <File Include="wwwroot/Files/30.jpeg">
+      <publishTime>03/29/2018 19:34:57</publishTime>
+    </File>
+    <File Include="wwwroot/Files/31.jpeg">
+      <publishTime>03/29/2018 19:44:42</publishTime>
+    </File>
+    <File Include="wwwroot/Files/32.png">
+      <publishTime>03/29/2018 19:44:46</publishTime>
+    </File>
+    <File Include="wwwroot/Files/33.jpeg">
+      <publishTime>03/29/2018 20:07:05</publishTime>
+    </File>
+    <File Include="wwwroot/Files/34.png">
+      <publishTime>03/29/2018 20:14:30</publishTime>
+    </File>
+    <File Include="wwwroot/Files/35.png">
+      <publishTime>03/29/2018 20:30:12</publishTime>
+    </File>
+    <File Include="wwwroot/Files/36.png">
+      <publishTime>03/29/2018 23:57:09</publishTime>
+    </File>
+    <File Include="wwwroot/Files/37.jpeg">
+      <publishTime>03/29/2018 23:57:38</publishTime>
+    </File>
+    <File Include="wwwroot/Files/38.png">
+      <publishTime>03/30/2018 00:00:26</publishTime>
+    </File>
+    <File Include="wwwroot/Files/39.png">
+      <publishTime>03/30/2018 00:00:30</publishTime>
+    </File>
+    <File Include="wwwroot/Files/4">
+      <publishTime>03/29/2018 16:44:43</publishTime>
+    </File>
+    <File Include="wwwroot/Files/4.png">
+      <publishTime>03/18/2018 16:38:36</publishTime>
+    </File>
+    <File Include="wwwroot/Files/40.jpeg">
+      <publishTime>03/30/2018 00:00:34</publishTime>
+    </File>
+    <File Include="wwwroot/Files/41.jpeg">
+      <publishTime>03/30/2018 00:11:36</publishTime>
+    </File>
+    <File Include="wwwroot/Files/5">
+      <publishTime>03/29/2018 16:47:26</publishTime>
+    </File>
+    <File Include="wwwroot/Files/5.png">
+      <publishTime>03/18/2018 16:43:06</publishTime>
+    </File>
+    <File Include="wwwroot/Files/6">
+      <publishTime>03/29/2018 18:51:49</publishTime>
+    </File>
+    <File Include="wwwroot/Files/6.png">
+      <publishTime>03/18/2018 16:43:24</publishTime>
+    </File>
+    <File Include="wwwroot/Files/7">
+      <publishTime>03/29/2018 19:12:33</publishTime>
+    </File>
+    <File Include="wwwroot/Files/7.png">
+      <publishTime>03/18/2018 16:43:46</publishTime>
+    </File>
+    <File Include="wwwroot/Files/8">
+      <publishTime>03/29/2018 19:12:44</publishTime>
+    </File>
+    <File Include="wwwroot/Files/8.png">
+      <publishTime>03/18/2018 16:44:18</publishTime>
+    </File>
+    <File Include="wwwroot/Files/9">
+      <publishTime>03/29/2018 19:12:50</publishTime>
+    </File>
+    <File Include="wwwroot/Files/9.png">
+      <publishTime>03/18/2018 16:44:35</publishTime>
+    </File>
+    <File Include="wwwroot/fonts/Montserrat-Bold.ttf">
+      <publishTime>03/17/2018 21:47:02</publishTime>
+    </File>
+    <File Include="wwwroot/fonts/Montserrat-Bold.woff">
+      <publishTime>03/17/2018 21:47:02</publishTime>
+    </File>
+    <File Include="wwwroot/fonts/Montserrat-Bold.woff2">
+      <publishTime>03/17/2018 21:47:02</publishTime>
+    </File>
+    <File Include="wwwroot/fonts/Montserrat-LightItalic.ttf">
+      <publishTime>03/17/2018 21:47:02</publishTime>
+    </File>
+    <File Include="wwwroot/fonts/Montserrat-LightItalic.woff">
+      <publishTime>03/17/2018 21:47:02</publishTime>
+    </File>
+    <File Include="wwwroot/fonts/Montserrat-LightItalic.woff2">
+      <publishTime>03/17/2018 21:47:02</publishTime>
+    </File>
+    <File Include="wwwroot/fonts/Montserrat-Medium.ttf">
+      <publishTime>03/17/2018 21:47:02</publishTime>
+    </File>
+    <File Include="wwwroot/fonts/Montserrat-Medium.woff">
+      <publishTime>03/17/2018 21:47:02</publishTime>
+    </File>
+    <File Include="wwwroot/fonts/Montserrat-Medium.woff2">
+      <publishTime>03/17/2018 21:47:02</publishTime>
+    </File>
+    <File Include="wwwroot/fonts/Montserrat-Regular.ttf">
+      <publishTime>03/17/2018 21:47:02</publishTime>
+    </File>
+    <File Include="wwwroot/fonts/Montserrat-Regular.woff">
+      <publishTime>03/17/2018 21:47:02</publishTime>
+    </File>
+    <File Include="wwwroot/fonts/Montserrat-Regular.woff2">
+      <publishTime>03/17/2018 21:47:02</publishTime>
+    </File>
+    <File Include="wwwroot/fonts/Montserrat/Montserrat-Black.otf">
+      <publishTime>03/17/2018 21:47:02</publishTime>
+    </File>
+    <File Include="wwwroot/fonts/Montserrat/Montserrat-Black.ttf">
+      <publishTime>03/17/2018 21:47:02</publishTime>
+    </File>
+    <File Include="wwwroot/fonts/Montserrat/Montserrat-BlackItalic.otf">
+      <publishTime>03/17/2018 21:47:02</publishTime>
+    </File>
+    <File Include="wwwroot/fonts/Montserrat/Montserrat-BlackItalic.ttf">
+      <publishTime>03/17/2018 21:47:02</publishTime>
+    </File>
+    <File Include="wwwroot/fonts/Montserrat/Montserrat-Bold.otf">
+      <publishTime>03/17/2018 21:47:02</publishTime>
+    </File>
+    <File Include="wwwroot/fonts/Montserrat/Montserrat-Bold.ttf">
+      <publishTime>03/17/2018 21:47:02</publishTime>
+    </File>
+    <File Include="wwwroot/fonts/Montserrat/Montserrat-BoldItalic.otf">
+      <publishTime>03/17/2018 21:47:02</publishTime>
+    </File>
+    <File Include="wwwroot/fonts/Montserrat/Montserrat-BoldItalic.ttf">
+      <publishTime>03/17/2018 21:47:02</publishTime>
+    </File>
+    <File Include="wwwroot/fonts/Montserrat/Montserrat-ExtraBold.otf">
+      <publishTime>03/17/2018 21:47:02</publishTime>
+    </File>
+    <File Include="wwwroot/fonts/Montserrat/Montserrat-ExtraBold.ttf">
+      <publishTime>03/17/2018 21:47:02</publishTime>
+    </File>
+    <File Include="wwwroot/fonts/Montserrat/Montserrat-ExtraBoldItalic.otf">
+      <publishTime>03/17/2018 21:47:02</publishTime>
+    </File>
+    <File Include="wwwroot/fonts/Montserrat/Montserrat-ExtraBoldItalic.ttf">
+      <publishTime>03/17/2018 21:47:02</publishTime>
+    </File>
+    <File Include="wwwroot/fonts/Montserrat/Montserrat-ExtraLight.otf">
+      <publishTime>03/17/2018 21:47:02</publishTime>
+    </File>
+    <File Include="wwwroot/fonts/Montserrat/Montserrat-ExtraLight.ttf">
+      <publishTime>03/17/2018 21:47:02</publishTime>
+    </File>
+    <File Include="wwwroot/fonts/Montserrat/Montserrat-ExtraLightItalic.otf">
+      <publishTime>03/17/2018 21:47:02</publishTime>
+    </File>
+    <File Include="wwwroot/fonts/Montserrat/Montserrat-ExtraLightItalic.ttf">
+      <publishTime>03/17/2018 21:47:02</publishTime>
+    </File>
+    <File Include="wwwroot/fonts/Montserrat/Montserrat-Italic.otf">
+      <publishTime>03/17/2018 21:47:02</publishTime>
+    </File>
+    <File Include="wwwroot/fonts/Montserrat/Montserrat-Italic.ttf">
+      <publishTime>03/17/2018 21:47:02</publishTime>
+    </File>
+    <File Include="wwwroot/fonts/Montserrat/Montserrat-Light.otf">
+      <publishTime>03/17/2018 21:47:02</publishTime>
+    </File>
+    <File Include="wwwroot/fonts/Montserrat/Montserrat-Light.ttf">
+      <publishTime>03/17/2018 21:47:02</publishTime>
+    </File>
+    <File Include="wwwroot/fonts/Montserrat/Montserrat-LightItalic.otf">
+      <publishTime>03/17/2018 21:47:02</publishTime>
+    </File>
+    <File Include="wwwroot/fonts/Montserrat/Montserrat-LightItalic.ttf">
+      <publishTime>03/17/2018 21:47:02</publishTime>
+    </File>
+    <File Include="wwwroot/fonts/Montserrat/Montserrat-Medium.otf">
+      <publishTime>03/17/2018 21:47:02</publishTime>
+    </File>
+    <File Include="wwwroot/fonts/Montserrat/Montserrat-Medium.ttf">
+      <publishTime>03/17/2018 21:47:02</publishTime>
+    </File>
+    <File Include="wwwroot/fonts/Montserrat/Montserrat-MediumItalic.otf">
+      <publishTime>03/17/2018 21:47:02</publishTime>
+    </File>
+    <File Include="wwwroot/fonts/Montserrat/Montserrat-MediumItalic.ttf">
+      <publishTime>03/17/2018 21:47:02</publishTime>
+    </File>
+    <File Include="wwwroot/fonts/Montserrat/Montserrat-Regular.otf">
+      <publishTime>03/17/2018 21:47:02</publishTime>
+    </File>
+    <File Include="wwwroot/fonts/Montserrat/Montserrat-Regular.ttf">
+      <publishTime>03/17/2018 21:47:03</publishTime>
+    </File>
+    <File Include="wwwroot/fonts/Montserrat/Montserrat-SemiBold.otf">
+      <publishTime>03/17/2018 21:47:03</publishTime>
+    </File>
+    <File Include="wwwroot/fonts/Montserrat/Montserrat-SemiBold.ttf">
+      <publishTime>03/17/2018 21:47:03</publishTime>
+    </File>
+    <File Include="wwwroot/fonts/Montserrat/Montserrat-SemiBoldItalic.otf">
+      <publishTime>03/17/2018 21:47:03</publishTime>
+    </File>
+    <File Include="wwwroot/fonts/Montserrat/Montserrat-SemiBoldItalic.ttf">
+      <publishTime>03/17/2018 21:47:03</publishTime>
+    </File>
+    <File Include="wwwroot/fonts/Montserrat/Montserrat-Thin.otf">
+      <publishTime>03/17/2018 21:47:03</publishTime>
+    </File>
+    <File Include="wwwroot/fonts/Montserrat/Montserrat-Thin.ttf">
+      <publishTime>03/17/2018 21:47:03</publishTime>
+    </File>
+    <File Include="wwwroot/fonts/Montserrat/Montserrat-ThinItalic.otf">
+      <publishTime>03/17/2018 21:47:03</publishTime>
+    </File>
+    <File Include="wwwroot/fonts/Montserrat/Montserrat-ThinItalic.ttf">
+      <publishTime>03/17/2018 21:47:03</publishTime>
+    </File>
+    <File Include="wwwroot/fonts/Montserrat/OFL.txt">
+      <publishTime>03/17/2018 21:47:03</publishTime>
+    </File>
+    <File Include="wwwroot/fonts/stylesheet.css">
+      <publishTime>03/17/2018 21:47:03</publishTime>
+    </File>
+    <File Include="wwwroot/fonts/transfonter.org-20180224-121451.zip">
+      <publishTime>03/17/2018 21:47:03</publishTime>
+    </File>
+    <File Include="wwwroot/images/about_triangle.png">
+      <publishTime>03/17/2018 21:47:03</publishTime>
+    </File>
+    <File Include="wwwroot/images/border_review.jpg">
+      <publishTime>03/17/2018 21:47:03</publishTime>
+    </File>
+    <File Include="wwwroot/images/burger.png">
+      <publishTime>03/17/2018 21:47:03</publishTime>
+    </File>
+    <File Include="wwwroot/images/close.png">
+      <publishTime>03/17/2018 21:47:03</publishTime>
+    </File>
+    <File Include="wwwroot/images/gallery_img.jpg">
+      <publishTime>03/17/2018 21:47:03</publishTime>
+    </File>
+    <File Include="wwwroot/images/grid_img_1.png">
+      <publishTime>03/17/2018 21:47:03</publishTime>
+    </File>
+    <File Include="wwwroot/images/grid_img_2.png">
+      <publishTime>03/17/2018 21:47:03</publishTime>
+    </File>
+    <File Include="wwwroot/images/icons/left_dark.png">
+      <publishTime>04/02/2018 21:44:08</publishTime>
+    </File>
+    <File Include="wwwroot/images/icons/left_nav.png">
+      <publishTime>03/17/2018 21:47:03</publishTime>
+    </File>
+    <File Include="wwwroot/images/icons/pdf.png">
+      <publishTime>03/17/2018 21:47:03</publishTime>
+    </File>
+    <File Include="wwwroot/images/icons/pdf2.png">
+      <publishTime>03/17/2018 21:47:03</publishTime>
+    </File>
+    <File Include="wwwroot/images/icons/right_dark.png">
+      <publishTime>04/02/2018 21:44:08</publishTime>
+    </File>
+    <File Include="wwwroot/images/icons/right_nav.png">
+      <publishTime>03/17/2018 21:47:03</publishTime>
+    </File>
+    <File Include="wwwroot/images/icons/video.png">
+      <publishTime>03/17/2018 21:47:03</publishTime>
+    </File>
+    <File Include="wwwroot/images/icons/video2.png">
+      <publishTime>03/17/2018 21:47:03</publishTime>
+    </File>
+    <File Include="wwwroot/images/left_arrow_pagin.png">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/images/loading.gif">
+      <publishTime>04/13/2018 22:27:13</publishTime>
+    </File>
+    <File Include="wwwroot/images/logo.png">
+      <publishTime>03/17/2018 21:47:03</publishTime>
+    </File>
+    <File Include="wwwroot/images/logo_dark.png">
+      <publishTime>03/17/2018 21:47:03</publishTime>
+    </File>
+    <File Include="wwwroot/images/main_bg.jpg">
+      <publishTime>03/17/2018 21:47:03</publishTime>
+    </File>
+    <File Include="wwwroot/images/main_present.png">
+      <publishTime>03/17/2018 21:47:03</publishTime>
+    </File>
+    <File Include="wwwroot/images/mapwork_bg.jpg">
+      <publishTime>03/17/2018 21:47:03</publishTime>
+    </File>
+    <File Include="wwwroot/images/map_ping.png">
+      <publishTime>03/17/2018 21:47:03</publishTime>
+    </File>
+    <File Include="wwwroot/images/mini_owl_left.jpg">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/images/mini_owl_right.jpg">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/images/next.png">
+      <publishTime>04/13/2018 22:27:13</publishTime>
+    </File>
+    <File Include="wwwroot/images/prev.png">
+      <publishTime>04/13/2018 22:27:13</publishTime>
+    </File>
+    <File Include="wwwroot/images/production_bg.jpg">
+      <publishTime>03/17/2018 21:47:03</publishTime>
+    </File>
+    <File Include="wwwroot/images/project_img.jpg">
+      <publishTime>03/17/2018 21:47:03</publishTime>
+    </File>
+    <File Include="wwwroot/images/project_slider_bg.jpg">
+      <publishTime>03/17/2018 21:47:03</publishTime>
+    </File>
+    <File Include="wwwroot/images/review_test.jpg">
+      <publishTime>03/17/2018 21:47:03</publishTime>
+    </File>
+    <File Include="wwwroot/images/right_arrow_pagin.png">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/images/stages_construction_bg.jpg">
+      <publishTime>03/17/2018 21:47:03</publishTime>
+    </File>
+    <File Include="wwwroot/images/work_map_bg.jpg">
+      <publishTime>03/17/2018 21:47:03</publishTime>
+    </File>
+    <File Include="wwwroot/images/work_map_test.jpg">
+      <publishTime>03/17/2018 21:47:03</publishTime>
+    </File>
+    <File Include="wwwroot/img/glyphicons-halflings-white.png">
+      <publishTime>07/27/2013 12:50:45</publishTime>
+    </File>
+    <File Include="wwwroot/img/glyphicons-halflings.png">
+      <publishTime>07/27/2013 12:50:45</publishTime>
+    </File>
+    <File Include="wwwroot/js/bootstrap.file-input.js">
+      <publishTime>03/28/2018 21:30:03</publishTime>
+    </File>
+    <File Include="wwwroot/js/bootstrap.js">
+      <publishTime>07/27/2013 12:50:47</publishTime>
+    </File>
+    <File Include="wwwroot/js/bootstrap.min.js">
+      <publishTime>07/27/2013 12:50:47</publishTime>
+    </File>
+    <File Include="wwwroot/js/jquery-3.2.1.min.js">
+      <publishTime>03/18/2018 12:10:25</publishTime>
+    </File>
+    <File Include="wwwroot/js/jquery.arcticmodal-0.3.min.js">
+      <publishTime>03/18/2018 12:10:24</publishTime>
+    </File>
+    <File Include="wwwroot/js/jquery.formstyler.min.js">
+      <publishTime>03/18/2018 12:10:23</publishTime>
+    </File>
+    <File Include="wwwroot/js/jquery.mCustomScrollbar.concat.min.js">
+      <publishTime>03/18/2018 12:10:23</publishTime>
+    </File>
+    <File Include="wwwroot/js/main.js">
+      <publishTime>04/02/2018 21:44:08</publishTime>
+    </File>
+    <File Include="wwwroot/js/nouislider.min.js">
+      <publishTime>03/18/2018 12:10:20</publishTime>
+    </File>
+    <File Include="wwwroot/js/owl.carousel.min.js">
+      <publishTime>03/18/2018 12:10:19</publishTime>
+    </File>
+    <File Include="wwwroot/less/clear.less">
+      <publishTime>03/17/2018 21:47:03</publishTime>
+    </File>
+    <File Include="wwwroot/less/components.less">
+      <publishTime>03/17/2018 21:47:03</publishTime>
+    </File>
+    <File Include="wwwroot/less/components/animate.less">
+      <publishTime>03/17/2018 21:47:03</publishTime>
+    </File>
+    <File Include="wwwroot/less/components/aos.less">
+      <publishTime>03/17/2018 21:47:03</publishTime>
+    </File>
+    <File Include="wwwroot/less/components/arctic_modal.less">
+      <publishTime>04/13/2018 22:27:13</publishTime>
+    </File>
+    <File Include="wwwroot/less/components/button.less">
+      <publishTime>04/13/2018 22:27:13</publishTime>
+    </File>
+    <File Include="wwwroot/less/components/formstyler.less">
+      <publishTime>03/17/2018 21:47:03</publishTime>
+    </File>
+    <File Include="wwwroot/less/components/lightbox.less">
+      <publishTime>04/13/2018 22:27:13</publishTime>
+    </File>
+    <File Include="wwwroot/less/components/mcustom.less">
+      <publishTime>03/17/2018 21:47:03</publishTime>
+    </File>
+    <File Include="wwwroot/less/components/noui.less">
+      <publishTime>03/17/2018 21:47:03</publishTime>
+    </File>
+    <File Include="wwwroot/less/components/owl.less">
+      <publishTime>03/17/2018 21:47:03</publishTime>
+    </File>
+    <File Include="wwwroot/less/components/sprite.less">
+      <publishTime>03/17/2018 21:47:03</publishTime>
+    </File>
+    <File Include="wwwroot/less/components/text_style.less">
+      <publishTime>04/02/2018 21:44:08</publishTime>
+    </File>
+    <File Include="wwwroot/less/fonts.less">
+      <publishTime>03/24/2018 11:12:17</publishTime>
+    </File>
+    <File Include="wwwroot/less/global.less">
+      <publishTime>03/17/2018 21:47:03</publishTime>
+    </File>
+    <File Include="wwwroot/less/media.less">
+      <publishTime>04/25/2018 22:56:24</publishTime>
+    </File>
+    <File Include="wwwroot/less/mixins.less">
+      <publishTime>03/17/2018 21:47:03</publishTime>
+    </File>
+    <File Include="wwwroot/less/partials/article.less">
+      <publishTime>04/21/2018 17:15:22</publishTime>
+    </File>
+    <File Include="wwwroot/less/partials/breadcrumbs.less">
+      <publishTime>03/17/2018 21:47:03</publishTime>
+    </File>
+    <File Include="wwwroot/less/partials/contacts.less">
+      <publishTime>04/25/2018 22:56:24</publishTime>
+    </File>
+    <File Include="wwwroot/less/partials/delivery_geo_cover.less">
+      <publishTime>03/24/2018 18:45:40</publishTime>
+    </File>
+    <File Include="wwwroot/less/partials/footer.less">
+      <publishTime>03/17/2018 21:47:03</publishTime>
+    </File>
+    <File Include="wwwroot/less/partials/gallery.less">
+      <publishTime>04/28/2018 10:41:11</publishTime>
+    </File>
+    <File Include="wwwroot/less/partials/header.less">
+      <publishTime>04/21/2018 17:15:22</publishTime>
+    </File>
+    <File Include="wwwroot/less/partials/main_section.less">
+      <publishTime>04/28/2018 10:41:11</publishTime>
+    </File>
+    <File Include="wwwroot/less/partials/navigation.less">
+      <publishTime>04/02/2018 21:44:08</publishTime>
+    </File>
+    <File Include="wwwroot/less/partials/products_grid.less">
+      <publishTime>04/21/2018 17:15:22</publishTime>
+    </File>
+    <File Include="wwwroot/less/partials/projects_slider.less">
+      <publishTime>04/25/2018 11:36:33</publishTime>
+    </File>
+    <File Include="wwwroot/less/partials/review_cover.less">
+      <publishTime>03/24/2018 18:45:40</publishTime>
+    </File>
+    <File Include="wwwroot/less/partials/seo_text.less">
+      <publishTime>04/13/2018 22:27:13</publishTime>
+    </File>
+    <File Include="wwwroot/less/partials/stages_construction.less">
+      <publishTime>04/25/2018 11:36:33</publishTime>
+    </File>
+    <File Include="wwwroot/less/partials/work_map.less">
+      <publishTime>04/13/2018 22:27:13</publishTime>
+    </File>
+    <File Include="wwwroot/less/prepros-6.config">
+      <publishTime>04/02/2018 21:44:08</publishTime>
+    </File>
+    <File Include="wwwroot/less/style.less">
+      <publishTime>03/17/2018 21:47:03</publishTime>
+    </File>
+    <File Include="wwwroot/less/variables.less">
+      <publishTime>03/17/2018 21:47:03</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/.bower.json">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/bower.json">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/CHANGELOG.md">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-theme.css">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-theme.css.map">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-theme.min.css">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-theme.min.css.map">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap.css">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap.css.map">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap.min.css">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.eot">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.svg">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/js/bootstrap.js">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/js/bootstrap.min.js">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/js/npm.js">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/fonts/glyphicons-halflings-regular.eot">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/fonts/glyphicons-halflings-regular.svg">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/fonts/glyphicons-halflings-regular.woff">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/fonts/glyphicons-halflings-regular.woff2">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/Gemfile">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/Gemfile.lock">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/grunt/.jshintrc">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/grunt/bs-commonjs-generator.js">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/grunt/bs-glyphicons-data-generator.js">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/grunt/bs-lessdoc-parser.js">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/grunt/bs-raw-files-generator.js">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/grunt/change-version.js">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/grunt/configBridge.json">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/grunt/npm-shrinkwrap.json">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/grunt/sauce_browsers.yml">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/Gruntfile.js">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/ISSUE_TEMPLATE.md">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/js/.jscsrc">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/js/.jshintrc">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/js/affix.js">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/js/alert.js">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/js/button.js">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/js/carousel.js">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/js/collapse.js">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/js/dropdown.js">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/js/modal.js">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/js/popover.js">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/js/scrollspy.js">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/js/tab.js">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/js/tooltip.js">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/js/transition.js">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/less/.csscomb.json">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/less/.csslintrc">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/less/alerts.less">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/less/badges.less">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/less/bootstrap.less">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/less/breadcrumbs.less">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/less/button-groups.less">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/less/buttons.less">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/less/carousel.less">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/less/close.less">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/less/code.less">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/less/component-animations.less">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/less/dropdowns.less">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/less/forms.less">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/less/glyphicons.less">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/less/grid.less">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/less/input-groups.less">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/less/jumbotron.less">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/less/labels.less">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/less/list-group.less">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/less/media.less">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/less/mixins.less">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/less/mixins/alerts.less">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/less/mixins/background-variant.less">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/less/mixins/border-radius.less">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/less/mixins/buttons.less">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/less/mixins/center-block.less">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/less/mixins/clearfix.less">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/less/mixins/forms.less">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/less/mixins/gradients.less">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/less/mixins/grid-framework.less">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/less/mixins/grid.less">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/less/mixins/hide-text.less">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/less/mixins/image.less">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/less/mixins/labels.less">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/less/mixins/list-group.less">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/less/mixins/nav-divider.less">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/less/mixins/nav-vertical-align.less">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/less/mixins/opacity.less">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/less/mixins/pagination.less">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/less/mixins/panels.less">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/less/mixins/progress-bar.less">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/less/mixins/reset-filter.less">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/less/mixins/reset-text.less">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/less/mixins/resize.less">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/less/mixins/responsive-visibility.less">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/less/mixins/size.less">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/less/mixins/tab-focus.less">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/less/mixins/table-row.less">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/less/mixins/text-emphasis.less">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/less/mixins/text-overflow.less">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/less/mixins/vendor-prefixes.less">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/less/modals.less">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/less/navbar.less">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/less/navs.less">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/less/normalize.less">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/less/pager.less">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/less/pagination.less">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/less/panels.less">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/less/popovers.less">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/less/print.less">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/less/progress-bars.less">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/less/responsive-embed.less">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/less/responsive-utilities.less">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/less/scaffolding.less">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/less/tables.less">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/less/theme.less">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/less/thumbnails.less">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/less/tooltip.less">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/less/type.less">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/less/utilities.less">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/less/variables.less">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/less/wells.less">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/LICENSE">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/nuget/bootstrap.less.nuspec">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/nuget/bootstrap.nuspec">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/nuget/MyGet.ps1">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/package.js">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/package.json">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/README.md">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-ajax-unobtrusive/.bower.json">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-ajax-unobtrusive/bower.json">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-ajax-unobtrusive/gulpfile.js">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-ajax-unobtrusive/jquery.unobtrusive-ajax.js">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-ajax-unobtrusive/jquery.unobtrusive-ajax.min.js">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-ajax-unobtrusive/LICENSE.txt">
+      <publishTime>03/29/2018 16:59:34</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-validation-unobtrusive/.bower.json">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-validation/.bower.json">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-validation/dist/additional-methods.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-validation/dist/additional-methods.min.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-validation/dist/jquery.validate.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-validation/dist/jquery.validate.min.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-validation/LICENSE.md">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery/.bower.json">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery/dist/jquery.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery/dist/jquery.min.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery/dist/jquery.min.map">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery/LICENSE.txt">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/prepros-6.config">
+      <publishTime>12/28/2017 23:31:52</publishTime>
+    </File>
+    <File Include="wwwroot/scripts/active.js">
+      <publishTime>04/25/2018 22:56:24</publishTime>
+    </File>
+    <File Include="wwwroot/scripts/aos.js">
+      <publishTime>03/17/2018 21:47:03</publishTime>
+    </File>
+    <File Include="wwwroot/scripts/generalScripts.js">
+      <publishTime>03/17/2018 21:47:03</publishTime>
+    </File>
+    <File Include="wwwroot/scripts/jquery-3.1.1.min.js">
+      <publishTime>03/17/2018 21:47:03</publishTime>
+    </File>
+    <File Include="wwwroot/scripts/jquery.arcticmodal-0.3.min.js">
+      <publishTime>03/17/2018 21:47:03</publishTime>
+    </File>
+    <File Include="wwwroot/scripts/jquery.formstyler.min.js">
+      <publishTime>03/17/2018 21:47:03</publishTime>
+    </File>
+    <File Include="wwwroot/scripts/lightbox.min.js">
+      <publishTime>03/17/2018 21:47:03</publishTime>
+    </File>
+    <File Include="wwwroot/scripts/main_animate.js">
+      <publishTime>03/17/2018 21:47:03</publishTime>
+    </File>
+    <File Include="wwwroot/scripts/mask.js">
+      <publishTime>03/17/2018 21:47:03</publishTime>
+    </File>
+    <File Include="wwwroot/scripts/mobiledetect.js">
+      <publishTime>03/17/2018 21:47:03</publishTime>
+    </File>
+    <File Include="wwwroot/scripts/owl.carousel.min.js">
+      <publishTime>03/17/2018 21:47:03</publishTime>
+    </File>
+    <File Include="wwwroot/scripts/rival.js">
+      <publishTime>04/13/2018 22:27:13</publishTime>
+    </File>
+    <File Include="wwwroot/scripts/site.js">
+      <publishTime>04/25/2018 21:31:52</publishTime>
+    </File>
+    <File Include="wwwroot/scripts/url.min.js">
+      <publishTime>03/17/2018 21:47:03</publishTime>
+    </File>
+    <File Include="wwwroot/style.css">
+      <publishTime>04/28/2018 10:41:11</publishTime>
+    </File>
+    <File Include="wwwroot/style.css.map">
+      <publishTime>04/28/2018 10:41:11</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/.agignore">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/.editorconfig">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/.eslintrc">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/.gitignore">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/.npmignore">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/.travis.yml">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/bs4.html">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/Context.js">
+      <publishTime>04/28/2018 10:41:45</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/Context.js.map">
+      <publishTime>04/28/2018 10:41:45</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/core/async.js">
+      <publishTime>04/28/2018 10:41:45</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/core/async.js.map">
+      <publishTime>04/28/2018 10:41:45</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/core/dom.js">
+      <publishTime>04/28/2018 10:41:45</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/core/dom.js.map">
+      <publishTime>04/28/2018 10:41:45</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/core/env.js">
+      <publishTime>04/28/2018 10:41:45</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/core/env.js.map">
+      <publishTime>04/28/2018 10:41:45</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/core/func.js">
+      <publishTime>04/28/2018 10:41:45</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/core/func.js.map">
+      <publishTime>04/28/2018 10:41:45</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/core/key.js">
+      <publishTime>04/28/2018 10:41:45</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/core/key.js.map">
+      <publishTime>04/28/2018 10:41:45</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/core/lists.js">
+      <publishTime>04/28/2018 10:41:45</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/core/lists.js.map">
+      <publishTime>04/28/2018 10:41:45</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/core/range.js">
+      <publishTime>04/28/2018 10:41:45</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/core/range.js.map">
+      <publishTime>04/28/2018 10:41:45</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/editing/Bullet.js">
+      <publishTime>04/28/2018 10:41:45</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/editing/Bullet.js.map">
+      <publishTime>04/28/2018 10:41:45</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/editing/History.js">
+      <publishTime>04/28/2018 10:41:45</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/editing/History.js.map">
+      <publishTime>04/28/2018 10:41:45</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/editing/Style.js">
+      <publishTime>04/28/2018 10:41:45</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/editing/Style.js.map">
+      <publishTime>04/28/2018 10:41:45</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/editing/Table.js">
+      <publishTime>04/28/2018 10:41:45</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/editing/Table.js.map">
+      <publishTime>04/28/2018 10:41:45</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/editing/Typing.js">
+      <publishTime>04/28/2018 10:41:45</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/editing/Typing.js.map">
+      <publishTime>04/28/2018 10:41:45</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/module/AirPopover.js">
+      <publishTime>04/28/2018 10:41:46</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/module/AirPopover.js.map">
+      <publishTime>04/28/2018 10:41:46</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/module/AutoLink.js">
+      <publishTime>04/28/2018 10:41:46</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/module/AutoLink.js.map">
+      <publishTime>04/28/2018 10:41:46</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/module/AutoSync.js">
+      <publishTime>04/28/2018 10:41:46</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/module/AutoSync.js.map">
+      <publishTime>04/28/2018 10:41:46</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/module/Buttons.js">
+      <publishTime>04/28/2018 10:41:46</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/module/Buttons.js.map">
+      <publishTime>04/28/2018 10:41:46</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/module/Clipboard.js">
+      <publishTime>04/28/2018 10:41:45</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/module/Clipboard.js.map">
+      <publishTime>04/28/2018 10:41:45</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/module/Codeview.js">
+      <publishTime>04/28/2018 10:41:45</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/module/Codeview.js.map">
+      <publishTime>04/28/2018 10:41:45</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/module/Dropzone.js">
+      <publishTime>04/28/2018 10:41:45</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/module/Dropzone.js.map">
+      <publishTime>04/28/2018 10:41:45</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/module/Editor.js">
+      <publishTime>04/28/2018 10:41:45</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/module/Editor.js.map">
+      <publishTime>04/28/2018 10:41:45</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/module/Fullscreen.js">
+      <publishTime>04/28/2018 10:41:46</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/module/Fullscreen.js.map">
+      <publishTime>04/28/2018 10:41:46</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/module/Handle.js">
+      <publishTime>04/28/2018 10:41:46</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/module/Handle.js.map">
+      <publishTime>04/28/2018 10:41:46</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/module/HelpDialog.js">
+      <publishTime>04/28/2018 10:41:46</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/module/HelpDialog.js.map">
+      <publishTime>04/28/2018 10:41:46</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/module/HintPopover.js">
+      <publishTime>04/28/2018 10:41:46</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/module/HintPopover.js.map">
+      <publishTime>04/28/2018 10:41:46</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/module/ImageDialog.js">
+      <publishTime>04/28/2018 10:41:46</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/module/ImageDialog.js.map">
+      <publishTime>04/28/2018 10:41:46</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/module/ImagePopover.js">
+      <publishTime>04/28/2018 10:41:46</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/module/ImagePopover.js.map">
+      <publishTime>04/28/2018 10:41:46</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/module/LinkDialog.js">
+      <publishTime>04/28/2018 10:41:46</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/module/LinkDialog.js.map">
+      <publishTime>04/28/2018 10:41:46</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/module/LinkPopover.js">
+      <publishTime>04/28/2018 10:41:46</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/module/LinkPopover.js.map">
+      <publishTime>04/28/2018 10:41:46</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/module/Placeholder.js">
+      <publishTime>04/28/2018 10:41:46</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/module/Placeholder.js.map">
+      <publishTime>04/28/2018 10:41:46</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/module/Statusbar.js">
+      <publishTime>04/28/2018 10:41:46</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/module/Statusbar.js.map">
+      <publishTime>04/28/2018 10:41:45</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/module/TablePopover.js">
+      <publishTime>04/28/2018 10:41:46</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/module/TablePopover.js.map">
+      <publishTime>04/28/2018 10:41:46</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/module/Toolbar.js">
+      <publishTime>04/28/2018 10:41:46</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/module/Toolbar.js.map">
+      <publishTime>04/28/2018 10:41:46</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/module/VideoDialog.js">
+      <publishTime>04/28/2018 10:41:46</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/module/VideoDialog.js.map">
+      <publishTime>04/28/2018 10:41:46</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/renderer.js">
+      <publishTime>04/28/2018 10:41:45</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/renderer.js.map">
+      <publishTime>04/28/2018 10:41:45</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/summernote-en-US.js">
+      <publishTime>04/28/2018 10:41:45</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/summernote-en-US.js.map">
+      <publishTime>04/28/2018 10:41:45</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/bs3/settings.js">
+      <publishTime>04/28/2018 10:41:46</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/bs3/settings.js.map">
+      <publishTime>04/28/2018 10:41:46</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/bs3/ui.js">
+      <publishTime>04/28/2018 10:41:46</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/bs3/ui.js.map">
+      <publishTime>04/28/2018 10:41:46</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/bs4/settings.js">
+      <publishTime>04/28/2018 10:41:46</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/bs4/settings.js.map">
+      <publishTime>04/28/2018 10:41:46</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/bs4/ui.js">
+      <publishTime>04/28/2018 10:41:46</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/bs4/ui.js.map">
+      <publishTime>04/28/2018 10:41:46</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/lite/settings.js">
+      <publishTime>04/28/2018 10:41:46</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/lite/settings.js.map">
+      <publishTime>04/28/2018 10:41:46</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/lite/ui.js">
+      <publishTime>04/28/2018 10:41:45</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/lite/ui.js.map">
+      <publishTime>04/28/2018 10:41:45</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/lite/ui/DropdownUI.js">
+      <publishTime>04/28/2018 10:41:45</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/lite/ui/DropdownUI.js.map">
+      <publishTime>04/28/2018 10:41:45</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/lite/ui/ModalUI.js">
+      <publishTime>04/28/2018 10:41:45</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/lite/ui/ModalUI.js.map">
+      <publishTime>04/28/2018 10:41:45</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/lite/ui/PopoverUI.js">
+      <publishTime>04/28/2018 10:41:46</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/lite/ui/PopoverUI.js.map">
+      <publishTime>04/28/2018 10:41:46</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/lite/ui/TooltipUI.js">
+      <publishTime>04/28/2018 10:41:45</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/lite/ui/TooltipUI.js.map">
+      <publishTime>04/28/2018 10:41:45</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/summernote.js">
+      <publishTime>04/28/2018 10:41:45</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/summernote.js.map">
+      <publishTime>04/28/2018 10:41:45</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/CONTRIBUTING.md">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/examples/airmode.html">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/examples/bs3.html">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/examples/codemirror.html">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/examples/external-api.html">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/examples/hint-emoji.html">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/examples/hint-symbols_mathematical-symbols_Greek-letters.html">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/examples/hint-userdefine.html">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/examples/ie8.html">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/examples/jquery-custom-event.html">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/examples/jquery19lt.html">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/examples/lang.html">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/examples/link-blank.html">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/examples/nativestyle.html">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/examples/ondialog-multitab.html">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/examples/ondialog.html">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/examples/plugin-hello.html">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/examples/rtl.html">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/examples/symbols_mathematical-symbols_Greek-letters.json">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/examples/textarea.html">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/examples/toolbar-container.html">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/examples/with-google-font.html">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/Gruntfile.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/grunts/grunt-build.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/index.html">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/ISSUE_TEMPLATE.md">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/karma.conf.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/lang/summernote-ar-AR.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/lang/summernote-bg-BG.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/lang/summernote-ca-ES.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/lang/summernote-cs-CZ.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/lang/summernote-da-DK.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/lang/summernote-de-DE.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/lang/summernote-el-GR.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/lang/summernote-es-ES.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/lang/summernote-es-EU.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/lang/summernote-fa-IR.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/lang/summernote-fi-FI.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/lang/summernote-fr-FR.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/lang/summernote-gl-ES.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/lang/summernote-he-IL.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/lang/summernote-hr-HR.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/lang/summernote-hu-HU.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/lang/summernote-id-ID.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/lang/summernote-it-IT.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/lang/summernote-ja-JP.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/lang/summernote-ko-KR.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/lang/summernote-lt-LT.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/lang/summernote-lt-LV.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/lang/summernote-mn-MN.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/lang/summernote-nb-NO.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/lang/summernote-nl-NL.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/lang/summernote-pl-PL.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/lang/summernote-pt-BR.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/lang/summernote-pt-PT.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/lang/summernote-ro-RO.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/lang/summernote-ru-RU.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/lang/summernote-sk-SK.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/lang/summernote-sl-SI.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/lang/summernote-sr-RS-Latin.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/lang/summernote-sr-RS.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/lang/summernote-sv-SE.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/lang/summernote-ta-IN.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/lang/summernote-th-TH.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/lang/summernote-tr-TR.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/lang/summernote-uk-UA.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/lang/summernote-vi-VN.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/lang/summernote-zh-CN.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/lang/summernote-zh-TW.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/LICENSE">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/lite.html">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/MAINTAIN.md">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/package.json">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/plugin/databasic/summernote-ext-databasic.css">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/plugin/databasic/summernote-ext-databasic.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/plugin/hello/summernote-ext-hello.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/plugin/specialchars/summernote-ext-specialchars.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/PULL_REQUEST_TEMPLATE.md">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/README.md">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/align-center.svg">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/align-indent.svg">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/align-justify.svg">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/align-left.svg">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/align-outdent.svg">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/align-right.svg">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/align.svg">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/arrow-circle-down.svg">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/arrow-circle-left.svg">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/arrow-circle-right.svg">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/arrow-circle-up.svg">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/arrows-alt.svg">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/arrows-h.svg">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/arrows-v.svg">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/bold.svg">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/caret.svg">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/chain-broken.svg">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/circle.svg">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/close.svg">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/code.svg">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/col-after.svg">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/col-before.svg">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/col-remove.svg">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/eraser.svg">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/font.svg">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/frame.svg">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/italic.svg">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/link.svg">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/magic.svg">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/menu-check.svg">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/minus.svg">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/orderedlist.svg">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/pencil.svg">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/picture.svg">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/question.svg">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/redo.svg">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/row-above.svg">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/row-below.svg">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/row-remove.svg">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/special-character.svg">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/square.svg">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/strikethrough.svg">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/subscript.svg">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/summernote.svg">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/superscript.svg">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/table.svg">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/templates/summernote.css">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/templates/summernote.json">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/text-height.svg">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/trash.svg">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/underline.svg">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/undo.svg">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/unorderedlist.svg">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/video.svg">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/js/base/Context.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/js/base/core/async.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/js/base/core/dom.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/js/base/core/env.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/js/base/core/func.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/js/base/core/key.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/js/base/core/lists.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/js/base/core/range.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/js/base/editing/Bullet.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/js/base/editing/History.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/js/base/editing/Style.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/js/base/editing/Table.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/js/base/editing/Typing.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/js/base/module/AirPopover.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/js/base/module/AutoLink.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/js/base/module/AutoSync.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/js/base/module/Buttons.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/js/base/module/Clipboard.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/js/base/module/Codeview.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/js/base/module/Dropzone.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/js/base/module/Editor.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/js/base/module/Fullscreen.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/js/base/module/Handle.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/js/base/module/HelpDialog.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/js/base/module/HintPopover.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/js/base/module/ImageDialog.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/js/base/module/ImagePopover.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/js/base/module/LinkDialog.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/js/base/module/LinkPopover.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/js/base/module/Placeholder.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/js/base/module/Statusbar.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/js/base/module/TablePopover.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/js/base/module/Toolbar.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/js/base/module/VideoDialog.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/js/base/renderer.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/js/base/summernote-en-US.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/js/bs3/settings.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/js/bs3/ui.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/js/bs4/settings.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/js/bs4/ui.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/js/lite/settings.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/js/lite/ui.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/js/lite/ui/DropdownUI.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/js/lite/ui/ModalUI.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/js/lite/ui/PopoverUI.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/js/lite/ui/TooltipUI.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/js/summernote.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/less/elements.less">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/less/elements.scss">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/less/lite-ui/all.less">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/less/lite-ui/btn-group.less">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/less/lite-ui/buttons.less">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/less/lite-ui/common.less">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/less/lite-ui/dropdown.less">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/less/lite-ui/form.less">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/less/lite-ui/mixins.less">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/less/lite-ui/mixins/buttons.less">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/less/lite-ui/modal.less">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/less/lite-ui/popover.less">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/less/lite-ui/toolbar.less">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/less/lite-ui/tooltip.less">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/less/lite-ui/variables.less">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/less/summernote-bs4.less">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/less/summernote-bs4.scss">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/less/summernote-lite.less">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/less/summernote.less">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/less/summernote.scss">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/test/chaidom.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/test/e2e/html/initialization.html">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/test/e2e/initialization.test.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/test/e2e/static-server.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/test/libs/.gitkeep">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/test/libs/sauce.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/test/nightwatch.conf.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/test/unit/base/Context.spec.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/test/unit/base/core/dom.spec.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/test/unit/base/core/func.spec.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/test/unit/base/core/key.spec.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/test/unit/base/core/lists.spec.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/test/unit/base/core/range.spec.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/test/unit/base/editing/style.spec.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/test/unit/base/editing/Table.spec.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/test/unit/base/module/Codeview.spec.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/test/unit/base/module/Editor.spec.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/test/unit/base/module/Fullscreen.spec.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/test/unit/bs/module/Buttons.spec.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/test/unit/bs/module/VideoDialog.spec.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/tsconfig.json">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/UploadImages/115.jpeg">
+      <publishTime>04/22/2018 12:36:57</publishTime>
+    </File>
+    <File Include="wwwroot/UploadImages/116.jpeg">
+      <publishTime>04/22/2018 12:37:54</publishTime>
+    </File>
+    <File Include="wwwroot/UploadImages/117.jpeg">
+      <publishTime>04/22/2018 12:38:52</publishTime>
+    </File>
+    <File Include="wwwroot/UploadImages/118.jpeg">
+      <publishTime>04/22/2018 12:39:09</publishTime>
+    </File>
+    <File Include="wwwroot/UploadImages/119.jpeg">
+      <publishTime>04/22/2018 12:40:38</publishTime>
+    </File>
+    <File Include="wwwroot/UploadImages/137.jpeg">
+      <publishTime>04/25/2018 21:34:53</publishTime>
+    </File>
+    <File Include="wwwroot/UploadImages/19.jpeg">
+      <publishTime>03/29/2018 23:41:08</publishTime>
+    </File>
+    <File Include="wwwroot/UploadImages/20.jpeg">
+      <publishTime>03/29/2018 23:41:29</publishTime>
+    </File>
+    <File Include="wwwroot/UploadImages/21.jpeg">
+      <publishTime>03/29/2018 23:45:19</publishTime>
+    </File>
+    <File Include="wwwroot/UploadImages/22.jpeg">
+      <publishTime>03/29/2018 23:47:21</publishTime>
+    </File>
+    <File Include="wwwroot/UploadImages/23.png">
+      <publishTime>03/29/2018 23:48:32</publishTime>
+    </File>
+    <File Include="wwwroot/UploadImages/24.jpeg">
+      <publishTime>03/29/2018 23:49:08</publishTime>
+    </File>
+    <File Include="wwwroot/UploadImages/25.png">
+      <publishTime>03/29/2018 23:50:04</publishTime>
+    </File>
+    <File Include="wwwroot/UploadImages/26.png">
+      <publishTime>03/29/2018 23:51:38</publishTime>
+    </File>
+    <File Include="wwwroot/UploadImages/27.png">
+      <publishTime>03/29/2018 23:52:28</publishTime>
+    </File>
+    <File Include="wwwroot/UploadImages/28.png">
+      <publishTime>03/29/2018 23:55:28</publishTime>
+    </File>
+    <File Include="wwwroot/UploadImages/29.jpeg">
+      <publishTime>03/29/2018 23:58:18</publishTime>
+    </File>
+    <File Include="wwwroot/UploadImages/30.jpeg">
+      <publishTime>03/29/2018 23:59:16</publishTime>
+    </File>
+    <File Include="wwwroot/UploadImages/31.jpeg">
+      <publishTime>03/30/2018 00:00:09</publishTime>
+    </File>
+    <File Include="wwwroot/UploadImages/32.jpeg">
+      <publishTime>03/30/2018 00:00:18</publishTime>
+    </File>
+    <File Include="wwwroot/UploadImages/33.jpeg">
+      <publishTime>03/30/2018 00:01:37</publishTime>
+    </File>
+    <File Include="wwwroot/UploadImages/34.png">
+      <publishTime>03/30/2018 00:01:53</publishTime>
+    </File>
+    <File Include="wwwroot/UploadImages/35.jpeg">
+      <publishTime>03/30/2018 00:10:19</publishTime>
+    </File>
+    <File Include="wwwroot/UploadImages/36.png">
+      <publishTime>03/30/2018 00:10:32</publishTime>
+    </File>
+    <File Include="wwwroot/UploadImages/37.png">
+      <publishTime>03/30/2018 00:11:49</publishTime>
+    </File>
+    <File Include="wwwroot/UploadImages/38.jpeg">
+      <publishTime>03/30/2018 00:15:35</publishTime>
+    </File>
+    <File Include="wwwroot/UploadImages/39.jpeg">
+      <publishTime>03/30/2018 00:16:29</publishTime>
+    </File>
+    <File Include="wwwroot/UploadImages/40.jpeg">
+      <publishTime>03/30/2018 00:18:40</publishTime>
+    </File>
+    <File Include="wwwroot/UploadImages/41.jpeg">
+      <publishTime>03/30/2018 00:19:29</publishTime>
+    </File>
+    <File Include="wwwroot/UploadImages/42.jpeg">
+      <publishTime>03/30/2018 00:19:44</publishTime>
+    </File>
+    <File Include="wwwroot/UploadImages/43.jpeg">
+      <publishTime>03/30/2018 00:20:40</publishTime>
+    </File>
+    <File Include="wwwroot/UploadImages/44.png">
+      <publishTime>03/30/2018 00:20:48</publishTime>
+    </File>
+    <File Include="wwwroot/UploadImages/45.png">
+      <publishTime>03/30/2018 00:21:17</publishTime>
+    </File>
+    <File Include="wwwroot/UploadImages/46.png">
+      <publishTime>03/30/2018 00:21:24</publishTime>
+    </File>
+    <File Include="wwwroot/UploadImages/47.png">
+      <publishTime>03/30/2018 00:21:29</publishTime>
+    </File>
+    <File Include="wwwroot/UploadImages/48.png">
+      <publishTime>03/30/2018 00:21:36</publishTime>
+    </File>
+    <File Include="wwwroot/UploadImages/54.png">
+      <publishTime>03/30/2018 00:35:18</publishTime>
+    </File>
+    <File Include="wwwroot/UploadImages/55.png">
+      <publishTime>03/30/2018 00:35:34</publishTime>
+    </File>
+    <File Include="wwwroot/UploadImages/61.jpeg">
+      <publishTime>04/15/2018 16:14:41</publishTime>
+    </File>
+    <File Include="wwwroot/UploadImages/62.jpeg">
+      <publishTime>04/15/2018 16:14:53</publishTime>
+    </File>
+    <File Include="wwwroot/UploadImages/63.jpeg">
+      <publishTime>04/15/2018 16:15:04</publishTime>
+    </File>
+    <File Include="wwwroot/UploadImages/64.jpeg">
+      <publishTime>04/15/2018 16:15:14</publishTime>
+    </File>
+    <File Include="wwwroot/UploadImages/65.jpeg">
+      <publishTime>04/16/2018 22:38:16</publishTime>
+    </File>
+    <File Include="wwwroot/UploadImages/66.jpeg">
+      <publishTime>04/16/2018 22:38:19</publishTime>
+    </File>
+    <File Include="wwwroot/UploadImages/67.jpeg">
+      <publishTime>04/16/2018 22:38:22</publishTime>
+    </File>
+    <File Include="wwwroot/UploadImages/68.jpeg">
+      <publishTime>04/16/2018 22:39:27</publishTime>
+    </File>
+    <File Include="wwwroot/UploadImages/69.jpeg">
+      <publishTime>04/16/2018 22:41:46</publishTime>
+    </File>
+    <File Include="wwwroot/UploadImages/70.jpeg">
+      <publishTime>04/16/2018 22:44:24</publishTime>
+    </File>
+    <File Include="wwwroot/UploadImages/71.jpeg">
+      <publishTime>04/16/2018 22:44:34</publishTime>
+    </File>
+    <File Include="wwwroot/UploadImages/72.jpeg">
+      <publishTime>04/16/2018 22:48:51</publishTime>
+    </File>
+    <File Include="wwwroot/UploadImages/73.jpeg">
+      <publishTime>04/16/2018 22:48:57</publishTime>
+    </File>
+    <File Include="wwwroot/UploadImages/74.png">
+      <publishTime>04/16/2018 22:49:02</publishTime>
+    </File>
+    <File Include="wwwroot/UploadImages/75.jpeg">
+      <publishTime>04/16/2018 22:53:19</publishTime>
+    </File>
+    <File Include="wwwroot/UploadImages/76.jpeg">
+      <publishTime>04/16/2018 22:53:25</publishTime>
+    </File>
+    <File Include="wwwroot/UploadImages/77.jpeg">
+      <publishTime>04/17/2018 00:14:25</publishTime>
+    </File>
+    <File Include="wwwroot/UploadImages/78.jpeg">
+      <publishTime>04/17/2018 00:15:46</publishTime>
+    </File>
+    <File Include="wwwroot/UploadImages/79.jpeg">
+      <publishTime>04/17/2018 00:21:27</publishTime>
+    </File>
+    <File Include="wwwroot/UploadImages/80.jpeg">
+      <publishTime>04/17/2018 00:26:13</publishTime>
+    </File>
+    <File Include="wwwroot/UploadImages/81.jpeg">
+      <publishTime>04/17/2018 00:26:22</publishTime>
+    </File>
+    <File Include="wwwroot/UploadImages/82.png">
+      <publishTime>04/17/2018 00:26:27</publishTime>
+    </File>
+    <File Include="wwwroot/UploadImages/83.jpeg">
+      <publishTime>04/17/2018 00:26:30</publishTime>
+    </File>
+    <File Include="wwwroot/UploadImages/84.jpeg">
+      <publishTime>04/17/2018 00:39:06</publishTime>
+    </File>
+    <File Include="wwwroot/UploadImages/85.jpeg">
+      <publishTime>04/17/2018 00:39:56</publishTime>
+    </File>
+    <File Include="wwwroot/UploadImages/88.png">
+      <publishTime>04/17/2018 02:26:53</publishTime>
+    </File>
+    <File Include="wwwroot/UploadImages/89.jpeg">
+      <publishTime>04/17/2018 02:27:06</publishTime>
+    </File>
+    <File Include="wwwroot/UploadImages/90.png">
+      <publishTime>04/17/2018 02:27:10</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

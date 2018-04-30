@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+  <!--<item
+       android:id="@+id/menu_place"
+       android:icon="@drawable/ic_place_white_24dp"
+       app:showAsAction="ifRoom"
+       android:title="Place" />
+  <item
+       android:id="@+id/menu_filter"
+       android:icon="@drawable/ic_action_filter"
+       app:showAsAction="ifRoom"
+       android:title="Filter" />
+  --><!--<item
+       android:id="@+id/menu_close"
+       android:icon="@drawable/ic_action_close"
+       app:showAsAction="ifRoom"
+       android:title="Закрыть" />--><!--
+  --><!--<item
+       android:id="@+id/menu_assept"
+       app:showAsAction="ifRoom"
+       android:title="Назначить" />
+  <item
+       android:id="@+id/menu_preferences"
+       app:showAsAction="never"
+       android:title="Preferences" />-->
+</menu>

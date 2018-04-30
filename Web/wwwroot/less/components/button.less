@@ -1,0 +1,53 @@
+.btn, a.btn, input.btn {
+  border: none;
+  padding: 22px 35px;
+  padding-bottom: 18px;
+  line-height: 0.8;
+  letter-spacing: 0.7px;
+  color: @maize;
+  background: @greyish-brown;
+  transition: all 500ms;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-size: 14px;
+  &:hover {
+    background: #fff;
+    color: @greyish-brown;
+  }
+  &:active {
+    /* background: darken(@button_def_color, 10%); */
+  }
+  &.btn_white{
+    background: #fff;
+    color: #000;
+    font-weight: 500;
+  }
+  &.btn_white_bordered{
+    border: 2px solid #fff;
+    background: transparent;
+    color: #fff;
+    font-weight: 500;
+  }
+  &.btn_yellow{
+    background: @maize;
+    color: #000;
+    &:hover {
+      background: #fff;
+      color: @greyish-brown;
+    }
+  }
+  &.btn_yellow_bordered{
+    border: 2px solid @maize;
+    background: transparent;
+    color: #000;
+    font-weight: 500;
+  }
+}

@@ -1,0 +1,1498 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Этот файл используется процессом публикации или упаковки вашего веб-проекта. Можно настроить поведение этого процесса,
+изменив этот файл MSBuild. Подробности см. на странице https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>ftp://ftp-eu.site4now.net/test</_PublishTargetUrl>
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAqcRQh7bPb06Msy3P6HY6SwAAAAACAAAAAAAQZgAAAAEAACAAAAAun1eqvsRxc4ngnOjXQAtuaoUE1HFOleUzOtMyyILGbgAAAAAOgAAAAAIAACAAAAB45iUdMPK3nNKqO0Mu/IKasTDBZ1+OCoC5N1YgcItkWyAAAABMaOD+TwZMtkMR5l3WYkrlrgtr9JA5iwQ54cQzaf227kAAAAAJeSTqbSZ5WSTCFFjI91imBX5ffVMXdBpgE6RD/bLfhQ2YF9YeBvFvl09X4S3orqn+OKxd4mWVDnE8XnXDPW6x</EncryptedPassword>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="appsettings.Development.json">
+      <publishTime>12/27/2017 23:30:50</publishTime>
+    </File>
+    <File Include="appsettings.json">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="appsettings.production.json">
+      <publishTime>01/07/2018 20:21:08</publishTime>
+    </File>
+    <File Include="bower.json">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="bundleconfig.json">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="dotnet-aspnet-codegenerator-design.dll">
+      <publishTime>04/11/2017 19:44:04</publishTime>
+    </File>
+    <File Include="Endpoint.deps.json">
+      <publishTime>01/07/2018 20:21:08</publishTime>
+    </File>
+    <File Include="Endpoint.dll">
+      <publishTime>01/07/2018 20:21:03</publishTime>
+    </File>
+    <File Include="Endpoint.pdb">
+      <publishTime>01/07/2018 20:21:03</publishTime>
+    </File>
+    <File Include="Endpoint.PrecompiledViews.dll">
+      <publishTime>01/07/2018 20:21:07</publishTime>
+    </File>
+    <File Include="Endpoint.PrecompiledViews.pdb">
+      <publishTime>01/07/2018 20:21:07</publishTime>
+    </File>
+    <File Include="Endpoint.runtimeconfig.json">
+      <publishTime>01/07/2018 20:21:08</publishTime>
+    </File>
+    <File Include="Microsoft.CodeAnalysis.CSharp.Workspaces.dll">
+      <publishTime>04/11/2017 19:43:59</publishTime>
+    </File>
+    <File Include="Microsoft.CodeAnalysis.Workspaces.dll">
+      <publishTime>04/11/2017 19:44:08</publishTime>
+    </File>
+    <File Include="Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll">
+      <publishTime>04/11/2017 19:44:04</publishTime>
+    </File>
+    <File Include="Microsoft.VisualStudio.Web.CodeGeneration.Core.dll">
+      <publishTime>04/11/2017 19:44:04</publishTime>
+    </File>
+    <File Include="Microsoft.VisualStudio.Web.CodeGeneration.dll">
+      <publishTime>04/11/2017 19:44:04</publishTime>
+    </File>
+    <File Include="Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll">
+      <publishTime>04/11/2017 19:44:04</publishTime>
+    </File>
+    <File Include="Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll">
+      <publishTime>04/11/2017 19:44:04</publishTime>
+    </File>
+    <File Include="Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll">
+      <publishTime>04/11/2017 19:44:04</publishTime>
+    </File>
+    <File Include="Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll">
+      <publishTime>04/11/2017 19:44:04</publishTime>
+    </File>
+    <File Include="NuGet.Frameworks.dll">
+      <publishTime>04/11/2017 19:44:03</publishTime>
+    </File>
+    <File Include="System.Composition.AttributedModel.dll">
+      <publishTime>04/11/2017 19:44:02</publishTime>
+    </File>
+    <File Include="System.Composition.Convention.dll">
+      <publishTime>04/11/2017 19:44:02</publishTime>
+    </File>
+    <File Include="System.Composition.Hosting.dll">
+      <publishTime>04/11/2017 19:44:03</publishTime>
+    </File>
+    <File Include="System.Composition.Runtime.dll">
+      <publishTime>04/11/2017 19:44:04</publishTime>
+    </File>
+    <File Include="System.Composition.TypedParts.dll">
+      <publishTime>04/11/2017 19:44:04</publishTime>
+    </File>
+    <File Include="web.config">
+      <publishTime>01/07/2018 20:21:08</publishTime>
+    </File>
+    <File Include="wwwroot/css/components/arctic.css">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/css/components/formstyler.css">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/css/components/noui.css">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/css/jquery.mCustomScrollbar.css">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/css/owl.carousel.css">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/css/owl.carousel.min.css">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/css/owl.theme.default.min.css">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/css/partials/articles_grid.css">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/css/partials/navigation.css">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/css/partials/news_cover.css">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/css/partials/related_products_owl.css">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/css/site.css">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/css/site.min.css">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/css/style.css">
+      <publishTime>01/07/2018 18:38:59</publishTime>
+    </File>
+    <File Include="wwwroot/css/style.css.map">
+      <publishTime>12/30/2017 21:37:01</publishTime>
+    </File>
+    <File Include="wwwroot/favicon.ico">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/Files/105.jpg">
+      <publishTime>01/07/2018 20:11:20</publishTime>
+    </File>
+    <File Include="wwwroot/Files/106.jpg">
+      <publishTime>01/07/2018 20:16:22</publishTime>
+    </File>
+    <File Include="wwwroot/Files/107.jpg">
+      <publishTime>01/07/2018 20:17:08</publishTime>
+    </File>
+    <File Include="wwwroot/Files/108.jpg">
+      <publishTime>01/07/2018 20:18:45</publishTime>
+    </File>
+    <File Include="wwwroot/Files/243 — копия.jpg">
+      <publishTime>12/29/2017 00:43:33</publishTime>
+    </File>
+    <File Include="wwwroot/Files/92.jpg">
+      <publishTime>01/05/2018 23:59:10</publishTime>
+    </File>
+    <File Include="wwwroot/Files/94.jpg">
+      <publishTime>01/06/2018 00:05:13</publishTime>
+    </File>
+    <File Include="wwwroot/Files/Cp1CWa14yJc.jpg">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/Files/ded93009-dccf-4ad8-a310-38a215ed9920">
+      <publishTime>01/05/2018 23:49:46</publishTime>
+    </File>
+    <File Include="wwwroot/Files/P5wwP1I_Xcs.jpg">
+      <publishTime>12/28/2017 00:01:09</publishTime>
+    </File>
+    <File Include="wwwroot/Files/Screenshot_1.png">
+      <publishTime>12/28/2017 00:01:09</publishTime>
+    </File>
+    <File Include="wwwroot/font/stylesheet.css">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/font/TTSupermolot-Bold.eot">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/font/TTSupermolot-Bold.ttf">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/font/TTSupermolot-Bold.woff">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/font/TTSupermolot-Regular.eot">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/font/TTSupermolot-Regular.ttf">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/font/TTSupermolot-Regular.woff">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/font/TTSupermolotBold.ttf">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/font/TTSupermolotRegular.ttf">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/images/avatar.jpg">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/images/banner.jpg">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/images/banner1.svg">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/images/banner2.jpg">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/images/banner2.svg">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/images/banner3.jpg">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/images/banner3.svg">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/images/banner4.svg">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/images/banner_left.png">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/images/banner_right.png">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/images/burger.png">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/images/cart_icon.png">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/images/chat_icon.png">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/images/chat_icon_active.png">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/images/close_menu.png">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/images/coins.png">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/images/delete_row.png">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/images/footer_logo.png">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/images/history_icon.png">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/images/history_icon_active.png">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/images/icons.png">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/images/icons22.png">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/images/item.jpg">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/images/item_cart.png">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/images/left_arrow_pagin.png">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/images/list_style.png">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/images/logo.png">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/images/logo_graph.png">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/images/logo_text.png">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/images/mini_owl_left.jpg">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/images/mini_owl_right.jpg">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/images/mobile_cart.png">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/images/mobile_ul_down.png">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/images/new_message.png">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/images/profile.jpg">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/images/profile_icon.png">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/images/profile_icon_active.png">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/images/right_arrow_pagin.png">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/images/scroll.png">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/js/jquery-3.2.1.min.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/js/jquery.arcticmodal-0.3.min.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/js/jquery.formstyler.min.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/js/jquery.mCustomScrollbar.concat.min.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/js/main.js">
+      <publishTime>01/07/2018 18:58:38</publishTime>
+    </File>
+    <File Include="wwwroot/js/nouislider.min.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/js/owl.carousel.min.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/js/site.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/js/site.min.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/less/components/arctic.less">
+      <publishTime>12/28/2017 23:31:52</publishTime>
+    </File>
+    <File Include="wwwroot/less/components/formstyler.less">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/less/components/noui.less">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/less/components/owl.less">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/less/fonts.less">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/less/global.less">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/less/normalize.less">
+      <publishTime>12/28/2017 23:31:52</publishTime>
+    </File>
+    <File Include="wwwroot/less/partials/action.less">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/less/partials/articles_grid.less">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/less/partials/breadcrumbs.less">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/less/partials/cabinet.less">
+      <publishTime>12/30/2017 21:37:01</publishTime>
+    </File>
+    <File Include="wwwroot/less/partials/cart_cover.less">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/less/partials/catalog.less">
+      <publishTime>12/28/2017 23:31:52</publishTime>
+    </File>
+    <File Include="wwwroot/less/partials/footer.less">
+      <publishTime>12/28/2017 23:31:52</publishTime>
+    </File>
+    <File Include="wwwroot/less/partials/gallery.less">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/less/partials/header.less">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/less/partials/item_card_cover.less">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/less/partials/main_banner.less">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/less/partials/navigation.less">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/less/partials/news_cover.less">
+      <publishTime>12/28/2017 23:31:52</publishTime>
+    </File>
+    <File Include="wwwroot/less/partials/pagination.less">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/less/partials/related_products_owl.less">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/less/partials/text_page.less">
+      <publishTime>12/28/2017 23:31:52</publishTime>
+    </File>
+    <File Include="wwwroot/less/partials/text_styles.less">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/less/prepros-6.config">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/less/style.less">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/.bower.json">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-theme.css">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-theme.css.map">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-theme.min.css">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-theme.min.css.map">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap.css">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap.css.map">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap.min.css">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.eot">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.svg">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/js/bootstrap.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/js/bootstrap.min.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/js/npm.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/LICENSE">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-validation-unobtrusive/.bower.json">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-validation/.bower.json">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-validation/dist/additional-methods.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-validation/dist/additional-methods.min.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-validation/dist/jquery.validate.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-validation/dist/jquery.validate.min.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-validation/LICENSE.md">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery/.bower.json">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery/dist/jquery.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery/dist/jquery.min.js">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery/dist/jquery.min.map">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery/LICENSE.txt">
+      <publishTime>12/27/2017 23:30:51</publishTime>
+    </File>
+    <File Include="wwwroot/prepros-6.config">
+      <publishTime>12/28/2017 23:31:52</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/.agignore">
+      <publishTime>12/17/2017 20:23:20</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/.editorconfig">
+      <publishTime>12/17/2017 20:23:20</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/.eslintrc">
+      <publishTime>12/17/2017 20:23:20</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/.gitignore">
+      <publishTime>12/17/2017 20:23:20</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/.npmignore">
+      <publishTime>12/17/2017 20:23:20</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/.travis.yml">
+      <publishTime>12/17/2017 20:23:20</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/bs4.html">
+      <publishTime>12/17/2017 20:23:20</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/Context.js">
+      <publishTime>12/23/2017 21:58:32</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/Context.js.map">
+      <publishTime>12/23/2017 21:58:32</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/core/async.js">
+      <publishTime>12/23/2017 21:58:32</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/core/async.js.map">
+      <publishTime>12/23/2017 21:58:32</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/core/dom.js">
+      <publishTime>12/23/2017 21:58:32</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/core/dom.js.map">
+      <publishTime>12/23/2017 21:58:32</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/core/env.js">
+      <publishTime>12/23/2017 21:58:32</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/core/env.js.map">
+      <publishTime>12/23/2017 21:58:32</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/core/func.js">
+      <publishTime>12/23/2017 21:58:32</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/core/func.js.map">
+      <publishTime>12/23/2017 21:58:32</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/core/key.js">
+      <publishTime>12/23/2017 21:58:32</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/core/key.js.map">
+      <publishTime>12/23/2017 21:58:32</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/core/lists.js">
+      <publishTime>12/23/2017 21:58:32</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/core/lists.js.map">
+      <publishTime>12/23/2017 21:58:32</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/core/range.js">
+      <publishTime>12/23/2017 21:58:32</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/core/range.js.map">
+      <publishTime>12/23/2017 21:58:32</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/editing/Bullet.js">
+      <publishTime>12/23/2017 21:58:32</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/editing/Bullet.js.map">
+      <publishTime>12/23/2017 21:58:32</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/editing/History.js">
+      <publishTime>12/23/2017 21:58:32</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/editing/History.js.map">
+      <publishTime>12/23/2017 21:58:32</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/editing/Style.js">
+      <publishTime>12/23/2017 21:58:32</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/editing/Style.js.map">
+      <publishTime>12/23/2017 21:58:32</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/editing/Table.js">
+      <publishTime>12/23/2017 21:58:32</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/editing/Table.js.map">
+      <publishTime>12/23/2017 21:58:32</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/editing/Typing.js">
+      <publishTime>12/23/2017 21:58:32</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/editing/Typing.js.map">
+      <publishTime>12/23/2017 21:58:32</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/module/AirPopover.js">
+      <publishTime>12/23/2017 21:58:32</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/module/AirPopover.js.map">
+      <publishTime>12/23/2017 21:58:32</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/module/AutoLink.js">
+      <publishTime>12/23/2017 21:58:32</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/module/AutoLink.js.map">
+      <publishTime>12/23/2017 21:58:32</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/module/AutoSync.js">
+      <publishTime>12/23/2017 21:58:32</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/module/AutoSync.js.map">
+      <publishTime>12/23/2017 21:58:32</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/module/Buttons.js">
+      <publishTime>12/23/2017 21:58:32</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/module/Buttons.js.map">
+      <publishTime>12/23/2017 21:58:32</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/module/Clipboard.js">
+      <publishTime>12/23/2017 21:58:32</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/module/Clipboard.js.map">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/module/Codeview.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/module/Codeview.js.map">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/module/Dropzone.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/module/Dropzone.js.map">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/module/Editor.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/module/Editor.js.map">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/module/Fullscreen.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/module/Fullscreen.js.map">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/module/Handle.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/module/Handle.js.map">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/module/HelpDialog.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/module/HelpDialog.js.map">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/module/HintPopover.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/module/HintPopover.js.map">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/module/ImageDialog.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/module/ImageDialog.js.map">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/module/ImagePopover.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/module/ImagePopover.js.map">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/module/LinkDialog.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/module/LinkDialog.js.map">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/module/LinkPopover.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/module/LinkPopover.js.map">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/module/Placeholder.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/module/Placeholder.js.map">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/module/Statusbar.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/module/Statusbar.js.map">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/module/TablePopover.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/module/TablePopover.js.map">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/module/Toolbar.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/module/Toolbar.js.map">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/module/VideoDialog.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/module/VideoDialog.js.map">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/renderer.js">
+      <publishTime>12/23/2017 21:58:32</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/renderer.js.map">
+      <publishTime>12/23/2017 21:58:32</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/summernote-en-US.js">
+      <publishTime>12/23/2017 21:58:32</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/base/summernote-en-US.js.map">
+      <publishTime>12/23/2017 21:58:32</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/bs3/settings.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/bs3/settings.js.map">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/bs3/ui.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/bs3/ui.js.map">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/bs4/settings.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/bs4/settings.js.map">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/bs4/ui.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/bs4/ui.js.map">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/lite/settings.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/lite/settings.js.map">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/lite/ui.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/lite/ui.js.map">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/lite/ui/DropdownUI.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/lite/ui/DropdownUI.js.map">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/lite/ui/ModalUI.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/lite/ui/ModalUI.js.map">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/lite/ui/PopoverUI.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/lite/ui/PopoverUI.js.map">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/lite/ui/TooltipUI.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/lite/ui/TooltipUI.js.map">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/summernote.js">
+      <publishTime>12/23/2017 21:58:32</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/built/summernote.js.map">
+      <publishTime>12/23/2017 21:58:32</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/CONTRIBUTING.md">
+      <publishTime>12/17/2017 20:23:20</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/examples/airmode.html">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/examples/bs3.html">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/examples/codemirror.html">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/examples/external-api.html">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/examples/hint-emoji.html">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/examples/hint-symbols_mathematical-symbols_Greek-letters.html">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/examples/hint-userdefine.html">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/examples/ie8.html">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/examples/jquery-custom-event.html">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/examples/jquery19lt.html">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/examples/lang.html">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/examples/link-blank.html">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/examples/nativestyle.html">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/examples/ondialog-multitab.html">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/examples/ondialog.html">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/examples/plugin-hello.html">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/examples/rtl.html">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/examples/symbols_mathematical-symbols_Greek-letters.json">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/examples/textarea.html">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/examples/toolbar-container.html">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/examples/with-google-font.html">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/Gruntfile.js">
+      <publishTime>12/17/2017 20:23:20</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/grunts/grunt-build.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/index.html">
+      <publishTime>12/17/2017 20:23:20</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/ISSUE_TEMPLATE.md">
+      <publishTime>12/17/2017 20:23:20</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/karma.conf.js">
+      <publishTime>12/17/2017 20:23:20</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/lang/summernote-ar-AR.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/lang/summernote-bg-BG.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/lang/summernote-ca-ES.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/lang/summernote-cs-CZ.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/lang/summernote-da-DK.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/lang/summernote-de-DE.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/lang/summernote-el-GR.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/lang/summernote-es-ES.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/lang/summernote-es-EU.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/lang/summernote-fa-IR.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/lang/summernote-fi-FI.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/lang/summernote-fr-FR.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/lang/summernote-gl-ES.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/lang/summernote-he-IL.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/lang/summernote-hr-HR.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/lang/summernote-hu-HU.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/lang/summernote-id-ID.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/lang/summernote-it-IT.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/lang/summernote-ja-JP.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/lang/summernote-ko-KR.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/lang/summernote-lt-LT.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/lang/summernote-lt-LV.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/lang/summernote-mn-MN.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/lang/summernote-nb-NO.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/lang/summernote-nl-NL.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/lang/summernote-pl-PL.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/lang/summernote-pt-BR.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/lang/summernote-pt-PT.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/lang/summernote-ro-RO.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/lang/summernote-ru-RU.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/lang/summernote-sk-SK.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/lang/summernote-sl-SI.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/lang/summernote-sr-RS-Latin.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/lang/summernote-sr-RS.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/lang/summernote-sv-SE.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/lang/summernote-ta-IN.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/lang/summernote-th-TH.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/lang/summernote-tr-TR.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/lang/summernote-uk-UA.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/lang/summernote-vi-VN.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/lang/summernote-zh-CN.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/lang/summernote-zh-TW.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/LICENSE">
+      <publishTime>12/17/2017 20:23:20</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/lite.html">
+      <publishTime>12/17/2017 20:23:20</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/MAINTAIN.md">
+      <publishTime>12/17/2017 20:23:20</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/package.json">
+      <publishTime>12/17/2017 20:23:20</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/plugin/databasic/summernote-ext-databasic.css">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/plugin/databasic/summernote-ext-databasic.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/plugin/hello/summernote-ext-hello.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/plugin/specialchars/summernote-ext-specialchars.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/PULL_REQUEST_TEMPLATE.md">
+      <publishTime>12/17/2017 20:23:20</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/README.md">
+      <publishTime>12/17/2017 20:23:20</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/align-center.svg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/align-indent.svg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/align-justify.svg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/align-left.svg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/align-outdent.svg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/align-right.svg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/align.svg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/arrow-circle-down.svg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/arrow-circle-left.svg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/arrow-circle-right.svg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/arrow-circle-up.svg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/arrows-alt.svg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/arrows-h.svg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/arrows-v.svg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/bold.svg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/caret.svg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/chain-broken.svg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/circle.svg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/close.svg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/code.svg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/col-after.svg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/col-before.svg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/col-remove.svg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/eraser.svg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/font.svg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/frame.svg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/italic.svg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/link.svg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/magic.svg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/menu-check.svg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/minus.svg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/orderedlist.svg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/pencil.svg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/picture.svg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/question.svg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/redo.svg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/row-above.svg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/row-below.svg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/row-remove.svg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/special-character.svg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/square.svg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/strikethrough.svg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/subscript.svg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/summernote.svg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/superscript.svg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/table.svg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/templates/summernote.css">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/templates/summernote.json">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/text-height.svg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/trash.svg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/underline.svg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/undo.svg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/unorderedlist.svg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/icons/video.svg">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/js/base/Context.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/js/base/core/async.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/js/base/core/dom.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/js/base/core/env.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/js/base/core/func.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/js/base/core/key.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/js/base/core/lists.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/js/base/core/range.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/js/base/editing/Bullet.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/js/base/editing/History.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/js/base/editing/Style.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/js/base/editing/Table.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/js/base/editing/Typing.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/js/base/module/AirPopover.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/js/base/module/AutoLink.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/js/base/module/AutoSync.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/js/base/module/Buttons.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/js/base/module/Clipboard.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/js/base/module/Codeview.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/js/base/module/Dropzone.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/js/base/module/Editor.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/js/base/module/Fullscreen.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/js/base/module/Handle.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/js/base/module/HelpDialog.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/js/base/module/HintPopover.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/js/base/module/ImageDialog.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/js/base/module/ImagePopover.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/js/base/module/LinkDialog.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/js/base/module/LinkPopover.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/js/base/module/Placeholder.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/js/base/module/Statusbar.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/js/base/module/TablePopover.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/js/base/module/Toolbar.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/js/base/module/VideoDialog.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/js/base/renderer.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/js/base/summernote-en-US.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/js/bs3/settings.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/js/bs3/ui.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/js/bs4/settings.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/js/bs4/ui.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/js/lite/settings.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/js/lite/ui.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/js/lite/ui/DropdownUI.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/js/lite/ui/ModalUI.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/js/lite/ui/PopoverUI.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/js/lite/ui/TooltipUI.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/js/summernote.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/less/elements.less">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/less/elements.scss">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/less/lite-ui/all.less">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/less/lite-ui/btn-group.less">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/less/lite-ui/buttons.less">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/less/lite-ui/common.less">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/less/lite-ui/dropdown.less">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/less/lite-ui/form.less">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/less/lite-ui/mixins.less">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/less/lite-ui/mixins/buttons.less">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/less/lite-ui/modal.less">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/less/lite-ui/popover.less">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/less/lite-ui/toolbar.less">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/less/lite-ui/tooltip.less">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/less/lite-ui/variables.less">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/less/summernote-bs4.less">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/less/summernote-bs4.scss">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/less/summernote-lite.less">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/less/summernote.less">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/src/less/summernote.scss">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/test/chaidom.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/test/e2e/html/initialization.html">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/test/e2e/initialization.test.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/test/e2e/static-server.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/test/libs/.gitkeep">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/test/libs/sauce.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/test/nightwatch.conf.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/test/unit/base/Context.spec.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/test/unit/base/core/dom.spec.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/test/unit/base/core/func.spec.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/test/unit/base/core/key.spec.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/test/unit/base/core/lists.spec.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/test/unit/base/core/range.spec.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/test/unit/base/editing/style.spec.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/test/unit/base/editing/Table.spec.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/test/unit/base/module/Codeview.spec.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/test/unit/base/module/Editor.spec.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/test/unit/base/module/Fullscreen.spec.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/test/unit/bs/module/Buttons.spec.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/test/unit/bs/module/VideoDialog.spec.js">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="wwwroot/summernote-develop/tsconfig.json">
+      <publishTime>12/17/2017 20:23:20</publishTime>
+    </File>
+  </ItemGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DefaultConnection">
+      <Value>Server=sql6002.site4now.net;uid=DB_A2D69F_123_admin;pwd=Zigaasih123;database=DB_A2D69F_123;</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,61 @@
+﻿@using Web.ViewModels.Cms
+@model OneToMayImageViewModel
+
+@{
+    Layout = null;
+    var uploaderId = $"OneToManyImageUploader{Model.LinkPropertyName}";
+    var imagesDivId = $"DivOneToManyImagesId{Model.LinkPropertyName}";
+}
+
+<div id="@(imagesDivId)">
+    @if (Model.Images?.Any() == true)
+    {
+        foreach (var image in Model.Images)
+        {
+            var model = new OneToManySingleImage(image.Id, image.Url, Model.LinkPropertyName);
+            @Html.Partial("OneToManySingleImage", model)
+        }
+    }
+</div>
+
+<input type="file" title="Выберите изображение" class="btn btn-primary" accept="image/*" id="@(uploaderId)"/>
+<input type="submit" value="Загрузить" class="btn btn-primary" onclick="uploadOneToManyImage@(Model.LinkPropertyName)()"/>
+
+<script>
+    uploadOneToManyImage@(Model.LinkPropertyName) = function () {
+        var file = $("#@(uploaderId)")[0].files[0];
+        var formData = new FormData();
+        formData.append("uploadedImage", file);
+        formData.append("propertyName", "@(Model.LinkPropertyName)");
+        formData.append("id", "@(Model.IdObject)");
+
+        $.ajax({
+            url: "/HomeCms/AddOneToManyImage",
+            type: "POST",
+            contentType: false,
+            data: formData,
+            cache: false,
+            processData: false,
+            async: true,
+            success: function (id) {
+                $.ajax({
+                    url: "/HomeCms/AddOneToManyImage?id=" + id + "&propertyName=" + "@(Model?.LinkPropertyName)",
+                    type: "GET",
+                    contentType: false,
+                    cache: false,
+                    processData: false,
+                    async: true,
+                    success: function (data) {
+                        var div = $("#@(imagesDivId)");
+                        div.html(div.html() + data);
+                    }
+                });
+            }
+        });
+    };
+</script>
+
+<script>
+    $('input[type=file]').bootstrapFileInput();
+    $('.file-inputs').bootstrapFileInput();
+</script>

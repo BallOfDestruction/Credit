@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <style name="MyCustomTheme" parent="Theme.AppCompat.Light">
+
+
+  </style>
+
+  <style name="MyCustomTheme.NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+
+
+  </style>
+
+</resources>

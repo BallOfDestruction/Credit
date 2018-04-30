@@ -1,0 +1,104 @@
+﻿@using System.Reflection
+@using Web.Controllers.cms
+@using Web.Models
+@using Web.StaticHelpers
+@using Web.ViewModels
+@model IEnumerable<dynamic>
+@inject Context DbContext
+
+@{
+    ViewData["TitleToTopLabelE"] = "Список";
+    Layout = "~/Views/Shared/_LayoutCms.cshtml";
+    var type = (Type)ViewBag.Type;
+    var access = type.GetCustomAttribute<AccessAttribute>() ?? new AccessAttribute();
+    var nameType = (string) ViewBag.NameType;
+    var page = (int) ViewBag.Page;
+    var pageCount = (int) ViewBag.PageCount;
+    var cmsSection = DbContext.CmsModels.FirstOrDefault(w => w.Class == nameType);
+
+    var properties = ReflectionHelper.GetPropertiesInList(type).ToList();
+
+    var paginationModel = new PaginationViewModel($"/HomeCms/GetList?type={nameType}&", page, pageCount);
+
+    ViewData["TitleToTopLabelE"] = "Список " + cmsSection?.Title;
+}
+
+
+<div class="col-md-offset-1 col-md-10">
+    <br />
+    <h2>@cmsSection.Title</h2>
+    <hr />
+    <p>
+        @if (access.OnCreate)
+        {
+            <h3>
+                <a asp-action="Create" asp-route-type="@nameType">Создать новый объект</a>
+            </h3>
+        }
+    </p>
+    <table class="table">
+        <thead>
+        <tr>
+
+            @foreach (var property in properties)
+            {
+                var name = ReflectionHelper.GetNameProperty(property);
+                <th>
+                    @Html.DisplayName(name)
+                </th>
+            }
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                @foreach (var property in properties)
+                {
+                    if (property.GetCustomAttribute<ShowTitleAttribute>() != null)
+                    {
+                        var value = (string)ReflectionHelper.GetValuePropertyAsTitle(property, item)?.ToString();
+                        var link = (string)ReflectionHelper.GetValuePropertyAsLink(property, item)?.ToString();
+                        <td>
+                            <a href="@link">
+                                @Html.DisplayFor(modelItem => value)
+                            </a>
+                        </td>
+                    }
+                    else
+                    {
+                        var value = (string)ReflectionHelper.GetValuePropertyAsString(property, item)?.ToString();
+                        <td>
+                            @Html.DisplayFor(modelItem => value)
+                        </td>
+                    }
+                }
+                <td>
+                    @if (access.OnDetails)
+                    {
+                        @Html.ActionLink("Посмотреть", "Details", new { type = nameType, id = (item as IEntity)?.Id })
+                    }
+                    @if (access.OnDetails && (access.OnEdit || access.OnDelete))
+                    {
+                        <span>|</span>
+                    }
+                    @if (access.OnEdit)
+                    {
+                        @Html.ActionLink("Редактировать", "Edit", new { type = nameType, id = (item as IEntity)?.Id })
+                    }
+                    @if (access.OnDelete && access.OnEdit)
+                    {
+                        <span>|</span>
+                    }
+                    @if (access.OnDelete)
+                    {
+                        @Html.ActionLink("Удалить", "Delete", new { type = nameType, id = (item as IEntity)?.Id })
+                    }
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+    @Html.Partial("Pagination", paginationModel)
+</div>

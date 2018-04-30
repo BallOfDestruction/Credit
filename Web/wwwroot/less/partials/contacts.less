@@ -1,0 +1,115 @@
+.contacts_page{
+  min-height: 100vh;
+  position: relative;
+  background: #6b6b6b;
+  display: flex;
+  .breadcrumbs{
+    a, span{
+      color: #fff;
+    }
+  }
+  .contact_info{
+    width: 44vw;
+    margin-left: 10vw;
+    margin-top: 27vh;
+    position: relative;
+    &:before{
+      content: '';
+      position: absolute;
+      left: -60px;
+      top: 0;
+      width: 20px;
+      height: 40vh;
+      background: #616161;
+    }
+    .title{
+      line-height: 1.07;
+      letter-spacing: 1.4px;
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 50px;
+    }
+    .main_phone, .main_mail{
+      color: #fff;
+      font-size: 27px;
+      font-weight: bold;
+      line-height: 10px;
+      letter-spacing: 2px;
+      margin-bottom: 33px;
+    }
+    .main_mail{
+      margin-bottom: 50px;
+    }
+    .department_cover{
+      display: flex;
+      color: #fff;
+      margin-bottom: 37px;
+      .department_col{
+        padding-right: 5vw;
+      }
+      b{
+        color: #f2b369;
+        font-size: 21px;
+        line-height: 1.25;
+        letter-spacing: 1.2px;
+        font-weight: bold;
+        margin-bottom: 5px;
+        display: block;
+      }
+      p{
+        font-size: 24px;
+        line-height: 1.67;
+        letter-spacing: 1.2px;
+        padding-bottom: 0;
+      }
+    }
+    .placement{
+      b{
+        color: @maize;
+        font-size: 24px;
+        line-height: 1.25;
+        letter-spacing: 1.2px;
+        font-weight: bold;
+        margin-bottom: 8px;
+        display: block;
+      }
+      p{
+        font-size: 21px;
+        line-height: 20px;
+        letter-spacing: 1.2px;
+        color: #fff;
+      }
+    }
+  }
+  .contact_form_cover{
+    margin-top: 27vh;
+    padding-left: 30px;
+    .title{
+      line-height: 1.07;
+      letter-spacing: 1.4px;
+      font-size: 28px;
+      font-weight: bold;
+    }
+    .request_form .text_attention {
+      color: #f2b369;
+      line-height: 12px;
+      letter-spacing: 0.9px;
+      margin-top: 44px;
+      font-size: 16px;
+    }
+    .request_form .input_cover{
+      margin-bottom: 13px;
+    }
+    .request_form .btn {
+      margin-top: 38px;
+    }
+    .request_form input, .request_form textarea {
+      padding: 14px 22px;
+      color: #fff;
+      background: transparent;
+      border-bottom: 2px solid #ffffff;
+      font-size: 18px;
+      border-radius: 0;
+    }
+  }
+}

@@ -1,0 +1,250 @@
+﻿@using System.Collections
+@using System.ComponentModel.DataAnnotations
+@using System.Reflection
+@using Web.Controllers.cms
+@using Web.Models
+@using Web.StaticHelpers
+@using Web.ViewModels.Cms
+@model dynamic
+@inject Context DbContext
+
+@{
+    Layout = "~/Views/Shared/_LayoutCms.cshtml";
+
+    var type = (Type)Model.GetType();
+    var properties = ReflectionHelper.GetProperiesInEdit(type).ToList();
+
+    var nameType = (string)ViewBag.NameType;
+    var cmsSection = DbContext.CmsModels.FirstOrDefault(w => w.Class == nameType);
+
+    var stringType = typeof(string);
+    var ienumerableType = typeof(IEnumerable);
+
+    var id = ((IEntity) Model)?.Id;
+
+    ViewData["TitleToTopLabelE"] = "Редактирование " + cmsSection?.Title;
+
+
+    var files = properties.Where(w => w.PropertyType == Types.File).ToList();
+    var images = properties.Where(w => w.PropertyType == Types.Image).ToList();
+
+    var oneToManyImages = properties.Where(w => w.PropertyType == Types.ListImage);
+
+    var other = properties.Where(w => w.PropertyType != Types.File && w.PropertyType != Types.Image && w.PropertyType != Types.ListImage).ToList();
+
+
+    var isSingleObject = type.GetCustomAttribute<SingleObjectAttribute>() != null;
+}
+
+
+<div class="col-md-offset-1 col-md-10">
+    <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-4">
+                <h2>Редактирование</h2>
+            </div>
+            <div class="col-md-offset-6 col-md-2">
+                @if (!isSingleObject)
+                {
+                    <h4>
+                        <a asp-action="GetList" asp-route-type="@(nameType)">Вернуться к списку</a>
+                    </h4>
+                }
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <hr />
+    </div>
+
+    <div class="col-md-12">
+
+        <h4>@(cmsSection?.Title)</h4>
+    </div>
+    <div class="col-md-12">
+
+        <hr />
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            @foreach (var propertyInfo in files)
+            {
+                var name = ReflectionHelper.GetNameProperty(propertyInfo);
+                var file = propertyInfo.GetValue(Model) as FileModel;
+                var fileViewModel = new FileViewModel()
+                {
+                    Id = propertyInfo.Name,
+                    FileId = file?.Id,
+                };
+
+                <div class="col-md-12" style="margin-bottom: 30px;">
+                    <div class="form-group">
+                        <div class="col-md-2">
+                            <span style="font-weight: bold">
+                                @Html.DisplayName(name)
+                            </span>
+                        </div>
+                        <div class="col-md-10" id="@(fileViewModel.Id)">
+                            @Html.Partial("File", fileViewModel)
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+    
+
+    <div class="row">
+        <div class="col-md-12">
+            @foreach (var propertyInfo in oneToManyImages)
+            {
+                var name = ReflectionHelper.GetNameProperty(propertyInfo);
+                var image = propertyInfo.GetValue(Model) as List<Image>;
+                var propertyName = propertyInfo.GetCustomAttribute<OneTwoManyAttribute>()?.PropertyName;
+                var imageViewModel = new OneToMayImageViewModel(image?.Select(w => (w.Id, w.Url)).ToList(), id.Value, propertyName);
+
+                <div class="col-md-12" style="margin-bottom: 30px;">
+                    <div class="form-group">
+                        <div class="col-md-2">
+                            <span style="font-weight: bold">
+                                @Html.DisplayName(name)
+                            </span>
+                        </div>
+                        <div class="col-md-10">
+                            @Html.Partial("OneToManyImage", imageViewModel)
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+    
+    
+    <div class="row">
+        <div class="col-md-12">
+            @foreach (var propertyInfo in images)
+            {
+                var name = ReflectionHelper.GetNameProperty(propertyInfo);
+                var image = propertyInfo.GetValue(Model) as Image;
+                var imageViewModel = new ImageViewModel()
+                {
+                    Id = propertyInfo.Name,
+                    ImageId = image?.Id,
+                    Url = image?.Url,
+                };
+
+                <div class="col-md-12" style="margin-bottom: 30px;">
+                    <div class="form-group">
+                        <div class="col-md-2">
+                            <span style="font-weight: bold">
+                                @Html.DisplayName(name)
+                            </span>
+                        </div>
+                        <div class="col-md-10" id="@(imageViewModel.Id)">
+                            @Html.Partial("Image", imageViewModel)
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <form asp-action="Edit" method="post" enctype="multipart/form-data">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                
+                <div class="col-md-12">
+                    <div class="form-group col-md-4 col-md-offset-2" style="margin-top: 60px; margin-bottom: 50px;">
+                        <input type="submit" value="Сохранить изменения" class="btn btn-primary" />
+                    </div>
+                </div>
+                <div style="display: none" id="fileHiddenInputs"></div>
+                <div style="display: none" id="imagesHiddenInputs"></div>
+
+                @Html.Hidden("type", type.Name)
+                @Html.Hidden("id", id)
+                @foreach (var propertyInfo in other)
+                {
+                    <div class="col-md-12" style="margin-bottom: 30px;">
+                        @{
+                            var name = ReflectionHelper.GetNameProperty(propertyInfo);
+                            var propertyName = propertyInfo.Name;
+                            var propertyType = propertyInfo.PropertyType;
+                            var dataType = propertyInfo.GetCustomAttribute<DataTypeAttribute>();
+                            var isHtml = ReflectionHelper.IsHtml(propertyInfo);
+                        }
+
+                        <div class="form-group">
+                            <div class="col-md-2">
+                                <span style="font-weight: bold">
+                                    @Html.DisplayName(name)
+                                </span>
+                            </div>
+                            <div class="col-md-10">
+                                @if (isHtml)
+                                {
+                                    @Html.TextArea(propertyInfo.Name, new { @class = "form-control summernote" })
+                                }
+                                else if ((propertyType.IsClass || propertyType.IsArray) && propertyType != stringType)
+                                {
+                                    if (propertyType.IsArray || propertyType.GetInterfaces().Any(w => w == ienumerableType))
+                                    {
+                                        @*Для списка*@
+                                        if (propertyType == Types.ListImage)
+                                        {
+                                            <input type="file" name="@propertyName" class="form-control" multiple="multiple" accept="image/*" />
+                                            <br>
+                                        }
+                                    }
+                                    else
+                                    {
+                                        var dataFor = propertyName + "Id";
+
+                                        var list = DataHelper.GetList(DbContext, propertyType);
+                                        var selectList = list.Select(w => new SelectListItem() { Text = w.Title, Value = w.Id.ToString() }).ToList();
+                                        selectList.Insert(0, new SelectListItem());
+
+                                        @Html.DropDownList(dataFor, selectList, new { @class = "form-control" })
+                                    }
+                                }
+                                else
+                                {
+                                    string typeInput;
+
+                                    if (propertyType == Types.Int || propertyType == Types.Byte || propertyType == Types.Double || propertyType == Types.Single || propertyType == Types.Long)
+                                    {
+                                        typeInput = "number";
+                                    }
+                                    else if (propertyType == Types.DataTime)
+                                    {
+                                        typeInput = "datetime";
+                                    }
+                                    else if (propertyType == Types.Bool)
+                                    {
+                                        typeInput = "checkbox";
+                                    }
+                                    else
+                                    {
+                                        typeInput = "text";
+                                    }
+
+                                    if (dataType?.DataType == DataType.Password)
+                                    {
+                                        typeInput = "password";
+                                    }
+
+                                    @Html.Editor(propertyName, new { htmlAttributes = new { type = typeInput, @class = "form-control", placeholder = name } })
+                                }
+                            </div>
+                        </div>
+                    </div>
+                }
+                <div class="form-group col-md-4 col-md-offset-5" style="margin-top: 60px; margin-bottom: 50px;">
+                    <input type="submit" value="Сохранить изменения" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

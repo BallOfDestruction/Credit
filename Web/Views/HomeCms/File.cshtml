@@ -1,0 +1,76 @@
+﻿@using Web.ViewModels.Cms
+@model Web.ViewModels.Cms.FileViewModel
+
+@{
+    Layout = null;
+}
+
+@if (Model?.FileId == null)
+{
+    <input type="file" title="Выберите файл" class="btn btn-primary" id="@(Model?.Id)files" />
+    <input type="submit" value="Загрузить" class="btn btn-primary" onclick="uploadFiles()" />
+    <script>
+        uploadFiles = function() {
+            var file = $("#@(Model?.Id)files")[0].files[0];
+            var formData = new FormData();
+            formData.append("uploadedFile", file);
+
+            $.ajax({
+                url: "/HomeCms/AddFile",
+                type: "POST",
+                contentType: false,
+                data: formData,
+                cache: false,
+                processData: false,
+                async: true,
+                success: function (id) {
+                    $.ajax({
+                        url: "/HomeCms/AddFile?id=" + id + "&idFileProperty=" + "@(Model?.Id)",
+                        type: "GET",
+                        contentType: false,
+                        cache: false,
+                        processData: false,
+                        async: true,
+                        success: function (data) {
+                            var input = $("#@(Model?.Id)Id");
+                            if (input.length === 0) {
+                                var filesDiv = $("#fileHiddenInputs");
+                                filesDiv.html(filesDiv.html() + '<input type="hidden" id="@(Model?.Id)Id" name="@(Model?.Id)Id" value="' + id + '"/>');
+                            } else {
+                                input.val(id);
+                            }
+                            $("#@(Model?.Id)").html(data);
+                        }
+                    });
+                }
+            });
+        };
+    </script>
+}
+else
+{
+    <form asp-controller="HomeCms" asp-action="RemoveFile" method="post" data-ajax="true" data-ajax-update="#@(Model?.Id)" data-ajax-success="onDelete()">
+        <input type="hidden" value="@(Model.FileId)" name="id" />
+        <input type="hidden" value="@(Model.Id)" name="idFileProperty" />
+
+        <input type="submit" value="Удалить файл" class="btn btn-primary" style="margin-bottom: 20px; margin-top: 20px;" />
+    </form>
+
+    <script>
+        onDelete = function () {
+            var input = $("#@(Model?.Id)Id");
+            if (input.length === 0) {
+                var filesDiv = $("#fileHiddenInputs");
+                filesDiv.html(filesDiv.html() + '<input type="hidden" id="@(Model?.Id)Id" name="@(Model?.Id)Id" value=""/>');
+            } else {
+                input.val("");
+            }
+        };
+    </script>
+}
+<br>
+
+<script>
+    $('input[type=file]').bootstrapFileInput();
+    $('.file-inputs').bootstrapFileInput();
+</script>
