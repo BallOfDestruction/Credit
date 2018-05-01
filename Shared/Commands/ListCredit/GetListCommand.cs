@@ -14,7 +14,13 @@ namespace Shared.Commands.ListCredit
         public override void Execute(object model)
         {
             var httpClient = new WSHttpClient();
-            var responce = httpClient.GetData<GetListResponce>("Credit/GetList", null);
+            var responce = httpClient.GetData<GetListResponce>("Credit/GetList/", null);
+
+            if (responce.Answer?.Credits?.Any() == true)
+            {
+                LocalDatabase?.DeleteAll<Models.Credit>();
+                LocalDatabase?.AddNewItems(responce.Answer.Credits);
+            }
 
             CommonExecute(responce);
 

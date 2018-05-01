@@ -7,5 +7,6 @@ namespace Web.Models
         public DateTime Date { get; set; }
         public float Summ { get; set; }
         public int Position { get; set; }
+        public bool IsPay { get; set; }
     }
 }

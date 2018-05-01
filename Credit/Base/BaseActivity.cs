@@ -168,10 +168,23 @@ namespace Credit.Base
 
         protected void HideKeyboard()
         {
-            var imm = (InputMethodManager)this.GetSystemService(Activity.InputMethodService);
+            try
+            {
+                var imm = (InputMethodManager) this.GetSystemService(Activity.InputMethodService);
 
-            var view = CurrentFocus ?? new View(this);
-            imm.HideSoftInputFromWindow(view.WindowToken, 0);
+                var view = CurrentFocus ?? new View(this);
+                imm.HideSoftInputFromWindow(view.WindowToken, 0);
+            }
+            catch
+            {
+                
+            }
+        }
+
+        public override void OnBackPressed()
+        {
+            HideKeyboard();
+            base.OnBackPressed();
         }
     }
 }

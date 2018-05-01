@@ -184,7 +184,7 @@ namespace Shared.Database
         {
             lock (Locker)
             {
-                return _database.Table<T>().FirstOrDefault(w => w.Id == id);
+                return _database.Table<T>().ToList().FirstOrDefault(w => w.Id == id);
             }
         }
         /// <summary>

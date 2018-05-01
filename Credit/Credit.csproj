@@ -147,6 +147,11 @@
     <Compile Include="Base\BaseActivity.cs" />
     <Compile Include="Base\BurgerActivity.cs" />
     <Compile Include="Base\ReturnActivity.cs" />
+    <Compile Include="Work\CreateCredit\CreateCreditActivity.cs" />
+    <Compile Include="Work\Credit\CreditActivity.cs" />
+    <Compile Include="Work\Credit\NotCanScrollGridLayoutManager.cs" />
+    <Compile Include="Work\Credit\PaymentAdapter.cs" />
+    <Compile Include="Work\Credit\PaymentViewHolder.cs" />
     <Compile Include="Work\ListCredit\CreditAdapter.cs" />
     <Compile Include="Work\ListCredit\CreditViewHolder.cs" />
     <Compile Include="Work\ListCredit\ListCreditActivity.cs" />
@@ -160,7 +165,6 @@
     <None Include="packages.config" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Properties\AndroidManifest.xml" />
-    <AndroidResource Include="Resources\menu\Drawer_view.axml" />
     <AndroidResource Include="Resources\menu\Top_menus.axml" />
     <AndroidResource Include="Resources\layout\Nav_header.axml" />
     <AndroidResource Include="Resources\layout\list_credit.axml">
@@ -172,11 +176,22 @@
     <AndroidResource Include="Resources\layout\credit_item.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
+    <AndroidResource Include="Resources\menu\drawer_view.axml" />
+    <AndroidResource Include="Resources\layout\credit.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\payment_item.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\create_credit.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\login.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
+    <AndroidResource Include="Resources\values\colors.xml" />
     <AndroidResource Include="Resources\values\Strings.xml" />
   </ItemGroup>
   <ItemGroup>
@@ -224,6 +239,36 @@
     <AndroidResource Include="Resources\mipmap-xhdpi\burger.png" />
     <AndroidResource Include="Resources\mipmap-xxhdpi\burger.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\burger.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\mipmap-hdpi\ic_payment_black_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\mipmap-mdpi\ic_payment_black_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\mipmap-xhdpi\ic_payment_black_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\mipmap-xxhdpi\ic_payment_black_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_payment_black_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\mipmap-hdpi\ic_add_black_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\mipmap-mdpi\ic_add_black_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\mipmap-xhdpi\ic_add_black_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\mipmap-xxhdpi\ic_add_black_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_add_black_24dp.png" />
   </ItemGroup>
   <Import Project="..\Shared\Shared.projitems" Label="Shared" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

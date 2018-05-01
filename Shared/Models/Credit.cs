@@ -19,7 +19,8 @@ namespace Shared.Models
 
         //Дифференцированный, Аннуитет
         public string TypeCredit { get; set; }
-        
+
+        public bool IsPay { get; set; }
         //Json выплат
         public string ListPayment { get; set; }
     }

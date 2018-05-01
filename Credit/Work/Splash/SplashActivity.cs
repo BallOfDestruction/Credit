@@ -15,7 +15,7 @@ namespace Credit.Work.Splash
             base.OnCreate(savedInstanceState);
 
             var user = LocalDb.Instance.GetFirstItem<LocalUserModel>();
-
+            Finish();
             StartActivity(user == null ? typeof(LoginActivity) : typeof(ListCreditActivity));
         }
     }

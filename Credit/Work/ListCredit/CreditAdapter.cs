@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Android.Graphics;
 using Android.Support.V7.Widget;
 using Android.Views;
 
@@ -24,9 +25,19 @@ namespace Credit.Work.ListCredit
 
             viewHolder.Title.Text = item.Name;
             viewHolder.Subtitle.Text = $"{item.BankName}, {item.Amount} руб., {item.DurationInMonth} мес.";
-            viewHolder.Icon.SetImageResource(Resource.Mipmap.ic_location_city_black_24dp);
+            viewHolder.Icon.SetImageResource(Resource.Mipmap.ic_payment_black_24dp);
+            viewHolder.Icon.SetColorFilter(Color.Green);
             viewHolder.Main.Click += null;
             viewHolder.Main.Click += (sender, args) => _open?.Invoke(item);
+
+            if (item.IsPay)
+            {
+                viewHolder.Icon.SetColorFilter(Color.Green);
+            }
+            else
+            {
+                viewHolder.Icon.SetColorFilter(Color.Red);
+            }
         }
 
         public override RecyclerView.ViewHolder OnCreateViewHolder(ViewGroup parent, int viewType)

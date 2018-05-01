@@ -1,8 +1,12 @@
 ﻿using Android.Content;
+using Android.OS;
 using Android.Support.Design.Widget;
 using Android.Support.V4.Widget;
 using Android.Views;
+using Credit.Work.ListCredit;
 using Credit.Work.Login;
+using Shared.Database;
+using Shared.Models;
 
 namespace Credit.Base
 {
@@ -14,9 +18,10 @@ namespace Credit.Base
         protected sealed override int? LeftButtonId => Resource.Mipmap.burger;
         private DrawerLayout _mDrawerLayout;
 
-        protected override void LoadSyncElements()
+        protected sealed override void OnCreate(Bundle savedInstanceState)
         {
-            //Выпадающее меню слева
+            base.OnCreate(savedInstanceState);
+
             _mDrawerLayout = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
             var mLeftDrawer = FindViewById<NavigationView>(Resource.Id.left_drawer);
 
@@ -38,6 +43,13 @@ namespace Credit.Base
                 switch (e.MenuItem.ItemId)
                 {
                     case Resource.Id.list_credit_nav:
+                        FinishAffinity();
+                        intent = new Intent(this, typeof(ListCreditActivity));
+                        StartActivity(intent);
+                        break;
+                    case Resource.Id.nav_exit:
+                        LocalDb.Instance.DeleteAll<LocalUserModel>();
+                        FinishAffinity();
                         intent = new Intent(this, typeof(LoginActivity));
                         StartActivity(intent);
                         break;
@@ -52,7 +64,7 @@ namespace Credit.Base
             {
                 case Android.Resource.Id.Home:
                     //Обрабатывает клик по бургеру, и выводит навигацию
-                    _mDrawerLayout.OpenDrawer((int)GravityFlags.Left);
+                    _mDrawerLayout?.OpenDrawer((int)GravityFlags.Left);
                     return true;
 
                 default:

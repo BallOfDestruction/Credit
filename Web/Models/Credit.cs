@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
+using Newtonsoft.Json;
 using Web.Controllers.cms;
 
 namespace Web.Models
@@ -26,18 +27,34 @@ namespace Web.Models
         public int DurationInMonth { get; set; }
 
         //Дифференцированный, Аннуитет
-        [DisplayName("Тип в кредитах")]
+        [DisplayName("Тип кредита")]
         public string TypeCredit { get; set; }
 
         //Json выплат
         [Show(false, false, false, false)]
         public string ListPayment { get; set; }
 
+        [DisplayName("Длительность в месяцах")]
+        public bool IsPay { get; set; }
+
         [Show(false, false, false, false)]
+        [JsonIgnore]
         public int UserId { get; set; }
 
-        [DisplayName("Изображение")]
+        [DisplayName("Пользователь")]
         [ShowTitle]
+        [JsonIgnore]
         public User User { get; set; }
+
+        public override string GetValueFromNameProperty(string propertyName)
+        {
+            switch (propertyName)
+            {
+                case "IsPay":
+                    return IsPay ? "Оплачено" : "Неоплачено";
+                default:
+                    return null;
+            }
+        }
     }
 }

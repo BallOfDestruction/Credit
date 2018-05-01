@@ -31,6 +31,7 @@ namespace Web.Controllers
             var token = Guid.NewGuid().ToString();
             var tokenModel = new TokenModel() {Token = token, UserId = user.Id};
             Context.Add(tokenModel);
+            Context.SaveChanges();
 
             return Json(new LoginResponceViewModel()
             {
