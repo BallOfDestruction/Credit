@@ -1,11 +1,11 @@
 ﻿using Android.App;
 using Android.OS;
-using Credit.ListCredit;
-using Credit.Login;
+using Credit.Work.ListCredit;
+using Credit.Work.Login;
 using Shared.Database;
 using Shared.Models;
 
-namespace Credit.Splash
+namespace Credit.Work.Splash
 {
     [Activity(Label = "Credit", MainLauncher = true, Theme = "@style/Theme.AppCompat.Light")]
     public class SplashActivity : Activity

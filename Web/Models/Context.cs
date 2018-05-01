@@ -15,7 +15,7 @@ namespace Web.Models
         public DbSet<CmsModel> CmsModels { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<TokenModel> TokenModels { get; set; }
-
+        public DbSet<Credit> Credits { get; set; }
 
 
         public IQueryable<T> GetDbSet<T>(T type)

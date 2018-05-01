@@ -50,6 +50,8 @@ namespace Shared.Database
                     _database = new SQLiteConnection(DatabasePath);
 
                     UpdateTable<LocalUserModel>();
+                    UpdateTable<Models.Credit>();
+
                 }
                 catch (Exception e)
                 {

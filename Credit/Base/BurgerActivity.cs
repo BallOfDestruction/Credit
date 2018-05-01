@@ -2,7 +2,7 @@
 using Android.Support.Design.Widget;
 using Android.Support.V4.Widget;
 using Android.Views;
-using Credit.Login;
+using Credit.Work.Login;
 
 namespace Credit.Base
 {
@@ -11,7 +11,7 @@ namespace Credit.Base
     /// </summary>
     public abstract class BurgerActivity : BaseActivity
     {
-        protected sealed override int? LeftButtonId => Resource.Mipmap.ic_action_menu;
+        protected sealed override int? LeftButtonId => Resource.Mipmap.burger;
         private DrawerLayout _mDrawerLayout;
 
         protected override void LoadSyncElements()

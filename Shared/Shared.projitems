@@ -13,6 +13,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Commands\CommonCommand.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Commands\ICommand.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Commands\ICommandDelegate.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Commands\ListCredit\GetListCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Commands\ListCredit\GetListResponce.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Commands\Login\LoginCommand.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Commands\Login\LoginResponceViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Commands\Login\LoginViewModel.cs" />
@@ -23,7 +25,9 @@
     <Compile Include="$(MSBuildThisFileDirectory)Database\IEntity.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Database\ILocalDb.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Database\LocalDb.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Credit.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\LocalUserModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\PaymentModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\RegistrationModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Settings\WSString.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)WebService\Error.cs" />

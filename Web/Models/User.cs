@@ -5,6 +5,7 @@ using Web.Controllers.cms;
 
 namespace Web.Models
 {
+    [Access(false)]
     public class User : Entity<User>
     {
         [DisplayName("Email")]
@@ -27,7 +28,10 @@ namespace Web.Models
         [Show(false, false, false, false)]
         public override string Title => $"{Email}";
 
-
+        [Show(false,false,false,false)]
         public List<TokenModel> TokenModels { get; set; }
+
+        [Show(false, false, false, false)]
+        public List<Credit> Credits { get; set; }
     }
 }

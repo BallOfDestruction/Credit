@@ -8,7 +8,7 @@ using Shared.Commands.Registration;
 using Shared.Database;
 using Shared.Delegates;
 
-namespace Credit.Registration
+namespace Credit.Work.Registration
 {
     [Activity(Label = "Регистрация", Theme = "@style/MyCustomTheme", WindowSoftInputMode = SoftInput.StateHidden)]
     public class RegistrationActivity : ReturnActivity

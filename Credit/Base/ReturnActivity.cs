@@ -9,7 +9,7 @@ namespace Credit.Base
     public abstract class ReturnActivity : BaseActivity
     {
         //Левая верхняя кнопка(бургер или назад)
-        protected override int? LeftButtonId => Resource.Mipmap.ic_action_arrow_back;
+        protected override int? LeftButtonId => null;
 
         public override bool OnOptionsItemSelected(IMenuItem item)
         {

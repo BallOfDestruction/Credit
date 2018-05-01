@@ -46,15 +46,15 @@ namespace Credit.Base
             if (LayoutResId != -1)
                 SetContentView(LayoutResId);
 
-            var support = FindViewById<SupportToolbar>(Resource.Id.toolbar);
-            if(support != null)
-                SetSupportActionBar(support);
-
-            if (LeftButtonId.HasValue && SupportActionBar != null)
+            if (SupportActionBar != null)
             {
                 SupportActionBar.Title = SupportTitle;
-                SupportActionBar.SetHomeAsUpIndicator(LeftButtonId.Value);
                 SupportActionBar.SetDisplayHomeAsUpEnabled(true);
+
+                if (LeftButtonId.HasValue)
+                {
+                    SupportActionBar.SetHomeAsUpIndicator(LeftButtonId.Value);
+                }
             }
 
             LoadSyncElements();

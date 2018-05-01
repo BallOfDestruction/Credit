@@ -147,19 +147,19 @@
     <Compile Include="Base\BaseActivity.cs" />
     <Compile Include="Base\BurgerActivity.cs" />
     <Compile Include="Base\ReturnActivity.cs" />
-    <Compile Include="ListCredit\ListCreditActivity.cs" />
-    <Compile Include="Login\LoginActivity.cs" />
-    <Compile Include="Registration\RegistrationActivity.cs" />
+    <Compile Include="Work\ListCredit\CreditAdapter.cs" />
+    <Compile Include="Work\ListCredit\CreditViewHolder.cs" />
+    <Compile Include="Work\ListCredit\ListCreditActivity.cs" />
+    <Compile Include="Work\Login\LoginActivity.cs" />
+    <Compile Include="Work\Registration\RegistrationActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Splash\SplashActivity.cs" />
+    <Compile Include="Work\Splash\SplashActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Properties\AndroidManifest.xml" />
-    <None Include="Assets\AboutAssets.txt" />
-    <AndroidResource Include="Resources\layout\CurrentOrders.axml" />
     <AndroidResource Include="Resources\menu\Drawer_view.axml" />
     <AndroidResource Include="Resources\menu\Top_menus.axml" />
     <AndroidResource Include="Resources\layout\Nav_header.axml" />
@@ -167,6 +167,9 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\registration.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\credit_item.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
@@ -191,7 +194,36 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_action_arrow_back.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_action_menu.png" />
     <AndroidResource Include="Resources\values\Styles.xml" />
-    <Content Include="THIRD-PARTY-NOTICES.txt" />
+    <AndroidResource Include="Resources\mipmap-hdpi\ic_email_black_24dp.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\ic_email_black_24dp.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\ic_email_black_24dp.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\ic_email_black_24dp.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_email_black_24dp.png" />
+    <AndroidResource Include="Resources\mipmap-hdpi\ic_vpn_key_black_24dp.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\ic_vpn_key_black_24dp.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\ic_vpn_key_black_24dp.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\ic_vpn_key_black_24dp.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_vpn_key_black_24dp.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_account_circle_black_24dp.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\ic_account_circle_black_24dp.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\ic_account_circle_black_24dp.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\ic_account_circle_black_24dp.png" />
+    <AndroidResource Include="Resources\mipmap-hdpi\ic_account_circle_black_24dp.png" />
+    <AndroidResource Include="Resources\mipmap-hdpi\ic_location_city_black_24dp.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\ic_location_city_black_24dp.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\ic_location_city_black_24dp.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\ic_location_city_black_24dp.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_location_city_black_24dp.png" />
+    <AndroidResource Include="Resources\mipmap-hdpi\back_icon_android.jpg" />
+    <AndroidResource Include="Resources\mipmap-mdpi\back_icon_android.jpg" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\back_icon_android.jpg" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\back_icon_android.jpg" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\back_icon_android.jpg" />
+    <AndroidResource Include="Resources\mipmap-hdpi\burger.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\burger.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\burger.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\burger.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\burger.png" />
   </ItemGroup>
   <Import Project="..\Shared\Shared.projitems" Label="Shared" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

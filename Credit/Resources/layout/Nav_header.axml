@@ -4,11 +4,5 @@
              android:paddingTop="30dp"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#0c54a0"
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#f2f2f2"
-        android:layout_gravity="bottom|left" />
 </FrameLayout>
