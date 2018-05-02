@@ -1,10 +1,15 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
+using System.Threading;
 using Android.App;
 using Android.Views;
 using Android.Widget;
 using Credit.Base;
+using Credit.Work.ListCredit;
+using Shared.Commands.CreateCredit;
+using Shared.Database;
+using Shared.Delegates;
 
 namespace Credit.Work.CreateCredit
 {
@@ -17,12 +22,17 @@ namespace Credit.Work.CreateCredit
         private EditText _name;
         private EditText _bank;
         private EditText _duration;
-        private EditText _startDate;
+        private Button _startDate;
         private EditText _percent;
         private EditText _amount;
         private AutoCompleteTextView _type;
         private Button _apply;
 
+        //TODO проверка при создании credit
+        // валидация на типы и числа
+        // отправка запроса на оплату
+        //Работа оплаты только в онлайн
+        // обновление списки после оплаты
         protected override void LoadSyncElements()
         {
             _name = FindViewById<EditText>(Resource.Id.create_credit_name);
@@ -31,12 +41,13 @@ namespace Credit.Work.CreateCredit
 
             _type = FindViewById<AutoCompleteTextView>(Resource.Id.create_credit_type);
             _type.Adapter = new ArrayAdapter(this, Android.Resource.Layout.SimpleListItem1,new List<string>(){ "Дифференцированный", "Аннуитет" });
-            _type.Text = "Дифференцированный";
+            _type.Text = "Аннуитет";
             _type.Threshold = 1;
 
             _duration = FindViewById<EditText>(Resource.Id.create_credit_duration);
 
-            _startDate = FindViewById<EditText>(Resource.Id.create_credit_start_date);
+            _startDate = FindViewById<Button>(Resource.Id.create_credit_start_date);
+            _startDate.Click += StartDateOnClick;
 
             _percent = FindViewById<EditText>(Resource.Id.create_credit_percent);
 
@@ -46,9 +57,40 @@ namespace Credit.Work.CreateCredit
             _apply.Click += ApplyOnClick;
         }
 
+        private void StartDateOnClick(object sender, EventArgs eventArgs)
+        {
+            var now = DateTime.Now;
+            var datePickerDialog = new DatePickerDialog(this, (o, args) =>
+            {
+                _startDate.Text = new DateTime(args.Year, args.Month, args.DayOfMonth).ToString("d", new CultureInfo("ru"));
+            },now.Year, now.Month, now.Day);
+
+            datePickerDialog.Show();
+        }
+
         private void ApplyOnClick(object sender, EventArgs eventArgs)
         {
-            ShowError("Rjle", "Apply click");
+            var model = new CreateCreditRequestModel(_name.Text, _bank.Text, _type.Text, _percent.Text, _duration.Text, _startDate.Text, _amount.Text);
+            if (model.IsValid(ShowError))
+            {
+                ThreadPool.QueueUserWorkItem(w =>
+                {
+                    ShowLoaderInMainThread();
+                    var commandDelegate = new CommandDelegate<CreateCreditResponce>(OnSuccess, ShowError, ShowErrorNotEnternet);
+                    var command = new CreateCreditCommand(LocalDb.Instance, commandDelegate);
+                    command.Execute(model);
+                    DissmissLoaderInMainThread();
+                });
+            }
+        }
+
+        private void OnSuccess(CreateCreditResponce responce)
+        {
+            RunOnUiThread(() =>
+            {
+                FinishAffinity();
+                StartActivity(typeof(ListCreditActivity));
+            });
         }
     }
 }

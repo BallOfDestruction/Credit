@@ -65,48 +65,19 @@ namespace Credit.Work.Credit
             _paymentView.SetLayoutManager(layoutManager);
             _paymentView.NestedScrollingEnabled = false;
 
-            _payments = new List<PaymentModel>()
-            {
-                new PaymentModel(DateTime.Now,1000, 1, true),
-                new PaymentModel(DateTime.Now,1002, 2, true),
-                new PaymentModel(DateTime.Now,1003, 3, true),
-                new PaymentModel(DateTime.Now,1004, 4, true),
-                new PaymentModel(DateTime.Now,1004, 4, true),
-                new PaymentModel(DateTime.Now,1004, 4, false),
-                new PaymentModel(DateTime.Now,1004, 4, false),
-                new PaymentModel(DateTime.Now,1004, 4, false),
-                new PaymentModel(DateTime.Now,1000, 1, true),
-                new PaymentModel(DateTime.Now,1002, 2, true),
-                new PaymentModel(DateTime.Now,1003, 3, true),
-                new PaymentModel(DateTime.Now,1004, 4, true),
-                new PaymentModel(DateTime.Now,1004, 4, true),
-                new PaymentModel(DateTime.Now,1004, 4, false),
-                new PaymentModel(DateTime.Now,1004, 4, false),
-                new PaymentModel(DateTime.Now,1004, 4, false),
-                new PaymentModel(DateTime.Now,1000, 1, true),
-                new PaymentModel(DateTime.Now,1002, 2, true),
-                new PaymentModel(DateTime.Now,1003, 3, true),
-                new PaymentModel(DateTime.Now,1004, 4, true),
-                new PaymentModel(DateTime.Now,1004, 4, true),
-                new PaymentModel(DateTime.Now,1004, 4, false),
-                new PaymentModel(DateTime.Now,1004, 4, false),
-                new PaymentModel(DateTime.Now,1004, 4, false),
-                new PaymentModel(DateTime.Now,1000, 1, true),
-                new PaymentModel(DateTime.Now,1002, 2, true),
-                new PaymentModel(DateTime.Now,1003, 3, true),
-                new PaymentModel(DateTime.Now,1004, 4, true),
-                new PaymentModel(DateTime.Now,1997, 4, true),
-                new PaymentModel(DateTime.Now,1998, 4, false),
-                new PaymentModel(DateTime.Now,1999, 4, false),
-                new PaymentModel(DateTime.Now,2000, 4, false),
-            };
-
             if (_payments?.Any() == true)
             {
-                _paymentView.SetAdapter(new PaymentAdapter(_payments));
+                _paymentView.SetAdapter(new PaymentAdapter(_payments, _credit.ServerId, ShowLoaderInMainThread, DissmissLoaderInMainThread, ReloadActivity, ShowError, ShowErrorNotEnternet));
             }
 
             _nestedScrollView = FindViewById<NestedScrollView>(Resource.Id.nested);
+        }
+
+        private void ReloadActivity(Shared.Models.Credit newCredit)
+        {
+            var intent = new Intent(this, typeof(CreditActivity));
+            intent.PutExtra("idCredit", JsonConvert.SerializeObject(newCredit));
+            StartActivity(intent);
         }
 
         protected override void SetDatasAfterLoad()

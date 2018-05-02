@@ -4073,16 +4073,19 @@ namespace Credit
 			public const int ic_add_black_24dp = 2130903045;
 			
 			// aapt resource value: 0x7f030006
-			public const int ic_email_black_24dp = 2130903046;
+			public const int ic_check_circle_black_24dp = 2130903046;
 			
 			// aapt resource value: 0x7f030007
-			public const int ic_location_city_black_24dp = 2130903047;
+			public const int ic_email_black_24dp = 2130903047;
 			
 			// aapt resource value: 0x7f030008
-			public const int ic_payment_black_24dp = 2130903048;
+			public const int ic_location_city_black_24dp = 2130903048;
 			
 			// aapt resource value: 0x7f030009
-			public const int ic_vpn_key_black_24dp = 2130903049;
+			public const int ic_payment_black_24dp = 2130903049;
+			
+			// aapt resource value: 0x7f03000a
+			public const int ic_vpn_key_black_24dp = 2130903050;
 			
 			static Mipmap()
 			{

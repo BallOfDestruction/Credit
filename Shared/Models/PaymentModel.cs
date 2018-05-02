@@ -6,7 +6,7 @@ namespace Shared.Models
     {
         public DateTime Date { get; set; }
         public float Summ { get; set; }
-        public int Position { get; set; }
+        public int Id { get; set; }
         public bool IsPay { get; set; }
 
         public PaymentModel()
@@ -18,7 +18,7 @@ namespace Shared.Models
         {
             Date = date;
             Summ = summ;
-            Position = position;
+            Id = position;
             IsPay = isPay;
         }
     }

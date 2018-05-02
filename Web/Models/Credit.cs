@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using Newtonsoft.Json;
 using Web.Controllers.cms;
@@ -55,6 +56,40 @@ namespace Web.Models
                 default:
                     return null;
             }
+        }
+
+        public void InitPayment()
+        {
+            if (TypeCredit == "Дифференцированный")
+                InitDiff();
+            else
+                InitAut();
+        }
+
+        private void InitAut()
+        {
+            var p = (Procent / 12f) / 100;
+            var d = p / (Math.Pow((1 + p), DurationInMonth) - 1);
+            var summPay =(float) (Amount * (p + d));
+            var listPay = new List<PaymentModel>();
+            for (var i = 0; i < DurationInMonth; i++)
+            {
+                listPay.Add(new PaymentModel(StartCredit.AddMonths(i), summPay, i, false));
+            }
+            ListPayment = JsonConvert.SerializeObject(listPay);
+        }
+
+        private void InitDiff()
+        {
+            var b = Amount / DurationInMonth;
+            var listPay = new List<PaymentModel>();
+            for (var i = 0; i < DurationInMonth; i++)
+            {
+                var sn = Amount - (i * b);
+                var p = b + sn * (Procent / 12f / 100);
+                listPay.Add(new PaymentModel(StartCredit.AddMonths(i), p, i, false));
+            }
+            ListPayment = JsonConvert.SerializeObject(listPay);
         }
     }
 }

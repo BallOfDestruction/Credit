@@ -2,20 +2,37 @@
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
+using System.Threading;
 using Android.Graphics;
 using Android.Support.V7.Widget;
 using Android.Views;
+using Shared.Commands.PayCredit;
+using Shared.Database;
+using Shared.Delegates;
 using Shared.Models;
+using Shared.WebService;
 
 namespace Credit.Work.Credit
 {
     public class PaymentAdapter : RecyclerView.Adapter
     {
+        private readonly int _creditId;
+        private readonly Action _showLoader;
+        private readonly Action _hideLoader;
+        private readonly Action<Shared.Models.Credit> _reloadActivity;
+        private readonly Action<Error> _showError;
+        private readonly Action _showErrorNotEnternet;
         private readonly List<PaymentModel> _payment;
 
-        public PaymentAdapter(List<PaymentModel> payment)
+        public PaymentAdapter(List<PaymentModel> payment, int creditId, Action showLoader, Action hideLoader, Action<Shared.Models.Credit> reloadActivity, Action<Error> showError, Action showErrorNotEnternet)
         {
-            _payment = payment.OrderBy(w => w.Position).ToList();
+            _creditId = creditId;
+            _showLoader = showLoader;
+            _hideLoader = hideLoader;
+            _reloadActivity = reloadActivity;
+            _showError = showError;
+            _showErrorNotEnternet = showErrorNotEnternet;
+            _payment = payment.OrderBy(w => w.Id).ToList();
         }
 
         public override void OnBindViewHolder(RecyclerView.ViewHolder holder, int position)
@@ -29,23 +46,32 @@ namespace Credit.Work.Credit
 
             if (item.IsPay)
             {
-                viewHolder.Icon.SetColorFilter(Color.Gray);
+                viewHolder.Icon.SetColorFilter(Color.Green);
                 viewHolder.Apply.Visibility = ViewStates.Gone;
                 viewHolder.Apply.Click += null;
                 viewHolder.PaymentText.Visibility = ViewStates.Visible;
             }
             else
             {
-                viewHolder.Icon.SetColorFilter(Color.Green);
-                viewHolder.Apply.Click +=null;
-                viewHolder.Apply.Click += ApplyOnClick;
+                viewHolder.Icon.SetColorFilter(Color.Gray);
+                viewHolder.Apply.Click += null;
+                viewHolder.Apply.Click += (sender, args) => ApplyOnClick(item.Id);
                 viewHolder.Apply.Visibility = ViewStates.Visible;
                 viewHolder.PaymentText.Visibility = ViewStates.Gone;
             }
         }
 
-        private void ApplyOnClick(object sender, EventArgs eventArgs)
+        private void ApplyOnClick(int id)
         {
+            ThreadPool.QueueUserWorkItem(w =>
+            {
+                _showLoader?.Invoke();
+                var model = new PayCreditRequest(_creditId, id);
+                var commandDelegate = new CommandDelegate<PayCreditResponce>(responce => _reloadActivity?.Invoke(responce.Credit), _showError, _showErrorNotEnternet);
+                var command = new PayCreditCommand(LocalDb.Instance, commandDelegate);
+                command.Execute(model);
+                _hideLoader?.Invoke();
+            });
         }
 
         public override RecyclerView.ViewHolder OnCreateViewHolder(ViewGroup parent, int viewType)

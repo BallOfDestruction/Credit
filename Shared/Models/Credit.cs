@@ -1,10 +1,14 @@
 ﻿using System;
+using Newtonsoft.Json;
 using Shared.Database;
 
 namespace Shared.Models
 {
     public class Credit : Entity
     {
+        [JsonProperty("Id")]
+        public int ServerId { get; set; }
+
         public string Name { get; set; }
 
         public string BankName { get; set; }
