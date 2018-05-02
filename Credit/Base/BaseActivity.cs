@@ -5,6 +5,7 @@ using Android.OS;
 using Android.Views;
 using Android.Views.InputMethods;
 using Android.Widget;
+using Credit.Work.Login;
 using Shared.Settings;
 using Shared.WebService;
 
@@ -45,7 +46,7 @@ namespace Credit.Base
             if (LayoutResId != -1)
                 SetContentView(LayoutResId);
 
-            if (SupportActionBar != null)
+            if (SupportActionBar != null && typeof(LoginActivity) != this.GetType())
             {
                 SupportActionBar.Title = SupportTitle;
                 SupportActionBar.SetDisplayHomeAsUpEnabled(true);

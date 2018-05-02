@@ -39,16 +39,16 @@ namespace Credit.Work.Compare
             _bank2.Text = _avialableCredit.BankName;
 
             _amount1 = FindViewById<TextView>(Resource.Id.compare_amount1);
-            _amount1.Text = _credit.Amount.ToString(new CultureInfo("ru"));
+            _amount1.Text = _credit.Amount.ToString("N", new CultureInfo("ru")) + " руб.";
 
             _amount2 = FindViewById<TextView>(Resource.Id.compare_amount2);
-            _amount2.Text = "до " + _avialableCredit.MaxAmount.ToString(new CultureInfo("ru"));
+            _amount2.Text = "до " + _avialableCredit.MaxAmount.ToString("N", new CultureInfo("ru")) + " руб.";
 
             _percent1 = FindViewById<TextView>(Resource.Id.compare_percent1);
-            _percent1.Text = _credit.Procent.ToString(new CultureInfo("ru"));
+            _percent1.Text = _credit.Procent.ToString(new CultureInfo("ru")) + " %";
 
             _percent2 = FindViewById<TextView>(Resource.Id.compare_percent2);
-            _percent2.Text = _avialableCredit.Percent.ToString(new CultureInfo("ru"));
+            _percent2.Text = _avialableCredit.Percent.ToString(new CultureInfo("ru")) + " %";
 
             _duration1 = FindViewById<TextView>(Resource.Id.compare_duration1);
             _duration1.Text = _credit.DurationInMonth.ToString(new CultureInfo("ru"));

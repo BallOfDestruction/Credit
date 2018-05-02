@@ -123,8 +123,9 @@ namespace Credit.Work.Credit
         {
             var intent = new Intent(this, typeof(CreditActivity));
             intent.PutExtra("idCredit", JsonConvert.SerializeObject(newCredit));
-            Finish();
             StartActivity(intent);
+            Finish();
+
         }
 
         protected override void SetDatasAfterLoad()

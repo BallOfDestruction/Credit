@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Threading;
 using Android.App;
+using Android.Content;
 using Android.Views;
 using Android.Widget;
 using Credit.Base;
@@ -15,7 +16,7 @@ namespace Credit.Work.Login
     [Activity(Label = "Авторизация", Theme = "@style/MyCustomTheme", WindowSoftInputMode = SoftInput.StateHidden)]
     public class LoginActivity : BaseActivity
     {
-        protected override string SupportTitle => "";
+        protected override string SupportTitle => "Авторизация";
         protected override int LayoutResId => Resource.Layout.login;
         protected override int? LeftButtonId => null;
 
@@ -39,7 +40,8 @@ namespace Credit.Work.Login
 
         private void RegistrationOnClick(object sender, EventArgs eventArgs)
         {
-            StartActivity(typeof(RegistrationActivity));
+            var intent = new Intent(this, typeof(RegistrationActivity));
+            StartActivity(intent);
         }
 
         private void TryLogin(object sender, EventArgs eventArgs)

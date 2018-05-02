@@ -24,16 +24,7 @@ namespace Credit.Base
             var allNeedPermission = new[]
             {
                 Manifest.Permission.ReadExternalStorage,
-                Manifest.Permission.Internet,
-                Manifest.Permission.CallPhone,
-                Manifest.Permission.ProcessOutgoingCalls,
-                Manifest.Permission.ReadPhoneState,
                 Manifest.Permission.WriteExternalStorage,
-                Manifest.Permission.AccessNetworkState,
-                Manifest.Permission.AccessCoarseLocation,
-                Manifest.Permission.AccessFineLocation,
-                Manifest.Permission.AccessWifiState,
-                Manifest.Permission.ChangeWifiState,
             };
 
             var denyied = allNeedPermission.Where(w => ContextCompat.CheckSelfPermission(this, w) != Permission.Granted).ToArray();
