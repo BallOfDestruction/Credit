@@ -51,6 +51,7 @@ namespace Shared.Database
 
                     UpdateTable<LocalUserModel>();
                     UpdateTable<Models.Credit>();
+                    UpdateTable<Models.AvialableCredit>();
 
                 }
                 catch (Exception e)

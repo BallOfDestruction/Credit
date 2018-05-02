@@ -1,9 +1,15 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
+using System.Net;
+using System.Threading;
+using HtmlAgilityPack;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using Web.Models;
 using Web.ViewModels;
+using Web.ViewModels.Avialable;
 using Web.ViewModels.Create;
 using Web.ViewModels.GetList;
 using Web.ViewModels.Pay;
@@ -72,6 +78,113 @@ namespace Web.Controllers
             Context.SaveChanges();
 
             return Json(new PayCreditResponce {Credit = credit});
+        }
+
+        [HttpGet]
+        public JsonResult GetAvialable()
+        {
+            var authorization = GetUserWithToken();
+            if (authorization.Error != null) return Json(authorization.Error);
+
+            var avialableCredits = Context.AvialableCredits?.ToList();
+
+            return Json(new AvialableCreditResponce(avialableCredits));
+        }
+
+        public JsonResult UpdateAvialableNow()
+        {
+            UpdateAvialable();
+
+            return Json("");
+        }
+
+        private void UpdateAvialable()
+        {
+            var link = "https://www.banki.ru/products/credits/search/";
+            var webClient = new WebClient();
+
+            Context.RemoveRange(Context.AvialableCredits.ToList());
+            Context.SaveChanges();
+
+            var avialable = new  List<AvialableCredit>();
+            for (var page = 1; page < 100; page++)
+            {
+                string str = null;
+ 
+                for (var i = 0; i < 5; i++)
+                { 
+                    try
+                    {
+                        str = webClient.DownloadString(link + "?page=" + page);
+                        break;
+                    }
+                    catch (Exception e)
+                    {
+                        str = null;
+                    }
+                }
+
+                if(string.IsNullOrEmpty(str))
+                    break;
+
+                try
+                {
+                    var doc = new HtmlDocument();
+                    doc.LoadHtml(str);
+
+                    var procents = doc.DocumentNode
+                        .SelectNodes("/html[1]/body[1]/div[3]/div[3]/div[2]/section[1]/div[1]/div[1]/div[2]").Elements().Where(w => w.Name == "div")
+                        .Select(w => w.SelectSingleNode("div[1]/div[2]/div[1]/span[1]")?.InnerText?.Replace("\n","")?.Replace("от", "")?.Replace("до", "")?.Replace("\t", "")?.Replace("от","")?.Replace("%", "")?.Replace("&nbsp;","").Replace(",","."))
+                        .Select(w => float.Parse(w,NumberStyles.AllowDecimalPoint))
+                        .ToArray();
+
+                    var bankName = doc.DocumentNode
+                        .SelectNodes("/html[1]/body[1]/div[3]/div[3]/div[2]/section[1]/div[1]/div[1]/div[2]").Elements().Where(w => w.Name == "div")
+                        .Select(w => w.SelectSingleNode("div[1]/div[1]/div[2]/div[2]")?.InnerText?.Replace("\t","")?.Replace("\n", ""))
+                        .ToArray();
+
+                    var amount = doc.DocumentNode
+                        .SelectNodes("/html[1]/body[1]/div[3]/div[3]/div[2]/section[1]/div[1]/div[1]/div[2]").Elements().Where(w => w.Name == "div")
+                        .Select(w => w.SelectSingleNode("div[1]/div[3]")?.InnerText?.Replace("\t", "")?.Replace("\n", "")?.Replace("от", "")?.Replace("до", "")?.Replace("%", "")?.Replace("&nbsp;", "")?.Replace(" ", ""))
+                        .Select(float.Parse)
+                        .ToArray();
+
+                    var duration = doc.DocumentNode
+                        .SelectNodes("/html[1]/body[1]/div[3]/div[3]/div[2]/section[1]/div[1]/div[1]/div[2]").Elements().Where(w => w.Name == "div")
+                        .Select(w => w.SelectSingleNode("div[1]/div[4]")?.InnerText?.Replace("\t", "")?.Replace("\n", "")?.Replace("от", "")?.Replace("до", "")?.Replace("%", "")?.Replace("&nbsp;", "")?.Replace(" ", "")?.Replace(".", ""))
+                        .Select(w => (w.Contains("лет") || w.Contains("года") ) ? int.Parse(w.Replace("лет", "").Replace("года", "")) * 12 : int.Parse(w.Replace("мес", "")))
+                        .ToArray();
+
+                    for (var c = 0; c < procents.Length; c++)
+                    {
+                        avialable.Add(new AvialableCredit(bankName[c], amount[c], procents[c], duration[c]));
+                    }
+
+                }
+                catch (Exception e)
+                {
+                    var doc = new HtmlDocument();
+                    doc.LoadHtml(str);
+
+                    var procents = doc.DocumentNode
+                        .SelectNodes("/html[1]/body[1]/div[3]/div[3]/div[2]/section[1]/div[1]/div[1]/div[2]").Elements().Where(w => w.Name == "div")
+                        .Select(w => w.SelectSingleNode("div[1]/div[2]/div[1]/span[1]")?.InnerText?.Replace("\n", "")?.Replace("\t", "")?.Replace("от", "")?.Replace("%", "")?.Replace("&nbsp;", "").Replace(",", "."))
+                        .ToArray();
+
+                    var amount = doc.DocumentNode
+                        .SelectNodes("/html[1]/body[1]/div[3]/div[3]/div[2]/section[1]/div[1]/div[1]/div[2]").Elements().Where(w => w.Name == "div")
+                        .Select(w => w.SelectSingleNode("div[1]/div[3]")?.InnerText?.Replace("\t", "")?.Replace("\n", "")?.Replace("до", "")?.Replace("%", "")?.Replace("&nbsp;", "")?.Replace(" ", ""))
+                        .ToArray();
+
+                    var duration = doc.DocumentNode
+                        .SelectNodes("/html[1]/body[1]/div[3]/div[3]/div[2]/section[1]/div[1]/div[1]/div[2]").Elements().Where(w => w.Name == "div")
+                        .Select(w => w.SelectSingleNode("div[1]/div[4]")?.InnerText?.Replace("\t", "")?.Replace("\n", "")?.Replace("до", "")?.Replace("%", "")?.Replace("&nbsp;", "")?.Replace(" ", "")?.Replace(".", ""))
+                        .ToArray();
+                }
+            }
+
+            Context.AddRange(avialable);
+            Context.SaveChanges();
         }
     }
 }

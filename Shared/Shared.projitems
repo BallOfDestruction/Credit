@@ -9,6 +9,9 @@
     <Import_RootNamespace>Shared</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Commands\AvialableCredit\AvialableCreditCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Commands\AvialableCredit\AvialableCreditRequest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Commands\AvialableCredit\AvialableCreditResponce.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Commands\CommandDelegate.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Commands\CommonCommand.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Commands\CreateCredit\CreateCreditCommand.cs" />
@@ -32,6 +35,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Database\IEntity.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Database\ILocalDb.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Database\LocalDb.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\AvialableCredit.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Credit.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\LocalUserModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\PaymentModel.cs" />

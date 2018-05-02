@@ -7,7 +7,6 @@ using Android.Views.InputMethods;
 using Android.Widget;
 using Shared.Settings;
 using Shared.WebService;
-using SupportToolbar = Android.Support.V7.Widget.Toolbar;
 
 namespace Credit.Base
 {

@@ -23,117 +23,100 @@
             android:layout_width="wrap_content"
             android:textAlignment="center"
             android:layout_height="24dp"/>
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical">
           <TextView
-          android:id="@+id/credit_bank"
+            android:id="@+id/compare_bank1"
+            android:layout_width="match_parent"
+            android:textAlignment="center"
+            android:layout_height="24dp"/>
+          <TextView
+          android:id="@+id/compare_bank2"
           android:layout_width="match_parent"
           android:textAlignment="center"
           android:layout_height="24dp"/>
+        </LinearLayout>
       </LinearLayout>
-      
+
       <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
         android:orientation="horizontal">
         <TextView
           android:hint="Сумма кредита:  "
           android:layout_width="wrap_content"
           android:textAlignment="center"
           android:layout_height="24dp"/>
-        <TextView
-          android:id="@+id/credit_amount"
+        <LinearLayout
           android:layout_width="match_parent"
-          android:textAlignment="center"
-          android:layout_height="24dp"/>
+          android:layout_height="wrap_content"
+          android:orientation="vertical">
+          <TextView
+            android:id="@+id/compare_amount1"
+            android:layout_width="match_parent"
+            android:textAlignment="center"
+            android:layout_height="24dp"/>
+          <TextView
+            android:id="@+id/compare_amount2"
+            android:layout_width="match_parent"
+            android:textAlignment="center"
+            android:layout_height="24dp"/>
+        </LinearLayout>
       </LinearLayout>
-      
+
       <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
         android:orientation="horizontal">
         <TextView
           android:hint="Процентная ставка:  "
           android:layout_width="wrap_content"
           android:textAlignment="center"
           android:layout_height="24dp"/>
-        <TextView
-          android:id="@+id/credit_percent"
-          android:layout_width="match_parent"
-          android:textAlignment="center"
-          android:layout_height="24dp"/>
-      </LinearLayout>
-      
-      <LinearLayout
+        <LinearLayout
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
-          android:layout_marginTop="16dp"
-          android:orientation="horizontal">
+          android:orientation="vertical">
           <TextView
-            android:hint="Тип выплат:  "
-            android:layout_width="wrap_content"
-            android:textAlignment="center"
-            android:layout_height="24dp"/>
-          <TextView
-            android:id="@+id/credit_type"
+            android:id="@+id/compare_percent1"
             android:layout_width="match_parent"
             android:textAlignment="center"
             android:layout_height="24dp"/>
-      </LinearLayout>
-        
-      <LinearLayout
+          <TextView
+            android:id="@+id/compare_percent2"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:orientation="horizontal">
-            <TextView
-              android:hint="Дата начала:  "
-              android:layout_width="wrap_content"
-              android:textAlignment="center"
-              android:layout_height="24dp"/>
-            <TextView
-              android:id="@+id/credit_start_date"
-              android:layout_width="match_parent"
-              android:textAlignment="center"
-              android:layout_height="24dp"/>
+            android:textAlignment="center"
+            android:layout_height="24dp"/>
+        </LinearLayout>
       </LinearLayout>
 
       <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
         android:orientation="horizontal">
         <TextView
           android:hint="Длительность(месяцы):  "
           android:layout_width="wrap_content"
           android:textAlignment="center"
           android:layout_height="24dp"/>
-        <TextView
-          android:id="@+id/credit_duration"
+        <LinearLayout
           android:layout_width="match_parent"
-          android:textAlignment="center"
-          android:layout_height="24dp"/>
-      </LinearLayout>
-
-      <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:orientation="horizontal">
-        <Button
-          android:text="Сравнить с доступными"
-          android:id="@+id/credit_find_better"
-          android:layout_width="match_parent"
-          android:textAlignment="center"
-          android:layout_height="48dp"/>
-      </LinearLayout>
-
-      <android.support.v7.widget.RecyclerView
-          android:id="@+id/credit_payment"
-          android:scrollbars="vertical"
-          android:layout_width="fill_parent"
           android:layout_height="wrap_content"
-          android:layout_marginBottom="48dp"/>  
+          android:orientation="vertical">
+          <TextView
+            android:id="@+id/compare_duration1"
+            android:layout_width="match_parent"
+            android:textAlignment="center"
+            android:layout_height="24dp"/>
+          <TextView
+            android:id="@+id/compare_duration2"
+            android:layout_width="match_parent"
+            android:textAlignment="center"
+            android:layout_height="24dp"/>
+        </LinearLayout>
+      </LinearLayout>
   
     </LinearLayout>
   </android.support.v4.widget.NestedScrollView>

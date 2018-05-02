@@ -5,6 +5,7 @@ using Android.Support.V4.Widget;
 using Android.Views;
 using Credit.Work.ListCredit;
 using Credit.Work.Login;
+using Credit.Work.АvailableCredit;
 using Shared.Database;
 using Shared.Models;
 
@@ -28,8 +29,6 @@ namespace Credit.Base
             if (mLeftDrawer != null)
             {
                 SetUpDrawerContent(mLeftDrawer);
-                //var leftMenu = mLeftDrawer.GetHeaderView(0);
-                //leftMenu.FindViewById<TextView>(Resource.Id.nameCurrentUser).Text = currentUser.Name;
             }
         }
 
@@ -45,6 +44,11 @@ namespace Credit.Base
                     case Resource.Id.list_credit_nav:
                         FinishAffinity();
                         intent = new Intent(this, typeof(ListCreditActivity));
+                        StartActivity(intent);
+                        break;
+                    case Resource.Id.list_avialable_credit_nav:
+                        FinishAffinity();
+                        intent = new Intent(this, typeof(AvialableCreditActivity));
                         StartActivity(intent);
                         break;
                     case Resource.Id.nav_exit:

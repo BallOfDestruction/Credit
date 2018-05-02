@@ -147,6 +147,7 @@
     <Compile Include="Base\BaseActivity.cs" />
     <Compile Include="Base\BurgerActivity.cs" />
     <Compile Include="Base\ReturnActivity.cs" />
+    <Compile Include="Work\Compare\CompareActivity.cs" />
     <Compile Include="Work\CreateCredit\CreateCreditActivity.cs" />
     <Compile Include="Work\Credit\CreditActivity.cs" />
     <Compile Include="Work\Credit\NotCanScrollGridLayoutManager.cs" />
@@ -160,6 +161,9 @@
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Work\Splash\SplashActivity.cs" />
+    <Compile Include="Work\АvailableCredit\AvialableCreditActivity.cs" />
+    <Compile Include="Work\АvailableCredit\AvialableCreditAdapter.cs" />
+    <Compile Include="Work\АvailableCredit\AvialableCreditHolder.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -184,6 +188,15 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\create_credit.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\avialable_list_credit.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\avialable_credit_item.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\compare.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

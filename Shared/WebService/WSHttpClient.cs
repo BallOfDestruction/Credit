@@ -191,44 +191,6 @@ namespace Shared.WebService
             return HttpResponceWork<string>(request, url);
         }
 
-        public (bool isOk, Error Error) RecoveryPassword(string url, object bodyDataset = null, bool isToken = true)
-        {
-            var client = _client;
-
-            var dataString = bodyDataset?.DataString();
-            var stringContent = new StringContent(dataString, Encoding.UTF8, ContentType);
-            var request = new HttpRequestMessage(HttpMethod.Delete, _webApiUrl + url) { Content = stringContent };
-
-            try
-            {
-                var answer = client.SendAsync(request);
-                answer.Wait();
-
-                if (answer.Result.IsSuccessStatusCode)
-                    return (true, null);
-
-                var answerStr = answer.Result.Content.ReadAsStringAsync().Result;
-
-                try
-                {
-                    var err = JsonConvert.DeserializeObject<Error>(answerStr);
-                    return (false, err);
-                }
-                catch (Exception e)
-                {
-                    return (false, new Error
-                    {
-                        ErrorCode = answer.Result.StatusCode.ToString(),
-                        ErrorDescription = answerStr
-                    });
-                }
-            }
-            catch (Exception e)
-            {
-                return (false, null);
-            }
-        }
-
         private System.Net.Http.HttpClient _client => new System.Net.Http.HttpClient
         {
             DefaultRequestHeaders =

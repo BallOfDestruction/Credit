@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
+using System.Threading;
 using Android.App;
 using Android.Content;
 using Android.Support.V4.Widget;
@@ -9,8 +10,13 @@ using Android.Support.V7.Widget;
 using Android.Views;
 using Android.Widget;
 using Credit.Base;
+using Credit.Work.Compare;
 using Newtonsoft.Json;
+using Shared.Commands.AvialableCredit;
+using Shared.Database;
+using Shared.Delegates;
 using Shared.Models;
+using Shared.WebService;
 
 namespace Credit.Work.Credit
 {
@@ -30,6 +36,7 @@ namespace Credit.Work.Credit
         private TextView _percent;
         private TextView _amount;
         private NestedScrollView _nestedScrollView;
+        private Button _findBetter;
 
         private RecyclerView _paymentView;
 
@@ -71,12 +78,52 @@ namespace Credit.Work.Credit
             }
 
             _nestedScrollView = FindViewById<NestedScrollView>(Resource.Id.nested);
+
+            _findBetter = FindViewById<Button>(Resource.Id.credit_find_better);
+            _findBetter.Click += FindBetterOnClick;
+        }
+
+        private void FindBetterOnClick(object sender, EventArgs eventArgs)
+        {
+            ThreadPool.QueueUserWorkItem(w =>
+            {
+                ShowLoaderInMainThread();
+
+                var commandDelegate = new CommandDelegate<AvialableCreditResponce>(OnSuccess, ShowError, ShowErrorNotEnternet);
+                var command = new AvialableCreditCommand(LocalDb.Instance, commandDelegate);
+                command.Execute(new AvialableCreditRequest());
+
+                DissmissLoaderInMainThread();
+            });
+        }
+
+        private void OnSuccess(AvialableCreditResponce avialableCreditResponce)
+        {
+            var better = avialableCreditResponce.AvialableCredits
+                .Where(w => w.MaxAmount >= _credit.Amount && w.MaxDuration >= _credit.DurationInMonth)
+                .OrderBy(w => w.Percent).FirstOrDefault();
+
+            if (better == null || better.Percent > _credit.Procent)
+            {
+                RunOnUiThread(() =>
+                {
+                    ShowError(new Error("code", "Более лучшего кредита не найдено"));
+                });
+            }
+            RunOnUiThread(() =>
+            {
+                var intent = new Intent(this, typeof(CompareActivity));
+                intent.PutExtra("credit", JsonConvert.SerializeObject(_credit));
+                intent.PutExtra("AvialableCredit", JsonConvert.SerializeObject(better));
+                StartActivity(intent);
+            });
         }
 
         private void ReloadActivity(Shared.Models.Credit newCredit)
         {
             var intent = new Intent(this, typeof(CreditActivity));
             intent.PutExtra("idCredit", JsonConvert.SerializeObject(newCredit));
+            Finish();
             StartActivity(intent);
         }
 
