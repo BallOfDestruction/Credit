@@ -13,6 +13,9 @@ using Credit.Base;
 using Credit.Work.Compare;
 using Newtonsoft.Json;
 using Shared.Commands.AvialableCredit;
+using Shared.Commands.CustomPay;
+using Shared.Commands.PayNow;
+using Shared.Commands.Recalculating;
 using Shared.Database;
 using Shared.Delegates;
 using Shared.Models;
@@ -37,6 +40,12 @@ namespace Credit.Work.Credit
         private TextView _amount;
         private NestedScrollView _nestedScrollView;
         private Button _findBetter;
+        private TextView _rest;
+        private EditText _inputPay;
+        private Button _buttonPay;
+
+        private Button _payNoewButton;
+        private Button _recalculationButton;
 
         private RecyclerView _paymentView;
 
@@ -61,10 +70,10 @@ namespace Credit.Work.Credit
             _startDate.Text = _credit.StartCredit.ToString("d", new CultureInfo("ru"));
 
             _percent = FindViewById<TextView>(Resource.Id.credit_percent);
-            _percent.Text = _credit.Procent.ToString();
+            _percent.Text = _credit.Procent.ToString(new CultureInfo("ru"));
 
             _amount = FindViewById<TextView>(Resource.Id.credit_amount);
-            _amount.Text = _credit.Amount.ToString();
+            _amount.Text = _credit.Amount.ToString(new CultureInfo("ru"));
 
             _paymentView = FindViewById<RecyclerView>(Resource.Id.credit_payment);
             _paymentView.AddItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.Vertical));
@@ -81,6 +90,100 @@ namespace Credit.Work.Credit
 
             _findBetter = FindViewById<Button>(Resource.Id.credit_find_better);
             _findBetter.Click += FindBetterOnClick;
+
+            _rest = FindViewById<TextView>(Resource.Id.credit_rest);
+            _rest.Text = _credit.Rest.ToString(new CultureInfo("ru"));
+
+            _inputPay = FindViewById<EditText>(Resource.Id.credit_input_custom_pay);
+
+            _buttonPay = FindViewById<Button>(Resource.Id.credit_button_custom_pay);
+            _buttonPay.Click += ButtonPayOnClick;
+
+            _payNoewButton = FindViewById<Button>(Resource.Id.credit_payNow);
+            _payNoewButton.Click += PayNowOnClick;
+
+            _recalculationButton = FindViewById<Button>(Resource.Id.credit_recalculation);
+            _recalculationButton.Click += RecalculateOnClick;
+
+            if (_credit.IsPay)
+            {
+                _recalculationButton.Visibility = ViewStates.Gone;
+                _payNoewButton.Visibility = ViewStates.Gone;
+                _buttonPay.Visibility = ViewStates.Gone;
+                _inputPay.Visibility = ViewStates.Gone;
+            }
+        }
+
+        private void RecalculateOnClick(object sender, EventArgs e)
+        {
+            ThreadPool.QueueUserWorkItem(w =>
+            {
+                ShowLoaderInMainThread();
+
+                var commandDelegate = new CommandDelegate<RecalculatingResponce>(OnSuccessRecalculating, ShowError, ShowErrorNotEnternet);
+                var command = new RecalculatingCommand(LocalDb.Instance, commandDelegate);
+                command.Execute(new RecalculatingRequest(){IdCredit = _credit.ServerId});
+
+                DissmissLoaderInMainThread();
+            });
+        }
+
+        private void PayNowOnClick(object sender, EventArgs e)
+        {
+            ThreadPool.QueueUserWorkItem(w =>
+            {
+                ShowLoaderInMainThread();
+
+                var commandDelegate = new CommandDelegate<PayNowResponce>(OnSuccessPayNow, ShowError, ShowErrorNotEnternet);
+                var command = new PayNowCommand(LocalDb.Instance, commandDelegate);
+                command.Execute(new PayNowRequest() { IdCredit = _credit.ServerId });
+
+                DissmissLoaderInMainThread();
+            });
+        }
+
+        private void ButtonPayOnClick(object sender, EventArgs eventArgs)
+        {
+            float.TryParse(_inputPay.Text, out var amount);
+
+            var model = new CustomPayRequest(amount, _credit.ServerId);
+
+            if (!model.IsValid(ShowError)) return;
+
+            ThreadPool.QueueUserWorkItem(w =>
+            {
+                ShowLoaderInMainThread();
+
+                var commandDelegate = new CommandDelegate<CustomPayResponce>(OnSuccessCustomPay, ShowError, ShowErrorNotEnternet);
+                var command = new CustomPayCommand(LocalDb.Instance, commandDelegate);
+                command.Execute(model);
+
+                DissmissLoaderInMainThread();
+            });
+        }
+
+        private void OnSuccessPayNow(PayNowResponce model)
+        {
+            RunOnUiThread(() =>
+            {
+                ReloadActivity(model.Credit);
+            });
+        }
+
+        private void OnSuccessRecalculating(RecalculatingResponce model)
+        {
+            RunOnUiThread(() =>
+            {
+                ReloadActivity(model.Credit);
+            });
+        }
+
+        private void OnSuccessCustomPay(CustomPayResponce model)
+        {
+            RunOnUiThread(() =>
+            {
+                ReloadActivity(model.Credit);
+            });
         }
 
         private void FindBetterOnClick(object sender, EventArgs eventArgs)
@@ -125,7 +228,6 @@ namespace Credit.Work.Credit
             intent.PutExtra("idCredit", JsonConvert.SerializeObject(newCredit));
             StartActivity(intent);
             Finish();
-
         }
 
         protected override void SetDatasAfterLoad()

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Android.Graphics;
 using Android.Support.V7.Widget;
 using Android.Views;
@@ -14,7 +15,7 @@ namespace Credit.Work.ListCredit
         public CreditAdapter(List<Shared.Models.Credit> credits, Action<Shared.Models.Credit> open)
         {
             _open = open;
-            _credits = credits ?? new List<Shared.Models.Credit>();
+            _credits = (credits ?? new List<Shared.Models.Credit>()).OrderByDescending(w => w.StartCredit).ToList();
         }
 
         public override void OnBindViewHolder(RecyclerView.ViewHolder holder, int position)

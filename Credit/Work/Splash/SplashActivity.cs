@@ -19,7 +19,7 @@ namespace Credit.Work.Splash
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
-            Microsoft.AppCenter.AppCenter.Start("e9ffcf21-cae4-47f2-95b9-5dc9aab4de2c", typeof(Analytics), typeof(Crashes));
+            //Microsoft.AppCenter.AppCenter.Start("e9ffcf21-cae4-47f2-95b9-5dc9aab4de2c", typeof(Analytics), typeof(Crashes));
 
             base.OnCreate(savedInstanceState);
 

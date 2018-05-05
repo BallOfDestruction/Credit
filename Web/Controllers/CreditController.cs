@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Net;
-using System.Threading;
 using HtmlAgilityPack;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
@@ -11,8 +10,11 @@ using Web.Models;
 using Web.ViewModels;
 using Web.ViewModels.Avialable;
 using Web.ViewModels.Create;
+using Web.ViewModels.CustomPay;
 using Web.ViewModels.GetList;
 using Web.ViewModels.Pay;
+using Web.ViewModels.PayNow;
+using Web.ViewModels.Recalculating;
 
 namespace Web.Controllers
 {
@@ -89,6 +91,88 @@ namespace Web.Controllers
             var avialableCredits = Context.AvialableCredits?.ToList();
 
             return Json(new AvialableCreditResponce(avialableCredits));
+        }
+
+        [HttpPost]
+        public JsonResult CustomPay([FromBody] CustomPayRequest model)
+        {
+            var authorization = GetUserWithToken();
+            if (authorization.Error != null) return Json(authorization.Error);
+
+            var credit = Context.Credits.FirstOrDefault(w => w.Id == model.IdCredit);
+            if (credit == null)
+            {
+                HttpContext.Response.StatusCode = (int)HttpStatusCode.BadRequest;
+                return new JsonResult(new Error("bad", "Нет такого кредита"));
+            }
+            credit.Rest += model.Amount;
+            Context.SaveChanges();
+
+            return Json(new CustomPayResponce()
+            {
+                Credit = credit,
+            });
+        }
+
+        [HttpPost]
+        public JsonResult Recalculating([FromBody] RecalculatingRequest model)
+        {
+            var authorization = GetUserWithToken();
+            if (authorization.Error != null) return Json(authorization.Error);
+
+            var credit = Context.Credits.FirstOrDefault(w => w.Id == model.IdCredit);
+            if (credit == null)
+            {
+                HttpContext.Response.StatusCode = (int)HttpStatusCode.BadRequest;
+                return new JsonResult(new Error("bad", "Нет такого кредита"));
+            }
+
+            credit.Recalculate();
+            Context.SaveChanges();
+
+            return Json(new RecalculatingResponce()
+            {
+                Credit = credit,
+            });
+        }
+
+        [HttpPost]
+        public JsonResult PayNow([FromBody] PayNowRequest model)
+        {
+            var authorization = GetUserWithToken();
+            if (authorization.Error != null) return Json(authorization.Error);
+
+            var credit = Context.Credits.FirstOrDefault(w => w.Id == model.IdCredit);
+            if (credit == null)
+            {
+                HttpContext.Response.StatusCode = (int)HttpStatusCode.BadRequest;
+                return new JsonResult(new Error("bad", "Нет такого кредита"));
+            }
+
+            var payment = JsonConvert.DeserializeObject<List<PaymentModel>>(credit.ListPayment).OrderBy(w => w.Id).ToList();
+            var notPayment = payment.Where(w => !w.IsPay);
+            foreach (var paymentModel in notPayment)
+            {
+                if (paymentModel.Summ <= credit.Rest)
+                {
+                    credit.Rest -= paymentModel.Summ;
+                    paymentModel.IsPay = true;
+                }
+                else
+                {
+                    break;
+                }
+            }
+
+            credit.ListPayment = JsonConvert.SerializeObject(payment);
+            if (payment.All(w => w.IsPay))
+                credit.IsPay = true;
+            Context.SaveChanges();
+
+            return Json(new PayNowResponce()
+            {
+                Credit = credit,
+            });
         }
 
         public JsonResult UpdateAvialableNow()

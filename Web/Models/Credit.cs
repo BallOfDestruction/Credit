@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Linq;
 using Newtonsoft.Json;
 using Web.Controllers.cms;
 
@@ -26,6 +27,9 @@ namespace Web.Models
 
         [DisplayName("Длительность в месяцах")]
         public int DurationInMonth { get; set; }
+
+        [DisplayName("Остаток на счету")]
+        public float Rest { get; set; }
 
         //Дифференцированный, Аннуитет
         [DisplayName("Тип кредита")]
@@ -72,24 +76,85 @@ namespace Web.Models
             var d = p / (Math.Pow((1 + p), DurationInMonth) - 1);
             var summPay =(float) (Amount * (p + d));
             var listPay = new List<PaymentModel>();
+
+            var localAmount = Amount;
             for (var i = 0; i < DurationInMonth; i++)
             {
-                listPay.Add(new PaymentModel(StartCredit.AddMonths(i), summPay, i, false));
+                var percentLocal = localAmount * p;
+                var mainPay = summPay - percentLocal;
+                localAmount -= mainPay;
+                listPay.Add(new PaymentModel(StartCredit.AddMonths(i), summPay, i, false, mainPay, percentLocal));
             }
             ListPayment = JsonConvert.SerializeObject(listPay);
         }
 
         private void InitDiff()
         {
-            var b = Amount / DurationInMonth;
+            var mainPay = Amount / DurationInMonth;
             var listPay = new List<PaymentModel>();
             for (var i = 0; i < DurationInMonth; i++)
             {
-                var sn = Amount - (i * b);
-                var p = b + sn * (Procent / 12f / 100);
-                listPay.Add(new PaymentModel(StartCredit.AddMonths(i), p, i, false));
+                var sn = Amount - (i * mainPay);
+                var percentPay = sn * (Procent / 12f / 100);
+                var p = mainPay + percentPay;
+                listPay.Add(new PaymentModel(StartCredit.AddMonths(i), p, i, false, mainPay, percentPay));
             }
             ListPayment = JsonConvert.SerializeObject(listPay);
+        }
+
+        public void Recalculate()
+        {
+            if (Rest == 0) return;
+
+            if (TypeCredit == "Дифференцированный")
+                RecalculateDiff();
+            else
+                RecalculateAut();
+        }
+
+        private void RecalculateAut()
+        {
+            var payment = JsonConvert.DeserializeObject<List<PaymentModel>>(ListPayment);
+            var notPayment = payment.Where(w => !w.IsPay).ToList();
+            var pay = payment.Where(w => w.IsPay).ToList();
+            var newSumm = Amount - pay.Sum(w => w.MainDebt) - Rest;
+            var restMonth = notPayment.Count;
+            payment.Insert(pay.Count(), new PaymentModel(DateTime.Now, Rest, pay.LastOrDefault()?.Id ?? -1, true, Rest, 0));
+            Rest = 0;
+            //Новый расчет
+            var p = (Procent / 12f) / 100;
+            var d = p / (Math.Pow((1 + p), restMonth) - 1);
+            var summPay = (float)(newSumm * (p + d));
+            for (var i = 0; i < restMonth; i++)
+            {
+                notPayment[i].Summ = summPay;
+            }
+
+            ListPayment = JsonConvert.SerializeObject(payment);
+        }
+
+        private void RecalculateDiff()
+        {
+            var payment = JsonConvert.DeserializeObject<List<PaymentModel>>(ListPayment);
+
+            var notPayment = payment.Where(w => !w.IsPay).ToList();
+            var pay = payment.Where(w => w.IsPay).ToList();
+            var newSumm = Amount - pay.Sum(w => w.MainDebt) - Rest;
+            var restMonth = notPayment.Count;
+            var lastPayDate = notPayment.FirstOrDefault()?.Date ?? DateTime.Now;
+            pay.Add(new PaymentModel(DateTime.Now, Rest, pay.LastOrDefault()?.Id ?? -1, true, Rest, 0));
+            Rest = 0;
+
+            var mainPay = Amount / DurationInMonth;
+            for (var i = 0; i < restMonth; i++)
+            {
+                var sn = newSumm - (i * mainPay);
+                var percentPay = sn * (Procent / 12f / 100);
+                var p = mainPay + percentPay;
+                pay.Add(new PaymentModel(lastPayDate.AddMonths(i), p, pay.Count, false, mainPay, percentPay));
+            }
+
+            ListPayment = JsonConvert.SerializeObject(pay);
         }
     }
 }

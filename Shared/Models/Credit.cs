@@ -16,6 +16,7 @@ namespace Shared.Models
         public DateTime StartCredit { get; set; }
 
         public float Procent { get; set; }
+        public float Rest { get; set; }
 
         public float Amount { get; set; }
 

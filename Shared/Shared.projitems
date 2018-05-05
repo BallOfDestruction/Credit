@@ -18,6 +18,9 @@
     <Compile Include="$(MSBuildThisFileDirectory)Commands\CreateCredit\CreateCreditRequest.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Commands\CreateCredit\CreateCreditRequestModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Commands\CreateCredit\CreateCreditResponce.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Commands\CustomPay\CustomPayCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Commands\CustomPay\CustomPayRequest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Commands\CustomPay\CustomPayResponce.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Commands\ICommand.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Commands\ICommandDelegate.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Commands\ListCredit\GetListCommand.cs" />
@@ -28,6 +31,12 @@
     <Compile Include="$(MSBuildThisFileDirectory)Commands\PayCredit\PayCreditCommand.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Commands\PayCredit\PayCreditRequest.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Commands\PayCredit\PayCreditResponce.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Commands\Recalculating\RecalculatingCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Commands\Recalculating\RecalculatingRequest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Commands\Recalculating\RecalculatingResponce.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Commands\PayNow\PayNowCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Commands\PayNow\PayNowRequest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Commands\PayNow\PayNowResponce.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Commands\Registration\RegistrationCommand.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Commands\Registration\RegistrationRequest.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Commands\Registration\RegistrationResponce.cs" />

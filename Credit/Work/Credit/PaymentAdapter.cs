@@ -32,7 +32,7 @@ namespace Credit.Work.Credit
             _reloadActivity = reloadActivity;
             _showError = showError;
             _showErrorNotEnternet = showErrorNotEnternet;
-            _payment = payment.OrderBy(w => w.Id).ToList();
+            _payment = payment.OrderBy(w => w.Id).ThenBy(w => w.Date).ToList();
         }
 
         public override void OnBindViewHolder(RecyclerView.ViewHolder holder, int position)

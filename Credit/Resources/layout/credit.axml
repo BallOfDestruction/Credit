@@ -114,19 +114,64 @@
           android:textAlignment="center"
           android:layout_height="24dp"/>
       </LinearLayout>
-
+      
       <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:orientation="horizontal">
-        <Button
-          android:text="Сравнить с доступными"
-          android:id="@+id/credit_find_better"
+        <TextView
+          android:hint="Остаток на счету:  "
+          android:layout_width="wrap_content"
+          android:textAlignment="center"
+          android:layout_height="24dp"/>
+        <TextView
+          android:id="@+id/credit_rest"
           android:layout_width="match_parent"
           android:textAlignment="center"
-          android:layout_height="48dp"/>
+          android:layout_height="24dp"/>
       </LinearLayout>
+
+      <EditText
+        android:layout_marginTop="16dp"
+        android:id="@+id/credit_input_custom_pay"
+        android:hint="Сумма оплаты"
+        android:layout_width="wrap_content"
+        android:textAlignment="center"
+        android:inputType="number"
+        android:layout_height="48dp"/>
+      
+      <Button
+        android:layout_marginTop="16dp"
+        android:id="@+id/credit_button_custom_pay"
+        android:text="Внести на счет"
+        android:layout_width="wrap_content"
+        android:textAlignment="center"
+        android:layout_height="48dp"/>
+
+      <Button
+        android:layout_marginTop="16dp"
+        android:id="@+id/credit_payNow"
+        android:text="Оплатить"
+        android:layout_width="wrap_content"
+        android:textAlignment="center"
+        android:layout_height="48dp"/>
+
+      <Button
+        android:layout_marginTop="16dp"
+        android:id="@+id/credit_recalculation"
+        android:text="Выполнить перерасчет"
+        android:layout_width="wrap_content"
+        android:textAlignment="center"
+        android:layout_height="48dp"/>
+        
+      <Button
+        android:layout_marginTop="16dp"
+        android:text="Сравнить с доступными"
+        android:id="@+id/credit_find_better"
+        android:layout_width="match_parent"
+        android:textAlignment="center"
+        android:layout_height="48dp"/>
 
       <android.support.v7.widget.RecyclerView
           android:id="@+id/credit_payment"
