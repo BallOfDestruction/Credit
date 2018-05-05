@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Threading;
+using Android.App;
+using Android.Content;
 using Android.Graphics;
 using Android.Support.V7.Widget;
 using Android.Views;
 using Shared.Commands.PayCredit;
+using Shared.Commands.Recalculating;
 using Shared.Database;
 using Shared.Delegates;
 using Shared.Models;
@@ -16,6 +19,7 @@ namespace Credit.Work.Credit
 {
     public class PaymentAdapter : RecyclerView.Adapter
     {
+        private readonly Context _context;
         private readonly int _creditId;
         private readonly Action _showLoader;
         private readonly Action _hideLoader;
@@ -24,8 +28,9 @@ namespace Credit.Work.Credit
         private readonly Action _showErrorNotEnternet;
         private readonly List<PaymentModel> _payment;
 
-        public PaymentAdapter(List<PaymentModel> payment, int creditId, Action showLoader, Action hideLoader, Action<Shared.Models.Credit> reloadActivity, Action<Error> showError, Action showErrorNotEnternet)
+        public PaymentAdapter(Context context, List<PaymentModel> payment, int creditId, Action showLoader, Action hideLoader, Action<Shared.Models.Credit> reloadActivity, Action<Error> showError, Action showErrorNotEnternet)
         {
+            _context = context;
             _creditId = creditId;
             _showLoader = showLoader;
             _hideLoader = hideLoader;
@@ -63,15 +68,22 @@ namespace Credit.Work.Credit
 
         private void ApplyOnClick(int id)
         {
-            ThreadPool.QueueUserWorkItem(w =>
+            var builder = new AlertDialog.Builder(_context);
+            builder.SetTitle("Вы точно хотите выполнить оплату?");
+            builder.SetPositiveButton("ОК", (o, args) =>
             {
-                _showLoader?.Invoke();
-                var model = new PayCreditRequest(_creditId, id);
-                var commandDelegate = new CommandDelegate<PayCreditResponce>(responce => _reloadActivity?.Invoke(responce.Credit), _showError, _showErrorNotEnternet);
-                var command = new PayCreditCommand(LocalDb.Instance, commandDelegate);
-                command.Execute(model);
-                _hideLoader?.Invoke();
+                ThreadPool.QueueUserWorkItem(w =>
+                {
+                    _showLoader?.Invoke();
+                    var model = new PayCreditRequest(_creditId, id);
+                    var commandDelegate = new CommandDelegate<PayCreditResponce>(responce => _reloadActivity?.Invoke(responce.Credit), _showError, _showErrorNotEnternet);
+                    var command = new PayCreditCommand(LocalDb.Instance, commandDelegate);
+                    command.Execute(model);
+                    _hideLoader?.Invoke();
+                });
             });
+            builder.SetNegativeButton("Нет", (o, args) => { });
+            builder.Create().Show();
         }
 
         public override RecyclerView.ViewHolder OnCreateViewHolder(ViewGroup parent, int viewType)

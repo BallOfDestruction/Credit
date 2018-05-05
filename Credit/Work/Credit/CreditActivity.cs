@@ -83,7 +83,7 @@ namespace Credit.Work.Credit
 
             if (_payments?.Any() == true)
             {
-                _paymentView.SetAdapter(new PaymentAdapter(_payments, _credit.ServerId, ShowLoaderInMainThread, DissmissLoaderInMainThread, ReloadActivity, ShowError, ShowErrorNotEnternet));
+                _paymentView.SetAdapter(new PaymentAdapter(this, _payments, _credit.ServerId, ShowLoaderInMainThread, DissmissLoaderInMainThread, ReloadActivity, ShowError, ShowErrorNotEnternet));
             }
 
             _nestedScrollView = FindViewById<NestedScrollView>(Resource.Id.nested);
@@ -116,50 +116,73 @@ namespace Credit.Work.Credit
 
         private void RecalculateOnClick(object sender, EventArgs e)
         {
-            ThreadPool.QueueUserWorkItem(w =>
+            var builder = new AlertDialog.Builder(this);
+            builder.SetTitle("Вы точно хотите выполнить перерасчет?");
+            builder.SetPositiveButton("ОК", (o, args) =>
             {
-                ShowLoaderInMainThread();
+                ThreadPool.QueueUserWorkItem(w =>
+                {
+                    ShowLoaderInMainThread();
 
-                var commandDelegate = new CommandDelegate<RecalculatingResponce>(OnSuccessRecalculating, ShowError, ShowErrorNotEnternet);
-                var command = new RecalculatingCommand(LocalDb.Instance, commandDelegate);
-                command.Execute(new RecalculatingRequest(){IdCredit = _credit.ServerId});
+                    var commandDelegate =
+                        new CommandDelegate<RecalculatingResponce>(OnSuccessRecalculating, ShowError,
+                            ShowErrorNotEnternet);
+                    var command = new RecalculatingCommand(LocalDb.Instance, commandDelegate);
+                    command.Execute(new RecalculatingRequest() {IdCredit = _credit.ServerId});
 
-                DissmissLoaderInMainThread();
+                    DissmissLoaderInMainThread();
+                });
             });
+            builder.SetNegativeButton("Нет", (o, args) => {});
+            builder.Create().Show();
         }
 
         private void PayNowOnClick(object sender, EventArgs e)
         {
-            ThreadPool.QueueUserWorkItem(w =>
+            var builder = new AlertDialog.Builder(this);
+            builder.SetTitle("Вы точно хотите списать с остатка и оплатить?");
+            builder.SetPositiveButton("ОК", (o, args) =>
             {
-                ShowLoaderInMainThread();
+                ThreadPool.QueueUserWorkItem(w =>
+                {
+                    ShowLoaderInMainThread();
 
-                var commandDelegate = new CommandDelegate<PayNowResponce>(OnSuccessPayNow, ShowError, ShowErrorNotEnternet);
-                var command = new PayNowCommand(LocalDb.Instance, commandDelegate);
-                command.Execute(new PayNowRequest() { IdCredit = _credit.ServerId });
+                    var commandDelegate = new CommandDelegate<PayNowResponce>(OnSuccessPayNow, ShowError, ShowErrorNotEnternet);
+                    var command = new PayNowCommand(LocalDb.Instance, commandDelegate);
+                    command.Execute(new PayNowRequest() { IdCredit = _credit.ServerId });
 
-                DissmissLoaderInMainThread();
+                    DissmissLoaderInMainThread();
+                });
             });
+            builder.SetNegativeButton("Нет", (o, args) => { });
+            builder.Create().Show();
         }
 
         private void ButtonPayOnClick(object sender, EventArgs eventArgs)
         {
-            float.TryParse(_inputPay.Text, out var amount);
-
-            var model = new CustomPayRequest(amount, _credit.ServerId);
-
-            if (!model.IsValid(ShowError)) return;
-
-            ThreadPool.QueueUserWorkItem(w =>
+            var builder = new AlertDialog.Builder(this);
+            builder.SetTitle("Вы точно хотите внести на счет?");
+            builder.SetPositiveButton("ОК", (o, args) =>
             {
-                ShowLoaderInMainThread();
+                float.TryParse(_inputPay.Text, out var amount);
 
-                var commandDelegate = new CommandDelegate<CustomPayResponce>(OnSuccessCustomPay, ShowError, ShowErrorNotEnternet);
-                var command = new CustomPayCommand(LocalDb.Instance, commandDelegate);
-                command.Execute(model);
+                var model = new CustomPayRequest(amount, _credit.ServerId);
 
-                DissmissLoaderInMainThread();
+                if (!model.IsValid(ShowError)) return;
+
+                ThreadPool.QueueUserWorkItem(w =>
+                {
+                    ShowLoaderInMainThread();
+
+                    var commandDelegate = new CommandDelegate<CustomPayResponce>(OnSuccessCustomPay, ShowError, ShowErrorNotEnternet);
+                    var command = new CustomPayCommand(LocalDb.Instance, commandDelegate);
+                    command.Execute(model);
+
+                    DissmissLoaderInMainThread();
+                });
             });
+            builder.SetNegativeButton("Нет", (o, args) => { });
+            builder.Create().Show();
         }
 
         private void OnSuccessPayNow(PayNowResponce model)

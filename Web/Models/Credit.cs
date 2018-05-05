@@ -117,7 +117,10 @@ namespace Web.Models
             var payment = JsonConvert.DeserializeObject<List<PaymentModel>>(ListPayment);
             var notPayment = payment.Where(w => !w.IsPay).ToList();
             var pay = payment.Where(w => w.IsPay).ToList();
-            var newSumm = Amount - pay.Sum(w => w.MainDebt) - Rest;
+            var paySum = pay.Sum(w => w.MainDebt);
+            if (paySum < 0) return;
+
+            var newSumm = Amount - paySum - Rest;
             var restMonth = notPayment.Count;
             payment.Insert(pay.Count(), new PaymentModel(DateTime.Now, Rest, pay.LastOrDefault()?.Id ?? -1, true, Rest, 0));
             Rest = 0;
@@ -130,6 +133,8 @@ namespace Web.Models
                 notPayment[i].Summ = summPay;
             }
 
+            CheckForZeros(payment);
+
             ListPayment = JsonConvert.SerializeObject(payment);
         }
 
@@ -139,6 +144,8 @@ namespace Web.Models
 
             var notPayment = payment.Where(w => !w.IsPay).ToList();
             var pay = payment.Where(w => w.IsPay).ToList();
+            var paySum = pay.Sum(w => w.MainDebt);
+            if (paySum < 0) return;
             var newSumm = Amount - pay.Sum(w => w.MainDebt) - Rest;
             var restMonth = notPayment.Count;
             var lastPayDate = notPayment.FirstOrDefault()?.Date ?? DateTime.Now;
@@ -154,7 +161,21 @@ namespace Web.Models
                 pay.Add(new PaymentModel(lastPayDate.AddMonths(i), p, pay.Count, false, mainPay, percentPay));
             }
 
+            CheckForZeros(pay);
+
             ListPayment = JsonConvert.SerializeObject(pay);
+        }
+
+        private void CheckForZeros(List<PaymentModel> payments)
+        {
+            foreach (var paymentModel in payments)
+            {
+                if (paymentModel.Summ == 0)
+                    paymentModel.IsPay = true;
+            }
+
+            if (payments.All(w => w.IsPay))
+                IsPay = true;
         }
     }
 }
