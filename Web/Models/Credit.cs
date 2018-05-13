@@ -23,7 +23,7 @@ namespace Web.Models
         public float Procent { get; set; }
 
         [DisplayName("Сумма")]
-        public float Amount { get; set; }
+        public long Amount { get; set; }
 
         [DisplayName("Длительность в месяцах")]
         public int DurationInMonth { get; set; }
@@ -77,7 +77,7 @@ namespace Web.Models
             var summPay =(float) (Amount * (p + d));
             var listPay = new List<PaymentModel>();
 
-            var localAmount = Amount;
+            var localAmount = (float)Amount;
             for (var i = 0; i < DurationInMonth; i++)
             {
                 var percentLocal = localAmount * p;

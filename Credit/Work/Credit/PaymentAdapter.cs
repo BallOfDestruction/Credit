@@ -9,7 +9,6 @@ using Android.Graphics;
 using Android.Support.V7.Widget;
 using Android.Views;
 using Shared.Commands.PayCredit;
-using Shared.Commands.Recalculating;
 using Shared.Database;
 using Shared.Delegates;
 using Shared.Models;

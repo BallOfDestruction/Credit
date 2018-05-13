@@ -10,6 +10,7 @@ namespace Credit.Work.ListCredit
         public ImageView Icon { get; set; }
         public TextView Title { get; set; }
         public TextView Subtitle { get; set; }
+        public Shared.Models.Credit Credit { get; set; }
 
         public CreditViewHolder(View itemView) : base(itemView)
         {

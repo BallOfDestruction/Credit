@@ -1,8 +1,12 @@
-﻿using System.Globalization;
+﻿using System.Collections.Generic;
 using Android.App;
+using Android.Support.V4.Widget;
+using Android.Support.V7.Widget;
 using Android.Views;
 using Android.Widget;
 using Credit.Base;
+using Credit.Work.Credit;
+using Credit.Work.АvailableCredit;
 using Newtonsoft.Json;
 using Shared.Models;
 
@@ -15,46 +19,39 @@ namespace Credit.Work.Compare
         protected override int LayoutResId => Resource.Layout.compare;
 
         private Shared.Models.Credit _credit;
-        private AvialableCredit _avialableCredit;
-        private TextView _bank1;
-        private TextView _bank2;
-        private TextView _amount1;
-        private TextView _amount2;
-        private TextView _percent1;
-        private TextView _percent2;
-        private TextView _duration1;
-        private TextView _duration2;
+        private List<AvialableCredit> _avialableCredit;
+        private TextView _title;
+        private TextView _subTitle;
+        private RecyclerView _list;
+        private NestedScrollView _nestedScrollView;
 
         protected override void LoadSyncElements()
         {
             base.LoadSyncElements();
 
             _credit = JsonConvert.DeserializeObject<Shared.Models.Credit>(Intent.GetStringExtra("credit"));
-            _avialableCredit = JsonConvert.DeserializeObject<Shared.Models.AvialableCredit>(Intent.GetStringExtra("AvialableCredit"));
+            _avialableCredit = JsonConvert.DeserializeObject<List<Shared.Models.AvialableCredit>>(Intent.GetStringExtra("AvialableCredit"));
 
-            _bank1 = FindViewById<TextView>(Resource.Id.compare_bank1);
-            _bank1.Text = _credit.BankName;
+            _title = FindViewById<TextView>(Resource.Id.compare_credit_title);
+            _title.Text = _credit.BankName;
 
-            _bank2 = FindViewById<TextView>(Resource.Id.compare_bank2);
-            _bank2.Text = _avialableCredit.BankName;
+            _subTitle = FindViewById<TextView>(Resource.Id.compare_credit_subtitle);
+            _subTitle.Text = $"{_credit.Procent}%, {_credit.Amount} руб., на {_credit.DurationInMonth} мес.";
 
-            _amount1 = FindViewById<TextView>(Resource.Id.compare_amount1);
-            _amount1.Text = _credit.Amount.ToString("N", new CultureInfo("ru")) + " руб.";
+            _list = FindViewById<RecyclerView>(Resource.Id.compare_list);
+            _list.SetLayoutManager(new NotCanScrollGridLayoutManager(this, 1));
+            _list.AddItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.Vertical));
+            _list.SetAdapter(new AvialableCreditAdapter(_avialableCredit));
+            _list.NestedScrollingEnabled = false;
 
-            _amount2 = FindViewById<TextView>(Resource.Id.compare_amount2);
-            _amount2.Text = "до " + _avialableCredit.MaxAmount.ToString("N", new CultureInfo("ru")) + " руб.";
+            _nestedScrollView = FindViewById<NestedScrollView>(Resource.Id.nested);
+        }
 
-            _percent1 = FindViewById<TextView>(Resource.Id.compare_percent1);
-            _percent1.Text = _credit.Procent.ToString(new CultureInfo("ru")) + " %";
+        protected override void SetDatasAfterLoad()
+        {
+            base.SetDatasAfterLoad();
 
-            _percent2 = FindViewById<TextView>(Resource.Id.compare_percent2);
-            _percent2.Text = _avialableCredit.Percent.ToString(new CultureInfo("ru")) + " %";
-
-            _duration1 = FindViewById<TextView>(Resource.Id.compare_duration1);
-            _duration1.Text = _credit.DurationInMonth.ToString(new CultureInfo("ru"));
-
-            _duration2 = FindViewById<TextView>(Resource.Id.compare_duration2);
-            _duration2.Text = "до " + _avialableCredit.MaxDuration.ToString(new CultureInfo("ru"));
+            _nestedScrollView.ScrollTo(0, 0);
         }
     }
 }

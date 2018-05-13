@@ -11,7 +11,7 @@ namespace Shared.Commands.CreateCredit
         public float Procent { get; set; }
         public int Duration { get; set; }
         public DateTime StartDate { get; set; }
-        public float Amount { get; set; }
+        public long Amount { get; set; }
 
         public CreateCreditRequest()
         {
@@ -26,7 +26,7 @@ namespace Shared.Commands.CreateCredit
             Procent = float.Parse(model.Procent);
             Duration = int.Parse(model.Duration);
             StartDate = DateTime.Parse(model.StartDate, new CultureInfo("ru"));
-            Amount = float.Parse(model.Amount);
+            Amount = long.Parse(model.Amount);
         }
     }
 }

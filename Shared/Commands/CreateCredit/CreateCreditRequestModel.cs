@@ -80,7 +80,7 @@ namespace Shared.Commands.CreateCredit
                 return false;
             }
 
-            if (!float.TryParse(Amount, out var anount))
+            if (!long.TryParse(Amount, out var anount))
             {
                 showError(new Error("name", "Сумма ввведена в неверном формате или равна 0"));
                 return false;

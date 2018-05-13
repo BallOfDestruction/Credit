@@ -18,7 +18,7 @@ namespace Shared.Models
         public float Procent { get; set; }
         public float Rest { get; set; }
 
-        public float Amount { get; set; }
+        public long Amount { get; set; }
 
         public int DurationInMonth { get; set; }
 

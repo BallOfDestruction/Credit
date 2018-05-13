@@ -11,6 +11,7 @@ namespace Credit.Work.ListCredit
     {
         private readonly Action<Shared.Models.Credit> _open;
         private readonly List<Shared.Models.Credit> _credits;
+        public List<Shared.Models.Credit> Credits => _credits;
 
         public CreditAdapter(List<Shared.Models.Credit> credits, Action<Shared.Models.Credit> open)
         {
@@ -24,12 +25,11 @@ namespace Credit.Work.ListCredit
 
             if (item == null || !(holder is CreditViewHolder viewHolder)) return;
 
+            viewHolder.Credit = item;
             viewHolder.Title.Text = item.Name;
             viewHolder.Subtitle.Text = $"{item.BankName}, {item.Amount} руб., {item.DurationInMonth} мес.";
             viewHolder.Icon.SetImageResource(Resource.Mipmap.ic_payment_black_24dp);
             viewHolder.Icon.SetColorFilter(Color.Green);
-            viewHolder.Main.Click += null;
-            viewHolder.Main.Click += (sender, args) => _open?.Invoke(item);
 
             if (item.IsPay)
             {
@@ -45,6 +45,12 @@ namespace Credit.Work.ListCredit
         {
             var itemView = LayoutInflater.From(parent.Context).Inflate(Resource.Layout.credit_item, parent, false);
             var viewHolder = new CreditViewHolder(itemView);
+
+            viewHolder.Main.Click += (sender, args) =>
+            {
+                _open?.Invoke(viewHolder.Credit);
+            };
+
             return viewHolder;
         }
 

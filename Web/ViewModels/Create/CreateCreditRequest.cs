@@ -10,6 +10,6 @@ namespace Web.ViewModels.Create
         public float Procent { get; set; }
         public int Duration { get; set; }
         public DateTime StartDate { get; set; }
-        public float Amount { get; set; }
+        public long Amount { get; set; }
     }
 }

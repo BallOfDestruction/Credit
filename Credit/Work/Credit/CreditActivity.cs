@@ -73,7 +73,7 @@ namespace Credit.Work.Credit
             _percent.Text = _credit.Procent.ToString(new CultureInfo("ru"));
 
             _amount = FindViewById<TextView>(Resource.Id.credit_amount);
-            _amount.Text = _credit.Amount.ToString(new CultureInfo("ru"));
+            _amount.Text = _credit.Amount.ToString("N", new CultureInfo("ru"));
 
             _paymentView = FindViewById<RecyclerView>(Resource.Id.credit_payment);
             _paymentView.AddItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.Vertical));
@@ -226,23 +226,26 @@ namespace Credit.Work.Credit
         private void OnSuccess(AvialableCreditResponce avialableCreditResponce)
         {
             var better = avialableCreditResponce.AvialableCredits
-                .Where(w => w.MaxAmount >= _credit.Amount && w.MaxDuration >= _credit.DurationInMonth)
-                .OrderBy(w => w.Percent).FirstOrDefault();
+                .Where(w => w.MaxAmount >= _credit.Amount && w.MaxDuration >= _credit.DurationInMonth && w.Percent < _credit.Procent)
+                .OrderBy(w => w.Percent).ToList();
 
-            if (better == null || better.Percent > _credit.Procent)
+            if (better.Any() != true)
             {
                 RunOnUiThread(() =>
                 {
                     ShowError(new Error("code", "Более лучшего кредита не найдено"));
                 });
             }
-            RunOnUiThread(() =>
+            else
             {
-                var intent = new Intent(this, typeof(CompareActivity));
-                intent.PutExtra("credit", JsonConvert.SerializeObject(_credit));
-                intent.PutExtra("AvialableCredit", JsonConvert.SerializeObject(better));
-                StartActivity(intent);
-            });
+                RunOnUiThread(() =>
+                {
+                    var intent = new Intent(this, typeof(CompareActivity));
+                    intent.PutExtra("credit", JsonConvert.SerializeObject(_credit));
+                    intent.PutExtra("AvialableCredit", JsonConvert.SerializeObject(better));
+                    StartActivity(intent);
+                });
+            }
         }
 
         private void ReloadActivity(Shared.Models.Credit newCredit)

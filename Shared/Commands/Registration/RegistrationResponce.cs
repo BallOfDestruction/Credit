@@ -1,6 +1,6 @@
 ﻿namespace Shared.Commands.Registration
 {
-    public class RegistrationResponce
+    public class RegistrationResponce 
     {
     }
 }
