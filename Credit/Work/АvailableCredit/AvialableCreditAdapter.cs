@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Globalization;
 using Android.Support.V7.Widget;
 using Android.Views;
 using Shared.Models;
@@ -21,7 +22,7 @@ namespace Credit.Work.АvailableCredit
             if (holder is AvialableCreditHolder viewHolder)
             {
                 viewHolder.Title.Text = item.BankName;
-                viewHolder.SubTitle.Text = $"{item.Percent}%, до {item.MaxAmount} руб., до {item.MaxDuration} мес.";
+                viewHolder.SubTitle.Text = $"{item.Percent}%, до {item.MaxAmount.ToString("N", new CultureInfo("ru"))} руб., до {item.MaxDuration} мес.";
             }
         }
 
