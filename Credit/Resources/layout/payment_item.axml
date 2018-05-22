@@ -33,11 +33,11 @@
     android:text="ОПЛАЧЕНО"
     android:textColor="#00FF00"
     android:id="@+id/payment_pay_text"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="match_parent"/>
   <Button
     android:id="@+id/payment_pay"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="match_parent"
     android:text="ОПЛАТИТЬ"/> 
   </LinearLayout>

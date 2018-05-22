@@ -56,7 +56,7 @@ namespace Shared.Commands.CreateCredit
                 return false;
             }
 
-            if (!float.TryParse(Procent, out var procent))
+            if (!float.TryParse(Procent?.Replace(",","."), out var procent))
             {
                 showError(new Error("name", "Процент ввведен в неверном формате или равен 0"));
                 return false;
