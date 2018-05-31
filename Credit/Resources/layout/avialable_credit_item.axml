@@ -2,20 +2,27 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal"
     android:layout_width="match_parent"
-    android:layout_height="72dp">
-  <LinearLayout
-    android:layout_marginTop="12dp"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <TextView
-      android:id="@+id/avialable_credit_item_title"
-      android:layout_width="match_parent"
-      android:layout_height="24dp"
-      android:layout_marginBottom="12dp"/>
-    <TextView
-      android:id="@+id/avialable_credit_item_subtitle"
-      android:layout_width="match_parent"
-      android:layout_height="24dp"/>
-  </LinearLayout>
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_marginTop="12dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/avialable_credit_item_title"
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:layout_marginBottom="12dp" />
+        <TextView
+            android:id="@+id/avialable_credit_item_subtitle"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="12dp"
+            android:layout_height="24dp" />
+        <TextView
+            android:id="@+id/avialable_credit_item_subsubtitle"
+            android:layout_width="match_parent"
+            android:autoLink="web"
+            android:linksClickable="true"
+            android:layout_height="24dp" />
+    </LinearLayout>
 </LinearLayout>

@@ -254,9 +254,15 @@ namespace Web.Controllers
                         .Select(w => (w.Contains("лет") || w.Contains("года") ) ? int.Parse(w.Replace("лет", "").Replace("года", "")) * 12 : int.Parse(w.Replace("мес", "")))
                         .ToArray();
 
+                    var urls = doc.DocumentNode
+                        .SelectNodes("/html[1]/body[1]/div[3]/div[3]/div[2]/section[1]/div[1]/div[1]/div[2]").Elements().Where(w => w.Name == "div")
+                        .Select(w => w.SelectSingleNode("div[1]/div[1]/div[2]/div[2]/a[1]").Attributes["href"].Value)
+                        .ToArray(); ;
+
                     for (var c = 0; c < procents.Length; c++)
                     {
-                        avialable.Add(new AvialableCredit(bankName[c], amount[c], procents[c], duration[c]));
+                        var url = string.IsNullOrEmpty(urls[c]) ? "" : "https://www.banki.ru" + urls[c];
+                        avialable.Add(new AvialableCredit(bankName[c], amount[c], procents[c], duration[c], url));
                     }
 
                 }

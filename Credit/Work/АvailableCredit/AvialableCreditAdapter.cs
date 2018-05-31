@@ -23,6 +23,9 @@ namespace Credit.Work.АvailableCredit
             {
                 viewHolder.Title.Text = item.BankName;
                 viewHolder.SubTitle.Text = $"{item.Percent}%, до {item.MaxAmount.ToString("N", new CultureInfo("ru"))} руб., до {item.MaxDuration} мес.";
+                viewHolder.SubSubTitle.Text = item.Url;
+
+                viewHolder.SubSubTitle.Visibility = string.IsNullOrEmpty(item.Url) ? ViewStates.Gone : ViewStates.Visible;
             }
         }
 
