@@ -3,6 +3,7 @@ using Android.OS;
 using Android.Support.Design.Widget;
 using Android.Support.V4.Widget;
 using Android.Views;
+using Credit.Work.Calculator;
 using Credit.Work.ListCredit;
 using Credit.Work.Login;
 using Credit.Work.АvailableCredit;
@@ -55,6 +56,11 @@ namespace Credit.Base
                         LocalDb.Instance.DeleteAll<LocalUserModel>();
                         FinishAffinity();
                         intent = new Intent(this, typeof(LoginActivity));
+                        StartActivity(intent);
+                        break;
+                    case Resource.Id.calculator_credit_nav:
+                        FinishAffinity();
+                        intent = new Intent(this, typeof(CalculatorActivity));
                         StartActivity(intent);
                         break;
                 }

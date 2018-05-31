@@ -12,6 +12,9 @@
     <Compile Include="$(MSBuildThisFileDirectory)Commands\AvialableCredit\AvialableCreditCommand.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Commands\AvialableCredit\AvialableCreditRequest.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Commands\AvialableCredit\AvialableCreditResponce.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Commands\Calculator\CalculateCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Commands\Calculator\CalculateRequest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Commands\Calculator\CalculateResponce.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Commands\CommandDelegate.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Commands\CommonCommand.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Commands\CreateCredit\CreateCreditCommand.cs" />

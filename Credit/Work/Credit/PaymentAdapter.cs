@@ -26,6 +26,7 @@ namespace Credit.Work.Credit
         private readonly Action<Error> _showError;
         private readonly Action _showErrorNotEnternet;
         private readonly List<PaymentModel> _payment;
+        private readonly int _paymentIndex;
 
         public PaymentAdapter(Context context, List<PaymentModel> payment, int creditId, Action showLoader, Action hideLoader, Action<Shared.Models.Credit> reloadActivity, Action<Error> showError, Action showErrorNotEnternet)
         {
@@ -37,6 +38,9 @@ namespace Credit.Work.Credit
             _showError = showError;
             _showErrorNotEnternet = showErrorNotEnternet;
             _payment = payment.OrderBy(w => w.Id).ThenBy(w => w.Date).ToList();
+
+            var item = _payment.FirstOrDefault(w => !w.IsPay);
+            _paymentIndex = _payment.IndexOf(item);
         }
 
         public override void OnBindViewHolder(RecyclerView.ViewHolder holder, int position)
@@ -47,6 +51,7 @@ namespace Credit.Work.Credit
 
             viewHolder.Amount.Text = item.Summ.ToString();
             viewHolder.Date.Text = item.Date.ToString("d", new CultureInfo("ru"));
+            viewHolder.Apply.Enabled = true;
 
             if (item.IsPay)
             {
@@ -57,11 +62,20 @@ namespace Credit.Work.Credit
             }
             else
             {
-                viewHolder.Icon.SetColorFilter(Color.Gray);
-                viewHolder.Apply.Click += null;
-                viewHolder.Apply.Click += (sender, args) => ApplyOnClick(item.Id);
                 viewHolder.Apply.Visibility = ViewStates.Visible;
                 viewHolder.PaymentText.Visibility = ViewStates.Gone;
+                viewHolder.Icon.SetColorFilter(Color.Gray);
+                viewHolder.Apply.Click += null;
+                
+                if (_paymentIndex == position)
+                {
+                    viewHolder.Apply.Click += (sender, args) => ApplyOnClick(item.Id);
+                }
+                else
+                {
+                    viewHolder.Apply.Click += null;
+                    viewHolder.Apply.Enabled = false;
+                }
             }
         }
 

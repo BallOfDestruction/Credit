@@ -3,13 +3,10 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Threading;
 using Android.App;
-using Android.Text;
-using Android.Text.Method;
 using Android.Views;
 using Android.Widget;
 using Credit.Base;
 using Credit.Work.ListCredit;
-using Java.Lang;
 using Shared.Commands.CreateCredit;
 using Shared.Database;
 using Shared.Delegates;
@@ -28,7 +25,7 @@ namespace Credit.Work.CreateCredit
         private Button _startDate;
         private EditText _percent;
         private EditText _amount;
-        private AutoCompleteTextView _type;
+        private string _type;
         private Button _apply;
 
         //TODO проверка при создании credit
@@ -42,11 +39,6 @@ namespace Credit.Work.CreateCredit
 
             _bank = FindViewById<EditText>(Resource.Id.create_credit_bank);
 
-            _type = FindViewById<AutoCompleteTextView>(Resource.Id.create_credit_type);
-            _type.Adapter = new ArrayAdapter(this, Android.Resource.Layout.SimpleListItem1,new List<string>(){ "Дифференцированный", "Аннуитет" });
-            _type.Text = "Аннуитет";
-            _type.Threshold = 1;
-
             _duration = FindViewById<EditText>(Resource.Id.create_credit_duration);
 
             _startDate = FindViewById<Button>(Resource.Id.create_credit_start_date);
@@ -58,6 +50,29 @@ namespace Credit.Work.CreateCredit
 
             _apply = FindViewById<Button>(Resource.Id.create_credit_apply);
             _apply.Click += ApplyOnClick;
+
+
+            var type1 = FindViewById<RadioButton>(Resource.Id.radio_type1);
+            type1.CheckedChange += Type1OnCheckedChange;
+
+            var type2 = FindViewById<RadioButton>(Resource.Id.radio_type2);
+            type2.CheckedChange += Type2OnCheckedChange;
+        }
+
+        private void Type2OnCheckedChange(object sender, CompoundButton.CheckedChangeEventArgs checkedChangeEventArgs)
+        {
+            if (checkedChangeEventArgs.IsChecked)
+            {
+                _type = "Аннуитет";
+            }
+        }
+
+        private void Type1OnCheckedChange(object sender, CompoundButton.CheckedChangeEventArgs checkedChangeEventArgs)
+        {
+            if (checkedChangeEventArgs.IsChecked)
+            {
+                _type = "Дифференцированный";
+            }
         }
 
         private void StartDateOnClick(object sender, EventArgs eventArgs)
@@ -73,7 +88,7 @@ namespace Credit.Work.CreateCredit
 
         private void ApplyOnClick(object sender, EventArgs eventArgs)
         {
-            var model = new CreateCreditRequestModel(_name.Text, _bank.Text, _type.Text, _percent.Text, _duration.Text, _startDate.Text, _amount.Text);
+            var model = new CreateCreditRequestModel(_name.Text, _bank.Text, _type, _percent.Text, _duration.Text, _startDate.Text, _amount.Text);
             if (model.IsValid(ShowError))
             {
                 ThreadPool.QueueUserWorkItem(w =>

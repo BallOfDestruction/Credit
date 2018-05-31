@@ -9,6 +9,7 @@ using Newtonsoft.Json;
 using Web.Models;
 using Web.ViewModels;
 using Web.ViewModels.Avialable;
+using Web.ViewModels.Calculate;
 using Web.ViewModels.Create;
 using Web.ViewModels.CustomPay;
 using Web.ViewModels.GetList;
@@ -42,7 +43,7 @@ namespace Web.Controllers
             var authorization = GetUserWithToken();
             if (authorization.Error != null) return Json(authorization.Error);
 
-            var credit = new Credit();
+            var credit = new Models.Credit();
             credit.Amount = model.Amount;
             credit.BankName = model.Bank;
             credit.DurationInMonth = model.Duration;
@@ -134,6 +135,20 @@ namespace Web.Controllers
             {
                 Credit = credit,
             });
+        }
+
+        [HttpGet]
+        public JsonResult Calculate([FromQuery]CalculateRequest model)
+        {
+            var credit = new Credit();
+            credit.Amount = model.Amount;
+            credit.DurationInMonth = model.Duration;
+            credit.TypeCredit = model.Type;
+            credit.Procent = model.Percent;
+            credit.StartCredit = DateTime.Now;
+            credit.InitPayment();
+
+            return Json(new CalculateResponce(credit));
         }
 
         [HttpPost]
