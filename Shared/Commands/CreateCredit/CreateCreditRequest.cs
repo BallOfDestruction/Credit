@@ -23,7 +23,8 @@ namespace Shared.Commands.CreateCredit
             Name = model.Name;
             Bank = model.Bank;
             Type = model.Type;
-            Procent = float.Parse(model.Procent);
+            
+            Procent = float.Parse(model.Procent?.Replace(",", ".") ?? "", NumberStyles.AllowDecimalPoint, null);
             Duration = int.Parse(model.Duration);
             StartDate = DateTime.Parse(model.StartDate, new CultureInfo("ru"));
             Amount = long.Parse(model.Amount);

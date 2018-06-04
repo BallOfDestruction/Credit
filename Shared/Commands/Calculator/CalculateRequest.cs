@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using Shared.WebService;
 
 namespace Credit.Commands.Calculator
@@ -37,7 +38,8 @@ namespace Credit.Commands.Calculator
                 return false;
             }
 
-            if (!float.TryParse(_percent?.Replace(",", "."), out var procent))
+            _percent = _percent?.Replace(",", ".");
+            if (!float.TryParse(_percent, NumberStyles.AllowDecimalPoint, null, out var procent))
             {
                 showError(new Error("name", "Процент ввведен в неверном формате или равен 0"));
                 return false;
